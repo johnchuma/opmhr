@@ -1,13 +1,48 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer base {
+  @font-face {
+    font-family: 'Aeonik';
+    font-style: normal;
+    font-weight: 100; /* Thin */
+    src: url(/public/Aeonik/Aeonik-Air.otf) format('opentype');
+  }
+  @font-face {
+    font-family: 'Aeonik';
+    font-style: normal;
+    font-weight: 200; /* Light */
+    src: url(/public/Aeonik/Aeonik-Light.otf) format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'Aeonik';
+    font-style: normal;
+    font-weight: 300; /* Medium */
+    src: url(/public/Aeonik/Aeonik-Medium.otf) format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'Aeonik';
+    font-style: normal;
+    font-weight: 400; /* Regular */
+    src: url(/public/Aeonik/Aeonik-Regular.otf) format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'Aeonik';
+    font-style: normal;
+    font-weight: 500; /* Bold */
+    src: url(/public/Aeonik/Aeonik-Bold.otf) format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'Aeonik';
+    font-style: normal;
+    font-weight: 700; /* Black */
+    src: url(/public/Aeonik/Aeonik-Black.otf) format('opentype');
+  }
+  
+  
 }
