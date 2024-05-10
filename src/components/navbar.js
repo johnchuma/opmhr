@@ -1,5 +1,5 @@
 const Navbar = () => {
-    return ( <div className="fixed w-full bg-white z-50">
+    return ( <div className="fixed w-full bg-white  text-muted z-50">
     <div className="flex w-11/12  items-center mx-auto py-4 justify-between">
         <img className="h-12" src="/logo.jpeg"/>
         <div className="flex space-x-3">

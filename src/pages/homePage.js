@@ -1,6 +1,6 @@
 const HomePage = () => {
     return ( <div className="pt-20">
-        <div className="mx-4 rounded-2xl bg-lightBackground py-12 h-screen ">
+        <div className="  bg-lightBackground py-12 h-screen ">
         <div className="flex flex-col space-y-6 justify-center items-center w-7/12 mx-auto text-center font-aeonik ">
             <h1 className="text-5xl font-medium ">Bridging HR and Technlogy for Global Success</h1>
             <p className="text-muted">We empower organizations with innovative solutions , optimizing HR functions for unparalleled efficiency and global success. We Offer a wide Range of HR solution to the business.</p>
@@ -30,9 +30,73 @@ const HomePage = () => {
         </div>
         <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         <br/><br/><br/><br/><br/>
+        <div className="grid grid-cols-6 w-11/12 mx-auto pb-20 opacity-35">
+            {["logo (1).jpg","logo (1).png","logo (2).jpg","logo (2).png","logo (3).jpg","logo (3).png"].map((item)=>{
+               return <div className="flex justify-center"><img className="h-10" src={`/logos/${item}`}/></div>
+            })}
+        </div>
+        <div className="grid grid-cols-12 w-11/12 mx-auto justify-between space-x-10 pb-20 ">
+            <div className=" col-span-5">
+                <h1 className="text-3xl font-medium">Short summary about OPM International HR Consultants: </h1>
+            </div>
+            <div className=" col-span-7">
+                <p className=" text-muted"> A premier HR-IT consulting firm specializing in bridging the gap between human resources and cutting-edge technology across the globe.We empower organizations with innovative solutions , optimizing HR functions for unparalleled efficiency and global success. We Offer a wide Range of HR solution to the business.</p>
+            </div>
+        </div>
+        <div className="w-11/12 mx-auto grid grid-cols-12 space-x-16 items-center">
+        <div className=" col-span-6">
+            <h1 className="text-3xl font-medium">Explore our services</h1>
+            <p className="mt-3 text-muted">
+            Weare the bridge to a modern, data-driven, and globally-minded HR function.Let us help you unlock the full potential of your HR technology and workforce across local and international borders.
+            </p>
+          <div className=" space-y-3 mt-8">
+          {[
+            "Global HR Technology Consulting",
+            "International and Local HR Data Analytics & Reporting",
+            "Global HR Process Automation",
+            "Global HR Transformation Strategy",
+            "Global Change Management & Training"            
+            ].map((item)=>{
+                return <div className="text-muted border-l-8 border-l-primary flex justify-between border-2 border-lightBackground  rounded-lg py-2 px-3 ">
+                    <p>{item}</p>
+                    <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-muted text-opacity-40">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                    </svg>
+                    </div>
+                </div>
+            })}
+          </div>
+
+            </div>
+            <div className=" col-span-6">
+                <img className=" rounded-3xl " src="girl.png"/>
+            </div>
+           
+        </div>
+        <div className="w-11/12 mx-auto grid grid-cols-12 space-x-16 items-center py-24">
+        <div className=" col-span-6">
+                <img className=" rounded-3xl" src="girl2.jpg"/>
+            </div>
+        <div className=" col-span-6">
+            <h1 className="text-3xl font-medium">Our softwares/products</h1>
+            <p className="mt-3 text-muted">
+            Weare the bridge to a modern, data-driven, and globally-minded HR function.Let us help you unlock the full potential of your HR technology and workforce across local and international borders.
+            </p>
+            <p className="mt-3 text-muted">
+            Weare the bridge to a modern, data-driven, and globally-minded HR function.Let us help you unlock the full potential of your HR technology and workforce across local and international borders.
+            </p>
+          <div className=" space-y-3 mt-8">
+        
+          </div>
+
+            </div>
+           
+           
+        </div>
         <div className="w-full mx-auto bg-lightBackground py-24 mb-8">
             <div className="w-6/12 mx-auto text-center space-y-4">
-            <h1 className="font-medium text-4xl">Latest job posts</h1>
+            <h1 className="font-medium text-3xl">Latest job posts</h1>
             <p className="text-muted">Deserunt sit non. Magna ullamco consectetur proident ex est duis magna tempor duis commodo velit qui amet. Quis cillum  mollit sunt.</p>
           
             
@@ -136,9 +200,20 @@ const HomePage = () => {
                 </button>
              </div>
         </div> 
+        <div className="w-6/12 mx-auto py-12 text-center">
+        <h1 className="font-medium text-3xl text-primary">Our director statement</h1>
+        <p className=" italic text-xl  text-muted"><span className="text-8xl text-orange-400">"</span>
+         Do velit eiusmod ad excepteur officia officia laboris consequat minim aute excepteur sit. Dolore occaecat aute ex laborum reprehenderit veniam ex magna ut ut sit sunt mollit. Consequat laboris sint eu nulla officia.
+        </p>
+<div className="text-end">
+<span className="text-8xl text-orange-400">"</span>
+
+</div>
+
+        </div>
         <div className="w-11/12 mx-auto bg-lightBackground rounded-2xl py-24">
             <div className="w-6/12 mx-auto text-center space-y-4">
-            <h1 className="font-medium text-4xl">Get our Daily Updates</h1>
+            <h1 className="font-medium text-3xl">Get our Daily Updates</h1>
             <p className="text-muted">Deserunt sit non. Magna ullamco consectetur proident ex est duis magna tempor duis commodo velit qui amet. Quis cillum  mollit sunt.</p>
              <div className="flex justify-center space-x-3">
                 <input placeholder="Enter email address" className=" border-muted focus:border-primary focus:ring-primary   border-opacity-10 rounded-md"/>
