@@ -13,12 +13,19 @@ import DashboardBlog from "./dashoard/dahboardBlog";
 import DashboardJobPosts from "./dashoard/dashboardJobPosts";
 import DashboardPublishedJobs from "./dashoard/dashboardPublishedJobs";
 import DashboardUnpublishedJobs from "./dashoard/dashboardUnpublishedJobs";
+import PrivateRoute from "./auth/privateRoute";
+import DashboardLayout from "./layouts/dashboardLayout";
+import DashboardSubscribers from "./dashoard/dashboardSubscribers";
+import LoginPage from "./auth/loginPage";
+import RegisterPage from "./auth/registerPage";
 
 function App() {
   return (
     <div className=" font-aeonik text-textColor">
       <BrowserRouter>
         <Routes>
+          <Route path="/login" index element={<LoginPage />} />
+          <Route path="/register" index element={<RegisterPage />} />
           <Route path="/" element={<MainLayout />}>
             <Route index path="/" element={<HomePage />} />
           </Route>
