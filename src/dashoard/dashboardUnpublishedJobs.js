@@ -30,7 +30,7 @@ const DashboardUnpublishedJobs = () => {
   }, [refresh]);
   return loading ? (
     <div className="flex   ms-auto w-full  justify-center items-center h-96">
-      <div className="border-4 rounded-full border-slate-900 h-8 w-8 animate-spin border-t-transparent "></div>
+      <div className="border-4 rounded-full border-primary h-8 w-8 animate-spin border-t-transparent "></div>
     </div>
   ) : (
     <div>

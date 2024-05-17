@@ -15,7 +15,7 @@ const DashboardLayout = () => {
         <div className=" w-3/12 h-screen bg-dark px-5 fixed pt-5 ">
           <Sidebar />
         </div>
-        <div className=" w-9/12 ms-auto min-h-screen  bg-white   ">
+        <div className=" w-9/12 ms-auto min-h-screen  bg-white  text-textColor ">
           <div className="py-5 fixed w-9/12 items-center ms-auto bg-white border-b border-borderColor z-10 flex  justify-between px-10">
             <div>
               <h1 className="text-xl text-textColor">Welcome, {user.name}</h1>

@@ -22,31 +22,39 @@ const DashboardCompanies = () => {
   }, [refresh]);
   return loading ? (
     <div className="flex   ms-auto w-full  justify-center items-center h-96">
-      <div className="border-4 rounded-full border-slate-900 h-8 w-8 animate-spin border-t-transparent "></div>
+      <div className="border-4 rounded-full border-primary h-8 w-8 animate-spin border-t-transparent "></div>
     </div>
   ) : (
     <div>
       <div className="flex justify-between">
-        <h1 className="text-2xl font-bold">Registered companies</h1>
+        <h1 className="text-lg ">Registered companies</h1>
         <input
           onChange={(e) => {
             setkeyword(e.target.value);
           }}
           placeholder="Search here"
-          className="bg-transparent border-slate-300 rounded"
+          className="border-borderColor rounded-lg"
         />
       </div>
-      <div className="bg-white p-5 shadow mt-5">
+      <div className="bg-white p-5 border border-borderColor py-5 rounded-xl mt-5">
         {companies.length < 1 ? (
           <NoData />
         ) : (
           <table className=" w-full">
-            <thead className="px-5">
-              <tr>
-                <th className="text-start">Full name</th>
-                <th className="text-start">Email</th>
-                <th className="text-start">Phone</th>
-                <th className="text-start">Address</th>
+            <thead className="px-5 font-normal">
+              <tr className="border-b border-borderColor border-opacity-70">
+                <th className="text-start font-normal text-muted pb-2">
+                  Full name
+                </th>
+                <th className="text-start font-normal text-muted pb-2">
+                  Email
+                </th>
+                <th className="text-start font-normal text-muted pb-2">
+                  Phone
+                </th>
+                <th className="text-start font-normal text-muted pb-2">
+                  Address
+                </th>
                 <th></th>
               </tr>
             </thead>
@@ -56,17 +64,17 @@ const DashboardCompanies = () => {
                   item.name.toLowerCase().includes(keyword.toLowerCase())
                 )
                 .map((item) => (
-                  <tr>
-                    <td className="py-2">{item.name}</td>
-                    <td className="py-2">{item.email}</td>
-                    <td className="py-2">{item.phone}</td>
-                    <td className="py-2">{item.address}</td>
-                    <td className="py-2">
+                  <tr className="">
+                    <td className="py-2 text-sm">{item.name}</td>
+                    <td className="py-2 text-sm">{item.email}</td>
+                    <td className="py-2 text-sm">{item.phone}</td>
+                    <td className="py-2 text-sm">{item.address}</td>
+                    <td className="py-2 text-sm">
                       <button
                         onClick={() => {
                           setShowModal(true);
                         }}
-                        className="bg-orange-100 text-sm px-3 py-2 rounded-full font-bold"
+                        className="bg-orange-100 text-sm px-3 py-2 rounded-full "
                       >
                         View Logo
                       </button>
@@ -75,7 +83,7 @@ const DashboardCompanies = () => {
                       <div className="fixed inset-0 bg-black bg-opacity-25 z-50 flex justify-center items-center">
                         <div className="w-4/12 bg-white   shadow-xl px-8 py-10">
                           <div className="flex justify-between">
-                            <h1 className="text-2xl font-bold">Logo</h1>
+                            <h1 className="text-2xl ">Logo</h1>
                             <svg
                               onClick={() => {
                                 setShowModal(false);
