@@ -1,9 +1,9 @@
 const HomePage = () => {
   return (
-    <div className="pt-20">
-      <div className="  bg-lightBackground py-12 h-screen w-11/12 mx-auto rounded-3xl ">
+    <div className="pt-24">
+      <div className="   py-12 h-screen w-11/12 mx-auto rounded-xl ">
         <div className="flex flex-col space-y-6 justify-center items-center w-7/12 mx-auto text-center font-aeonik ">
-          <h1 className="text-5xl font-bold ">
+          <h1 className="text-5xl font-medium ">
             Bridging HR and Technlogy for Global Success
           </h1>
           <p className="text-muted">
@@ -15,7 +15,7 @@ const HomePage = () => {
             <button className="bg-primary text-white py-3 px-4 rounded-xl">
               Subscribe Now
             </button>
-            <button className="bg-color text-primary py-3 px-4 rounded-xl flex items-center bg-white space-x-2  ">
+            <button className="bg-color text-primary py-3 px-4 rounded-xl border border-borderColor flex items-center bg-white space-x-2  ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -33,7 +33,7 @@ const HomePage = () => {
           </div>
         </div>
         <div className="mb-24">
-          <div className=" flex w-11/12 mx-auto mt-8 relative z-0 justify-center ">
+          <div className=" flex w-12/12 mx-auto mt-8 relative z-0 justify-center ">
             <img
               className="w-full aspect-video object-cover rounded-3xl "
               src="/video.png"
@@ -73,6 +73,9 @@ const HomePage = () => {
       <br />
       <br />
       <br />
+      <br />
+      <br />
+
       <div className="grid grid-cols-6 w-11/12 mx-auto pb-20 ">
         {[
           "logo (1).jpeg",
@@ -136,7 +139,8 @@ const HomePage = () => {
                       fill="none"
                       viewBox="0 0 24 24"
                       strokeWidth={1.5}
-                      stroke="currentColor"b
+                      stroke="currentColor"
+                      b
                       className="w-6 h-6 text-muted text-opacity-40"
                     >
                       <path
@@ -320,12 +324,12 @@ const HomePage = () => {
       </div>
       <div className="w-7/12 mx-auto py-12 text-center">
         <h1 className="font-bold text-3xl">Our director statement</h1>
-        <p className=" italic text-base  text-muted space-y-2">
-          <span className="text-8xl text-primary translate-y-8">"</span>I am
-          proud to present our company as a leader in human resources consulting
-          and software solutions. With a global footprint and a commitment to
-          excellence, our mission is to empower organizations by optimizing
-          their most valuable asset: their people.
+        <p className="text-muted">James Freeman Tana</p>
+        <p className=" italic text-base mt-5 text-muted space-y-2">
+          I am proud to present our company as a leader in human resources
+          consulting and software solutions. With a global footprint and a
+          commitment to excellence, our mission is to empower organizations by
+          optimizing their most valuable asset: their people.
           <div>
             At OPM International, we understand the challenges of managing human
             capital in today's fast-paced and complex business environment. We
@@ -357,9 +361,6 @@ const HomePage = () => {
             solutions.
           </div>
         </p>
-        <div className="text-end -translate-y-2">
-          <span className="text-8xl text-primary ">"</span>
-        </div>
       </div>
       <div className="w-11/12 mx-auto bg-lightBackground rounded-2xl py-24">
         <div className="w-6/12 mx-auto text-center space-y-4">

@@ -30,11 +30,11 @@ const DashboardCv = () => {
     <PageLoader />
   ) : (
     <div>
-      <div className="flex justify-between">
-        <h1 className="text-2xl font-bold">Curriculum vitae</h1>
+      <div className="flex justify-between items-center">
+        <h1 className="text-lg">Curriculum vitae</h1>
       </div>
-      <div className="grid grid-cols-12 bg-white shadow mt-5">
-        <div className=" col-span-4 border-r-2  ">
+      <div className="grid grid-cols-12 bg-white p-5 border border-borderColor py-5 rounded-md mt-5">
+        <div className=" col-span-4 border border-borderColor py-5 rounded-md ">
           <div className="flex flex-col">
             {[
               {
@@ -46,7 +46,7 @@ const DashboardCv = () => {
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="w-5 h-5"
+                    className="w-4 h-4"
                   >
                     <path
                       strokeLinecap="round"
@@ -65,7 +65,7 @@ const DashboardCv = () => {
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="w-5 h-5"
+                    className="w-4 h-4"
                   >
                     <path
                       strokeLinecap="round"
@@ -84,7 +84,7 @@ const DashboardCv = () => {
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="w-5 h-5"
+                    className="w-4 h-4"
                   >
                     <path
                       strokeLinecap="round"
@@ -103,7 +103,7 @@ const DashboardCv = () => {
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="w-5 h-5"
+                    className="w-4 h-4"
                   >
                     <path
                       strokeLinecap="round"
@@ -122,7 +122,7 @@ const DashboardCv = () => {
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="w-5 h-5"
+                    className="w-4 h-4"
                   >
                     <path
                       strokeLinecap="round"
@@ -141,7 +141,7 @@ const DashboardCv = () => {
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="w-5 h-5"
+                    className="w-4 h-4"
                   >
                     <path
                       strokeLinecap="round"
@@ -156,12 +156,14 @@ const DashboardCv = () => {
                 onClick={() => {
                   setSelectedTab(index);
                 }}
-                className={`flex items-center py-3 px-6 space-x-1 cursor-pointer ${
-                  index == selectedTab ? "bg-orange-100" : ""
+                className={`flex items-center py-3 px-6 space-x-1 cursor-pointer mx-2 ${
+                  index == selectedTab
+                    ? "border border-borderColor py-2  rounded-md"
+                    : ""
                 }`}
               >
                 <div>{item.icon}</div>
-                <div className="text-lg font-bold">{item.title}</div>
+                <div className="text-base">{item.title}</div>
               </div>
             ))}
           </div>
@@ -216,21 +218,21 @@ const DashboardCv = () => {
                   ></input>
                 </div>
                 <div className=" text-start space-y-1 col-span-1">
-                  <h1>Full Name</h1>
+                  <h1 className="text-sm">Full Name</h1>
                   <input
                     defaultValue={user.name}
                     name="name"
-                    className="w-full border-slate-300"
+                    className="w-full border-borderColor rounded-md focus:ring-primary focus:border-primary"
                     placeholder="Enter your full name"
                   />
                 </div>
                 <div className=" text-start space-y-1 col-span-1">
-                  <h1>Gender</h1>
+                  <h1 className="text-sm">Gender</h1>
                   <select
                     required
                     defaultValue={user.gender}
                     name="gender"
-                    className="w-full border-slate-300"
+                    className="w-full border-borderColor rounded-md focus:ring-primary focus:border-primary"
                     placeholder="Enter your phone number"
                   >
                     <option>Select gender</option>
@@ -239,41 +241,41 @@ const DashboardCv = () => {
                   </select>
                 </div>
                 <div className=" text-start space-y-1 col-span-1">
-                  <h1>Phone number</h1>
+                  <h1 className="text-sm">Phone number</h1>
                   <input
                     required
                     defaultValue={user.phone}
                     type="number"
                     name="phone"
-                    className="w-full border-slate-300"
+                    className="w-full border-borderColor rounded-md focus:ring-primary focus:border-primary"
                     placeholder="Enter your age"
                   />
                 </div>
                 <div className=" text-start space-y-1 col-span-1">
-                  <h1>Age</h1>
+                  <h1 className="text-sm">Age</h1>
                   <input
                     required
                     defaultValue={user.age}
                     type="number"
                     name="age"
-                    className="w-full border-slate-300"
+                    className="w-full border-borderColor rounded-md focus:ring-primary focus:border-primary"
                     placeholder="Enter your age"
                   />
                 </div>
                 <div className=" text-start space-y-1 col-span-1">
-                  <h1>Address</h1>
+                  <h1 className="text-sm">Address</h1>
                   <input
                     required
                     defaultValue={user.address}
                     name="address"
-                    className="w-full border-slate-300"
+                    className="w-full border-borderColor rounded-md focus:ring-primary focus:border-primary"
                     placeholder="Enter your address"
                   />
                 </div>
               </div>
               <button
                 type="submit"
-                className="py-3 mt-5 px-4 w-48 flex justify-center bg-green-600 text-white font-bold"
+                className="py-2 mt-5 px-2 w-48 flex justify-center bg-primary text-white  rounded-lg"
               >
                 {loading ? <Spinner /> : "Save Changes"}
               </button>
@@ -297,21 +299,21 @@ const DashboardCv = () => {
             >
               <div className="grid grid-cols-2 gap-2 w-full">
                 <div className=" text-start space-y-1 col-span-2">
-                  <h1>Write your short Bio</h1>
+                  <h1 className="text-sm">Write your short Bio</h1>
                   <textarea
                     defaultValue={user.bio}
                     name="bio"
-                    className="w-full border-slate-300"
+                    className="w-full border-borderColor rounded-md focus:ring-primary focus:border-primary"
                     placeholder="Bio"
                   />
                 </div>
                 <div className=" text-start space-y-1 col-span-1">
-                  <h1>Level of Education</h1>
+                  <h1 className="text-sm">Level of Education</h1>
                   <select
                     required
                     defaultValue={user.education}
                     name="education"
-                    className="w-full border-slate-300"
+                    className="w-full border-borderColor rounded-md focus:ring-primary focus:border-primary"
                   >
                     <option>Select education level</option>
                     <option value="Certificate">Certificate</option>
@@ -322,20 +324,20 @@ const DashboardCv = () => {
                   </select>
                 </div>
                 <div className=" text-start space-y-1 col-span-1">
-                  <h1>Salary expection (TSH)</h1>
+                  <h1 className="text-sm">Salary expection (TSH)</h1>
                   <input
                     required
                     defaultValue={user.salary}
                     type="number"
                     name="salary"
-                    className="w-full border-slate-300"
+                    className="w-full border-borderColor rounded-md focus:ring-primary focus:border-primary"
                     placeholder="Tell us your salary expection"
                   />
                 </div>
               </div>
               <button
                 type="submit"
-                className="py-3 mt-5 px-4 w-48 flex justify-center bg-green-600 text-white font-bold"
+                className="py-2 mt-5 px-2 w-48 flex justify-center bg-primary text-white  rounded-lg"
               >
                 {loading ? <Spinner /> : "Save Changes"}
               </button>
@@ -343,21 +345,21 @@ const DashboardCv = () => {
           )}
           {selectedTab == 2 && (
             <div>
-              <div className="flex justify-between">
-                <h1 className="font-bold text-xl">Skills</h1>
+              <div className="flex justify-between items-center ">
+                <h1 className=" text-xl">Skills</h1>
                 <div
                   onClick={() => {
                     setshowSkillForm(true);
                   }}
-                  className="text-white cursor-pointer bg-green-600 font-bold px-3 py-2"
+                  className="py-2  px-2 w-48 flex justify-center bg-primary text-white  rounded-lg cursor-pointer"
                 >
                   Add skill
                 </div>
                 {showSkillForm && (
                   <div className="fixed inset-0 bg-black bg-opacity-25 z-50 flex justify-center items-center">
                     <div className="w-5/12 bg-white  shadow-xl   px-8 py-10">
-                      <div className="flex justify-between mb-5">
-                        <h1 className="text-2xl font-bold">Add skill</h1>
+                      <div className="flex justify-between items-center mb-5">
+                        <h1 className="text-lg ">Add skill</h1>
                         <svg
                           onClick={() => {
                             setshowSkillForm(false);
@@ -392,9 +394,11 @@ const DashboardCv = () => {
                         }}
                       >
                         <div className="flex flex-col space-y-2">
-                          <label>Your skill</label>
+                          <label className="text-sm text-muted">
+                            Your skill
+                          </label>
                           <select
-                            className=" border-slate-300"
+                            className=" border-borderColor rounded-md focus:ring-primary focus:border-primary"
                             placeholder="Write your skill"
                             required
                             name="skill"
@@ -407,7 +411,7 @@ const DashboardCv = () => {
                         </div>
                         <button
                           type="submit"
-                          className="py-2 mt-4 px-3 bg-green-600 w-48 flex justify-center text-white font-bold"
+                          className="py-2 mt-4 px-3 bg-primary w-48 flex justify-center text-white rounded-lg cursor-pointer "
                         >
                           {loading ? <Spinner /> : "Add "}
                         </button>
@@ -420,8 +424,8 @@ const DashboardCv = () => {
                 {user.skills &&
                   user.skills.map((item) => {
                     return (
-                      <div className="py-2 mr-2 mb-2 rounded-full text-sm px-3 bg-green-50 font-bold flex space-x-1">
-                        <h1>{item}</h1>
+                      <div className="py-2 mr-2 mb-2 rounded-full text-sm px-3 bg-green-50  flex space-x-1">
+                        <h1 className="text-sm">{item}</h1>
                         <svg
                           onClick={() => {
                             const skills = user.skills.filter((e) => item == e);
@@ -450,21 +454,21 @@ const DashboardCv = () => {
           )}
           {selectedTab == 3 && (
             <div>
-              <div className="flex justify-between">
-                <h1 className="font-bold text-xl">Experience</h1>
+              <div className="flex justify-between items-center">
+                <h1 className=" text-xl">Experience</h1>
                 <div
                   onClick={() => {
                     setshowExperienceForm(true);
                   }}
-                  className="text-white cursor-pointer bg-green-600 font-bold px-3 py-2"
+                  className="py-2  px-2 w-48 flex justify-center bg-primary text-white  rounded-lg cursor-pointer cursor-pointer"
                 >
                   Add experiences
                 </div>
                 {showExperienceForm && (
                   <div className="fixed inset-0 bg-black bg-opacity-25 z-50 flex justify-center items-center">
                     <div className="w-5/12 bg-white  shadow-xl h-3/4 overflow-y-scroll  px-8 py-10">
-                      <div className="flex justify-between mb-5">
-                        <h1 className="text-2xl font-bold">Add experience</h1>
+                      <div className="flex justify-between items-center mb-5">
+                        <h1 className="text-lg ">Add experience</h1>
                         <svg
                           onClick={() => {
                             setshowExperienceForm(false);
@@ -513,47 +517,51 @@ const DashboardCv = () => {
                         }}
                       >
                         <div className="flex flex-col space-y-2">
-                          <label>Company name</label>
+                          <label className="text-sm text-muted">
+                            Company name
+                          </label>
                           <input
                             required
-                            className="w-full border-slate-300"
+                            className="w-full border-borderColor rounded-md focus:ring-primary focus:border-primary"
                             name="company"
                             placeholder="Company name"
                           />
                         </div>
                         <div className="flex flex-col space-y-2">
-                          <label>Job Title ?</label>
+                          <label className="text-sm text-muted">
+                            Job Title ?
+                          </label>
                           <input
                             required
-                            className="w-full border-slate-300"
+                            className="w-full border-borderColor rounded-md focus:ring-primary focus:border-primary"
                             name="position"
                             placeholder="Your position"
                           />
                         </div>
                         <div className="flex flex-col space-y-2">
-                          <label>Roles</label>
+                          <label className="text-sm text-muted">Roles</label>
                           <textarea
-                            className="w-full border-slate-300"
+                            className="w-full border-borderColor rounded-md focus:ring-primary focus:border-primary"
                             required
                             name="description"
                             placeholder="What your roles"
                           />
                         </div>
                         <div className="flex flex-col space-y-2">
-                          <label>From</label>
+                          <label className="text-sm text-muted">From</label>
                           <input
                             required
-                            className="w-full border-slate-300"
+                            className="w-full border-borderColor rounded-md focus:ring-primary focus:border-primary"
                             type="date"
                             name="startDate"
                             placeholder="Starting date"
                           />
                         </div>
                         <div className="flex flex-col space-y-2">
-                          <label>To</label>
+                          <label className="text-sm text-muted">To</label>
                           <input
                             required
-                            className="w-full border-slate-300"
+                            className="w-full border-borderColor rounded-md focus:ring-primary focus:border-primary"
                             type="date"
                             name="endDate"
                             placeholder="End date"
@@ -562,7 +570,7 @@ const DashboardCv = () => {
 
                         <button
                           type="submit"
-                          className="py-2 px-3 bg-green-600 w-48 flex justify-center text-white font-bold"
+                          className="py-2 px-3 bg-primary w-48 flex justify-center text-white rounded-lg cursor-pointer "
                         >
                           {loading ? <Spinner /> : "Add"}
                         </button>
@@ -617,21 +625,21 @@ const DashboardCv = () => {
 
           {selectedTab == 4 && (
             <div>
-              <div className="flex justify-between">
-                <h1 className="font-bold text-xl">Referees</h1>
+              <div className="flex justify-between items-center">
+                <h1 className=" text-xl">Referees</h1>
                 <div
                   onClick={() => {
                     setshowRefereesForm(true);
                   }}
-                  className="text-white cursor-pointer bg-green-600 font-bold px-3 py-2"
+                  className="py-2  px-2 w-48 flex justify-center bg-primary text-white  rounded-lg cursor-pointer"
                 >
                   Add refreees
                 </div>
                 {showRefereesForm && (
                   <div className="fixed inset-0 bg-black bg-opacity-25 z-50 flex justify-center items-center">
                     <div className="w-5/12 bg-white  shadow-xl h-3/4 overflow-scroll  px-8 py-10">
-                      <div className="flex justify-between mb-5">
-                        <h1 className="text-2xl font-bold">Add Refree</h1>
+                      <div className="flex justify-between items-center mb-5">
+                        <h1 className="text-lg ">Add Refree</h1>
                         <svg
                           onClick={() => {
                             setshowRefereesForm(false);
@@ -676,46 +684,54 @@ const DashboardCv = () => {
                         }}
                       >
                         <div className="flex flex-col space-y-1">
-                          <label>Refree name</label>
+                          <label className="text-sm text-muted">
+                            Refree name
+                          </label>
                           <input
                             required
-                            className="w-full border-slate-300"
+                            className="w-full border-borderColor rounded-md focus:ring-primary focus:border-primary"
                             name="name"
                             placeholder="Refreee name"
                           />
                         </div>
                         <div className="flex flex-col space-y-1">
-                          <label>Company</label>
+                          <label className="text-sm text-muted">Company</label>
                           <input
                             required
-                            className="w-full border-slate-300"
+                            className="w-full border-borderColor rounded-md focus:ring-primary focus:border-primary"
                             name="company"
                             placeholder="Company name"
                           />
                         </div>
                         <div className="flex flex-col space-y-1">
-                          <label>Their position at company</label>
+                          <label className="text-sm text-muted">
+                            Their position at company
+                          </label>
                           <input
                             required
-                            className="w-full border-slate-300"
+                            className="w-full border-borderColor rounded-md focus:ring-primary focus:border-primary"
                             name="position"
                             placeholder="Enter position at company"
                           />
                         </div>
                         <div className="flex flex-col space-y-1">
-                          <label>Refree phone number</label>
+                          <label className="text-sm text-muted">
+                            Refree phone number
+                          </label>
                           <input
                             required
-                            className="w-full border-slate-300"
+                            className="w-full border-borderColor rounded-md focus:ring-primary focus:border-primary"
                             name="phone"
                             placeholder="Enter phone number "
                           />
                         </div>
                         <div className="flex flex-col space-y-1">
-                          <label>Refree Email addrss</label>
+                          <label className="text-sm text-muted">
+                            Refree Email addrss
+                          </label>
                           <input
                             required
-                            className="w-full border-slate-300"
+                            className="w-full border-borderColor rounded-md focus:ring-primary focus:border-primary"
                             name="email"
                             placeholder="Enter email address"
                           />
@@ -723,7 +739,7 @@ const DashboardCv = () => {
 
                         <button
                           type="submit"
-                          className="py-2 px-3 bg-green-600 w-48 flex justify-center text-white font-bold"
+                          className="py-2 px-3 bg-primary rounded-lg w-48 flex justify-center text-white"
                         >
                           {loading ? <Spinner /> : "Add"}
                         </button>
@@ -786,7 +802,7 @@ const DashboardCv = () => {
                   {loading ? (
                     <Spinner color={"border-black"} />
                   ) : (
-                    <div className="flex flex-col text-center justify-center border-2 border-dotted px-5 border-slate-300 items-center py-10">
+                    <div className="flex flex-col text-center justify-center border-2 border-dotted px-5 border-borderColor rounded-md focus:ring-primary focus:border-primary items-center py-10">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -809,12 +825,12 @@ const DashboardCv = () => {
                 <a
                   target="__blank"
                   href={user.cv.link}
-                  className="flex flex-col text-center justify-center border-2 border-dotted px-5 border-slate-300 items-center py-10"
+                  className="flex flex-col text-center justify-center border-2 border-dotted px-5 border-borderColor rounded-md focus:ring-primary focus:border-primary items-center py-10"
                 >
                   <img className="w-24" src="/pdf.png" />
-                  <div className="font-bold mt-3">{user.cv.name}</div>
+                  <div className=" mt-3">{user.cv.name}</div>
                   <h1
-                    className="cursor-pointer pt-5 text-red-200 hover:text-red-600 font-bold"
+                    className="cursor-pointer pt-5 text-red-200 hover:text-red-600 "
                     onClick={() => {
                       updateUser(user.id, { cv: null }).then((data) => {
                         setRefresh(refresh + 1);

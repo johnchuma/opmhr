@@ -19,12 +19,12 @@ const DashboardBlog = () => {
   }, [refresh]);
   return loading ? (
     <div className="flex   ms-auto w-full  justify-center items-center h-96">
-      <div className="border-4 rounded-full border-primary h-8 w-8 animate-spin border-t-transparent "></div>
+      <div className="border-4 rounded-full border-textColor h-8 w-8 animate-spin border-t-transparent "></div>
     </div>
   ) : (
     <div>
       <div className="flex justify-between">
-        <h1 className="text-2xl font-bold">Blog posts</h1>
+        <h1 className="text-lg">Blog posts</h1>
         <AddBlog refresh={refresh} setRefresh={setRefresh} />
       </div>
       {posts.length < 1 ? (

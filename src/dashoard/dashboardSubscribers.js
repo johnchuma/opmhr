@@ -22,14 +22,14 @@ const DashboardSubscribers = () => {
   }, [refresh]);
   return loading ? (
     <div className="flex   ms-auto w-full  justify-center items-center h-96">
-      <div className="border-4 rounded-full border-primary h-8 w-8 animate-spin border-t-transparent "></div>
+      <div className="border-4 rounded-full border-textColor h-8 w-8 animate-spin border-t-transparent "></div>
     </div>
   ) : (
     <div>
       <div className="flex justify-between">
-        <h1 className="text-2xl font-bold">Subscribers</h1>
+        <h1 className="text-lg">Subscribers</h1>
         <button
-          className="py-2 px-4 bg-orange-500 text-white font-bold"
+          className="py-2 px-4 bg-primary text-white rounded-lg"
           onClick={() => {
             exportToExcel(subscribers);
           }}
@@ -37,27 +37,33 @@ const DashboardSubscribers = () => {
           Download Excel
         </button>
       </div>
-      <div className="bg-white p-5 shadow mt-5">
+      <div className="bg-white p-5 border border-borderColor py-5 rounded-md mt-5">
         {subscribers.length < 1 ? (
           <NoData />
         ) : (
           <table className=" w-full">
             <thead className="px-5">
-              <tr>
-                <th className="text-start">Subscribed</th>
-                <th className="text-start">Phone</th>
-                <th className="text-start">Email</th>
+              <tr className="border-b border-borderColor border-opacity-70">
+                <th className="text-start text-sm pb-2 font-normal text-muted">
+                  Subscribed
+                </th>
+                <th className="text-start text-sm pb-2 font-normal text-muted">
+                  Phone
+                </th>
+                <th className="text-start text-sm pb-2 font-normal text-muted">
+                  Email
+                </th>
                 <th></th>
               </tr>
             </thead>
             <tbody className="mt-3">
               {subscribers.map((item) => (
                 <tr className={`cursor-pointer hover:opacity-100`}>
-                  <td className="py-2">
+                  <td className="py-2 text-sm font-normal">
                     {formatDate(item.createdAt.toDate())}
                   </td>
-                  <td className="py-2">{item.phone}</td>
-                  <td className="py-2">{item.email}</td>
+                  <td className="py-2 text-sm font-normal">{item.phone}</td>
+                  <td className="py-2 text-sm font-normal">{item.email}</td>
                 </tr>
               ))}
             </tbody>

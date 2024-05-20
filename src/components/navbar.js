@@ -3,18 +3,28 @@ import { useNavigate } from "react-router-dom";
 const Navbar = () => {
   const navigate = useNavigate();
   return (
-    <div className="fixed w-full bg-white  text-muted z-50">
+    <div className="fixed w-full bg-white border-b border-borderColor  text-muted z-50">
       <div className="flex w-11/12  items-center mx-auto py-4 justify-between">
-        <img className="h-12" src="/logo.jpeg" />
+        <img
+          className="h-12 cursor-pointer"
+          onClick={() => {
+            navigate("/");
+          }}
+          src="/logo.jpeg"
+        />
         <div className="flex space-x-3">
           {[
-            { title: "Products", path: "" },
-            { title: "Company", path: "" },
-            { title: "Jobs", path: "" },
-            { title: "Posts", path: "" },
-            { title: "Contacts", path: "" }
+            { title: "Services", path: "/services/0" },
+            { title: "Products", path: "/products" },
+            { title: "Company", path: "/company" },
+            { title: "Investment", path: "/investment" },
+            { title: "Jobs", path: "/jobs" },
+            { title: "Posts", path: "/blog" },
+            { title: "Contacts", path: "/contactus" }
           ].map((item) => {
-            return <button>{item.title}</button>;
+            return (
+              <button onClick={() => navigate(item.path)}>{item.title}</button>
+            );
           })}
         </div>
         <div className="flex space-x-3">

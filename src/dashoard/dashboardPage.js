@@ -6,6 +6,7 @@ import {
 import PageLoader from "../components/pageLoader";
 import { useEffect, useState } from "react";
 import moment from "moment";
+import DashboardUsers from "./dashboardUsers";
 
 const DashboardPage = () => {
   const [dashboardData, setDashboardData] = useState(null);
@@ -46,7 +47,7 @@ const DashboardPage = () => {
             </svg>
           </div>
           <div>
-            <h1 className="text-lg text-textColor">
+            <h1 className="text-base text-textColor">
               {dashboardData.totalApplicants} Users
             </h1>
             <p className="text-muted text-sm">Total Applicants</p>
@@ -69,7 +70,7 @@ const DashboardPage = () => {
             </svg>
           </div>
           <div>
-            <h1 className="text-textColor text-lg">
+            <h1 className="text-textColor text-base">
               {dashboardData.totalCompanies} Companies
             </h1>
             <p className="text-muted text-sm">Total companies</p>
@@ -87,7 +88,9 @@ const DashboardPage = () => {
             </svg>
           </div>
           <div>
-            <h1 className=" text-lg">{dashboardData.totalVisitors} visitors</h1>
+            <h1 className="text-base">
+              {dashboardData.totalVisitors} visitors
+            </h1>
             <p className="text-sm text-muted">Total website visitors</p>
           </div>
         </div>
@@ -107,7 +110,7 @@ const DashboardPage = () => {
             </svg>
           </div>
           <div>
-            <h1 className=" text-lg ">
+            <h1 className="text-base ">
               {dashboardData.totalInquiries} Inquiries
             </h1>
             <p className=" text-sm text-muted line-clamp-1">Unread inquiries</p>
@@ -130,7 +133,7 @@ const DashboardPage = () => {
             </svg>
           </div>
           <div>
-            <h1 className=" text-lg">{dashboardData.totalBlogs} Posts</h1>
+            <h1 className="text-base">{dashboardData.totalBlogs} Posts</h1>
             <p className=" line-clamp-1 text-muted text-sm">Total blog posts</p>
           </div>
         </div>
@@ -147,15 +150,15 @@ const DashboardPage = () => {
             </svg>
           </div>
           <div>
-            <h1 className=" text-lg">{dashboardData.totalJobs} Jobs</h1>
+            <h1 className="text-base">{dashboardData.totalJobs} Jobs</h1>
             <p className=" text-sm text-muted line-clamp-1">Total job posts</p>
           </div>
         </div>
       </div>
       <div className="grid grid-cols-12 mb-8">
         <div className=" col-span-12">
-          <h1 className="mt-8  text-xl">Website visitors Trend (yearly)</h1>
-          <div className=" border border-borderColor   mt-3 bg-white w-full p-8 rounded-lg"></div>
+          <h1 className="mt-8  text-lg">New registered users</h1>
+          <DashboardUsers hideHeader={true} />
         </div>
         <div className=" col-span-4"></div>
       </div>

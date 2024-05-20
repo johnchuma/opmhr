@@ -8,7 +8,7 @@ import UserProfile from "../components/userProfile";
 import NoData from "../components/noData";
 import { timeAgo } from "../utils/time_ago";
 
-const DashboardUsers = () => {
+const DashboardUsers = ({ hideHeader }) => {
   const [users, setUsers] = useState([]);
   const [refresh, setRefresh] = useState(0);
   const [selectedUser, setSelectedUser] = useState(null);
@@ -25,49 +25,82 @@ const DashboardUsers = () => {
   }, [refresh]);
   return loading ? (
     <div className="flex   ms-auto w-full  justify-center items-center h-96">
-      <div className="border-4 rounded-full border-primary h-8 w-8 animate-spin border-t-transparent "></div>
+      <div className="border-4 rounded-full border-textColor h-8 w-8 animate-spin border-t-transparent "></div>
     </div>
   ) : (
     <div className="text-textColor">
-      <div className="flex justify-between">
-        <h1 className="text-lg">Users/Applicants</h1>
-        <input
-          onChange={(e) => {
-            setkeyword(e.target.value);
-          }}
-          placeholder="Search here"
-          className="bg-transparent border-borderColor rounded-lg"
-        />
-      </div>
-      {users.length < 1 ? (
-        <NoData />
-      ) : (
-        <div className="grid grid-cols-4 gap-8 px-8 py-8 bg-white  border border-borderColor rounded-lg mt-5 w-full">
-          {users
-            .filter((item) =>
-              item.name.toLowerCase().includes(keyword.toLowerCase())
-            )
-            .map((item) => (
-              <div className="items-center border border-borderColor py-3 rounded-2xl flex flex-col">
-                <img
-                  onClick={() => {
-                    setSelectedUser(item);
-                    setShowModal(true);
-                  }}
-                  className="aspect-squire rounded-full h-24 w-24 object-cover"
-                  src={item.profileURL}
-                />
-                <h1 className="">{item.name}</h1>
-                <p className="text-muted text-sm">
-                  Joined {timeAgo(item.createdAt.toDate())}
-                </p>
-              </div>
-            ))}
-          {showModal == true && (
-            <UserProfile setShowModal={setShowModal} item={selectedUser} />
-          )}
+      {hideHeader ?? (
+        <div className="flex justify-between">
+          <h1 className="text-lg">Users/Applicants</h1>
+          <input
+            onChange={(e) => {
+              setkeyword(e.target.value);
+            }}
+            placeholder="Search here"
+            className="border-borderColor rounded-md focus:ring-primary focus:border-primary"
+          />
         </div>
       )}
+      <div className="bg-white p-5 border border-borderColor py-5 rounded-md mt-5">
+        {users.length < 1 ? (
+          <NoData />
+        ) : (
+          <table className=" w-full">
+            <thead className="px-5 font-normal">
+              <tr className="border-b border-borderColor border-opacity-70">
+                <th className="text-start text-sm font-normal text-muted pb-2"></th>
+                <th className="text-start text-sm font-normal text-muted pb-2">
+                  Full name
+                </th>
+                <th className="text-start text-sm font-normal text-muted pb-2">
+                  Email
+                </th>
+                <th className="text-start text-sm font-normal text-muted pb-2">
+                  Phone
+                </th>
+                <th className="text-start text-sm font-normal text-muted pb-2">
+                  Address
+                </th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody className="mt-3">
+              {users
+                .filter((item) =>
+                  item.name.toLowerCase().includes(keyword.toLowerCase())
+                )
+                .map((item) => (
+                  <tr className="">
+                    <td className="py-2 text-sm">
+                      <img
+                        src={item.profileURL}
+                        className="h-6 w-6 rounded-full"
+                      />
+                    </td>
+                    <td className="py-2 text-sm">{item.name}</td>
+                    <td className="py-2 text-sm">{item.email}</td>
+                    <td className="py-2 text-sm">{item.phone}</td>
+                    <td className="py-2 text-sm">{item.address}</td>
+                    <td className="py-2 text-sm">
+                      <button
+                        onClick={() => {
+                          setSelectedUser(item);
+                          setShowModal(true);
+                        }}
+                        className="bg-orange-100 text-sm px-3 py-1 rounded-full "
+                      >
+                        View profile
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+            </tbody>
+          </table>
+        )}
+        {showModal == true && (
+          <UserProfile setShowModal={setShowModal} item={selectedUser} />
+        )}
+      </div>
     </div>
   );
 };

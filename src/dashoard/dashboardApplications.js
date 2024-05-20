@@ -50,12 +50,12 @@ const DashboardApplications = () => {
   }, [refresh]);
   return loading ? (
     <div className="flex   ms-auto w-full  justify-center items-center h-96">
-      <div className="border-4 rounded-full border-primary h-8 w-8 animate-spin border-t-transparent "></div>
+      <div className="border-4 rounded-full border-textColor h-8 w-8 animate-spin border-t-transparent "></div>
     </div>
   ) : (
     <div>
-      <div className="flex justify-between">
-        <h1 className="text-2xl font-bold">
+      <div className="flex justify-between items-center">
+        <h1 className="text-lg">
           {user.role == "User" ? "My Applications" : "Applications"}{" "}
         </h1>
         <input
@@ -63,20 +63,28 @@ const DashboardApplications = () => {
             setkeyword(e.target.value);
           }}
           placeholder="Search here"
-          className="bg-transparent rounded border-slate-300"
+          className="border-borderColor rounded-md focus:ring-primary focus:border-primary"
         />
       </div>
-      <div className="bg-white p-5 shadow mt-5">
+      <div className="bg-white p-5 border border-borderColor py-5 rounded-md mt-5">
         {applications.length < 1 ? (
           <NoData />
         ) : (
           <table className=" w-full">
             <thead className="px-5">
-              <tr>
-                <th className="text-start">Sent</th>
-                <th className="text-start">Applicant</th>
-                <th className="text-start">Job Position</th>
-                <th className="text-start">Phone number</th>
+              <tr className="border-b border-borderColor border-opacity-70">
+                <th className="text-start text-sm font-normal text-muted pb-2">
+                  Sent
+                </th>
+                <th className="text-start text-sm font-normal text-muted pb-2">
+                  Applicant
+                </th>
+                <th className="text-start text-sm font-normal text-muted pb-2">
+                  Job Position
+                </th>
+                <th className="text-start text-sm font-normal text-muted pb-2">
+                  Phone number
+                </th>
                 <th></th>
                 <th></th>
               </tr>
@@ -92,12 +100,12 @@ const DashboardApplications = () => {
                       item.isRead ? "opacity-50" : ""
                     } cursor-pointer hover:opacity-100`}
                   >
-                    <td className="py-2">
+                    <td className="py-2 text-sm">
                       {formatDate(item.createdAt.toDate())}
                     </td>
-                    <td className="py-2">{item.name}</td>
-                    <td className="py-2">{item.jobTitle}</td>
-                    <td className="py-2">{item.phone}</td>
+                    <td className="py-2 text-sm">{item.name}</td>
+                    <td className="py-2 text-sm">{item.jobTitle}</td>
+                    <td className="py-2 text-sm">{item.phone}</td>
                     {/* <td className="py-2">{item.service}</td> */}
 
                     <td>
@@ -106,7 +114,7 @@ const DashboardApplications = () => {
                           setselectedItem(item);
                           setShowModal(true);
                         }}
-                        className="py-1 px-3 bg-green-100 text-sm font-bold rounded-full"
+                        className="py-1 px-3 bg-orange-100 text-sm rounded-full"
                       >
                         View application
                       </button>

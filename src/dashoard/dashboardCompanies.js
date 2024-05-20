@@ -12,6 +12,7 @@ const DashboardCompanies = () => {
   const [keyword, setkeyword] = useState("");
   const [loading, setLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(null);
 
   useEffect(() => {
     setLoading(true);
@@ -22,7 +23,7 @@ const DashboardCompanies = () => {
   }, [refresh]);
   return loading ? (
     <div className="flex   ms-auto w-full  justify-center items-center h-96">
-      <div className="border-4 rounded-full border-primary h-8 w-8 animate-spin border-t-transparent "></div>
+      <div className="border-4 rounded-full border-textColor h-8 w-8 animate-spin border-t-transparent "></div>
     </div>
   ) : (
     <div>
@@ -33,26 +34,27 @@ const DashboardCompanies = () => {
             setkeyword(e.target.value);
           }}
           placeholder="Search here"
-          className="border-borderColor rounded-lg"
+          className="border-borderColor rounded-md focus:ring-primary focus:border-primary"
         />
       </div>
-      <div className="bg-white p-5 border border-borderColor py-5 rounded-xl mt-5">
+      <div className="bg-white p-5 border border-borderColor py-5 rounded-md mt-5">
         {companies.length < 1 ? (
           <NoData />
         ) : (
           <table className=" w-full">
             <thead className="px-5 font-normal">
               <tr className="border-b border-borderColor border-opacity-70">
-                <th className="text-start font-normal text-muted pb-2">
-                  Full name
+                <th className="text-start font-normal text-sm  text-muted pb-2"></th>
+                <th className="text-start font-normal text-sm  text-muted pb-2">
+                  Company
                 </th>
-                <th className="text-start font-normal text-muted pb-2">
+                <th className="text-start font-normal text-sm  text-muted pb-2">
                   Email
                 </th>
-                <th className="text-start font-normal text-muted pb-2">
+                <th className="text-start font-normal text-sm  text-muted pb-2">
                   Phone
                 </th>
-                <th className="text-start font-normal text-muted pb-2">
+                <th className="text-start font-normal text-sm  text-muted pb-2">
                   Address
                 </th>
                 <th></th>
@@ -65,6 +67,9 @@ const DashboardCompanies = () => {
                 )
                 .map((item) => (
                   <tr className="">
+                    <td className="py-2 text-sm">
+                      <img src={item.profileURL} className="h-6 w-6 " />
+                    </td>
                     <td className="py-2 text-sm">{item.name}</td>
                     <td className="py-2 text-sm">{item.email}</td>
                     <td className="py-2 text-sm">{item.phone}</td>
@@ -73,8 +78,9 @@ const DashboardCompanies = () => {
                       <button
                         onClick={() => {
                           setShowModal(true);
+                          setSelectedItem(item);
                         }}
-                        className="bg-orange-100 text-sm px-3 py-2 rounded-full "
+                        className="bg-orange-100 text-sm px-3 py-1 rounded-full "
                       >
                         View Logo
                       </button>
@@ -105,7 +111,7 @@ const DashboardCompanies = () => {
                           <div className="flex justify-center">
                             <img
                               className="aspect-squire  h-48 my-5  object-cover"
-                              src={item.profileURL}
+                              src={selectedItem.profileURL}
                             />
                           </div>
                         </div>

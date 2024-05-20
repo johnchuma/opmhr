@@ -27,31 +27,39 @@ const DashboardInquiries = () => {
   }, [refresh]);
   return loading ? (
     <div className="flex   ms-auto w-full  justify-center items-center h-96">
-      <div className="border-4 rounded-full border-primary h-8 w-8 animate-spin border-t-transparent "></div>
+      <div className="border-4 rounded-full border-textColor h-8 w-8 animate-spin border-t-transparent "></div>
     </div>
   ) : (
     <div>
       <div className="flex justify-between">
-        <h1 className="text-2xl font-bold">Inquiries</h1>
+        <h1 className="text-lg ">Inquiries</h1>
         <input
           onChange={(e) => {
             setkeyword(e.target.value);
           }}
           placeholder="Search here"
-          className="bg-transparent"
+          className="border-borderColor rounded-md focus:ring-primary focus:border-primary"
         />
       </div>
-      <div className="bg-white p-5 shadow mt-5">
+      <div className="bg-white p-5 border border-borderColor py-5 rounded-md mt-5">
         {inquiries.length < 1 ? (
           <NoData />
         ) : (
           <table className=" w-full">
             <thead className="px-5">
-              <tr>
-                <th className="text-start">Sent</th>
-                <th className="text-start">Full name</th>
-                <th className="text-start">Email</th>
-                <th className="text-start">Phone</th>
+              <tr className="border-b border-borderColor border-opacity-70">
+                <th className="text-start font-normal text-sm pb-2 text-muted">
+                  Sent
+                </th>
+                <th className="text-start font-normal text-sm pb-2 text-muted">
+                  Full name
+                </th>
+                <th className="text-start font-normal text-sm pb-2 text-muted">
+                  Email
+                </th>
+                <th className="text-start font-normal text-sm pb-2 text-muted">
+                  Phone
+                </th>
                 {/* <th className="text-start">Service</th> */}
                 <th></th>
               </tr>
@@ -63,10 +71,12 @@ const DashboardInquiries = () => {
                 )
                 .map((item) => (
                   <tr className={`cursor-pointer hover:opacity-100`}>
-                    <td className="py-2">{timeAgo(item.createdAt.toDate())}</td>
-                    <td className="py-2">{item.name}</td>
-                    <td className="py-2">{item.email}</td>
-                    <td className="py-2">{item.phone}</td>
+                    <td className="py-2 text-sm">
+                      {timeAgo(item.createdAt.toDate())}
+                    </td>
+                    <td className="py-2 text-sm">{item.name}</td>
+                    <td className="py-2 text-sm">{item.email}</td>
+                    <td className="py-2 text-sm">{item.phone}</td>
                     {/* <td className="py-2">{item.service}</td> */}
                     <td>
                       <button
@@ -74,7 +84,7 @@ const DashboardInquiries = () => {
                           setselectedItem(item);
                           setShowModal(true);
                         }}
-                        className="py-1 px-3 bg-green-100 text-sm font-bold rounded-full"
+                        className="py-1 px-3 bg-orange-100 text-sm  rounded-full"
                       >
                         Read message
                       </button>

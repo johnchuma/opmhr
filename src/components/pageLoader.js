@@ -5,7 +5,7 @@ const PageLoader = ({ height }) => {
         height ?? "h-96"
       }`}
     >
-      <div className="border-4 rounded-full border-primary h-8 w-8 animate-spin border-t-transparent "></div>
+      <div className="border-4 rounded-full border-textColor h-8 w-8 animate-spin border-t-transparent "></div>
     </div>
   );
 };

@@ -18,6 +18,16 @@ import DashboardLayout from "./layouts/dashboardLayout";
 import DashboardSubscribers from "./dashoard/dashboardSubscribers";
 import LoginPage from "./auth/loginPage";
 import RegisterPage from "./auth/registerPage";
+import BlogPage from "./pages/blogPage";
+import JobsPage from "./pages/jobsPage";
+import BlogPostDetails from "./pages/blogPostDetails";
+import JobDetails from "./pages/jobDetails";
+import ApplyForAJob from "./pages/applyForAJob";
+import ContactPage from "./pages/contactpage";
+import ServicesPage from "./pages/servicesPage";
+import CompanyPage from "./pages/companyPage";
+import ProductPage from "./pages/productsPage";
+import InvestmentPage from "./pages/investmentPage";
 
 function App() {
   return (
@@ -28,6 +38,20 @@ function App() {
           <Route path="/register" index element={<RegisterPage />} />
           <Route path="/" element={<MainLayout />}>
             <Route index path="/" element={<HomePage />} />
+            <Route path="/contactus" element={<ContactPage />} />
+            <Route path="/jobs" element={<JobsPage />} />
+            <Route path="/services/:uuid" element={<ServicesPage />} />
+            <Route path="/company" element={<CompanyPage />} />
+            <Route path="/products" element={<ProductPage />} />
+            <Route path="/investment" element={<InvestmentPage />} />
+
+            <Route path="/blog" element={<BlogPage />} />
+            <Route
+              path="/blogPostDetails/:uuid"
+              element={<BlogPostDetails />}
+            />
+            <Route path="/jobDetails/:uuid" element={<JobDetails />} />
+            <Route path="/applyForAJob/:uuid" element={<ApplyForAJob />} />
           </Route>
           <Route
             path="/dashboard"

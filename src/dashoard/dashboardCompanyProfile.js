@@ -75,7 +75,7 @@ const CompanyProfile = () => {
               <input
                 defaultValue={user.name}
                 name="name"
-                className="w-full border-slate-300"
+                className="w-full border-borderColor rounded-md focus:ring-primary focus:border-primary"
                 placeholder="Enter your full name"
               />
             </div>
@@ -87,7 +87,7 @@ const CompanyProfile = () => {
                 defaultValue={user.phone}
                 type="number"
                 name="phone"
-                className="w-full border-slate-300"
+                className="w-full border-borderColor rounded-md focus:ring-primary focus:border-primary"
                 placeholder="Enter your age"
               />
             </div>
@@ -98,14 +98,14 @@ const CompanyProfile = () => {
                 required
                 defaultValue={user.address}
                 name="address"
-                className="w-full border-slate-300"
+                className="w-full border-borderColor rounded-md focus:ring-primary focus:border-primary"
                 placeholder="Enter your address"
               />
             </div>
           </div>
           <button
             type="submit"
-            className="py-3 mt-5 px-4 w-48 flex justify-center bg-green-600 text-white font-bold"
+            className="py-3 mt-5 px-4 w-48 flex justify-center bg-primary text-white font-bold"
           >
             {loading ? <Spinner /> : "Save Changes"}
           </button>

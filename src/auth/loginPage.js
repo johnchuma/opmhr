@@ -66,7 +66,7 @@ const LoginPage = () => {
             <input
               required
               name="email"
-              className="w-full border-slate-300 placeholder:text-sm focus:border-primary focus:ring-primary rounded-lg"
+              className="w-full border-borderColor rounded-md focus:ring-primary focus:border-primary placeholder:text-sm focus:border-primary focus:ring-primary rounded-lg"
               placeholder="Enter email address"
             />
           </div>
@@ -76,7 +76,7 @@ const LoginPage = () => {
               type="password"
               required
               name="password"
-              className="w-full focus:border-primary placeholder:text-sm focus:ring-primary rounded-lg border-slate-300"
+              className="w-full focus:border-primary placeholder:text-sm focus:ring-primary rounded-lg border-borderColor rounded-md focus:ring-primary focus:border-primary"
               placeholder="Enter your password"
             />
           </div>

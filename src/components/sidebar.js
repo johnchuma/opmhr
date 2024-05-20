@@ -295,8 +295,8 @@ const Sidebar = () => {
                   className={`${
                     pathname == item.path
                       ? "bg-primary hover:bg-opacity-90 rounded-lg text-sm text-white"
-                      : " text-white  opacity-70 text-sm hover:bg-slate-800"
-                  }  flex space-x-2 px-5 py-2 items-center cursor-pointer `}
+                      : " text-white  opacity-70 text-sm hover:bg-[#393D3D] rounded-lg"
+                  }  flex space-x-2 px-5 py-2 items-center cursor-pointer transition-all `}
                 >
                   {item.icon}
                   <h1 className="text-base">{item.title}</h1>
