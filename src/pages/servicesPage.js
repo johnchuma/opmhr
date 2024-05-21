@@ -1,51 +1,23 @@
 import { useNavigate, useParams } from "react-router-dom";
+import { services } from "../utils/arrays";
+import { useEffect, useState } from "react";
 
 const ServicesPage = () => {
   const { uuid } = useParams();
   const navigate = useNavigate();
+  const [index, setIndex] = useState(0);
+  useEffect(() => {
+    var no = services.indexOf(uuid);
+    setIndex(no);
+  }, [uuid]);
   return (
     <div>
       <div className="py-12" />
-      <h1 className="text-2xl text-center mb-2">Our services</h1>
-      <p className="text-muted text-center">
-        We strive to provide top-notch HR service in practise with High
-        Technology.
-      </p>
-      <div className="grid grid-cols-12 w-11/12 mx-auto gap-8 mt-12 bg-white p-3  ">
-        <div className="col-span-4">
-          <div className="">
-            <div className=" space-y-2 ">
-              {[
-                "Performance management services",
-                "HR advisory and consultancy",
-                "International and Local HR Data Analytics & Reporting",
-                "AI & Machine learning in global HR",
-                "Global Staff outsourcing solutions",
-                "Change management & trainings services",
-                "Global HR Process Automation",
-                "Global HR Transformation Strategy",
-                "HR Data analytics & reporting",
-              ].map((item, index) => {
-                return (
-                  <div
-                    onClick={() => {
-                      navigate(`/services/${index}`);
-                    }}
-                    className={`border-2 transition-all px-3 rounded-md duration-300 cursor-pointer py-2 hover:scale-105 border-gray-200   ${
-                      uuid == index
-                        ? "  flex justify-between bg-primary text-white group hover:px-2"
-                        : " text-muted bg-white"
-                    }`}
-                  >
-                    <p>{item}</p>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-        <div className="col-span-8 space-y-4  ">
-          {uuid == 0 && (
+
+      <div className="grid grid-cols-12 w-11/12 mx-auto gap-8 mt-6 bg-white p-3  ">
+        <div className="col-span-12 space-y-4  ">
+          <h1 className="font-bold text-2xl">{uuid}</h1>
+          {index == 0 && (
             <div className=" space-y-4">
               <p>
                 Our Performance Management services are designed to elevate your
@@ -60,7 +32,7 @@ const ServicesPage = () => {
                   "Feedback and Coaching: Our expert team offers personalized feedback and coaching to employees, fostering a culture of continuous improvement and growth within your organization.",
                   "Training and Development: We provide tailored training programs aimed at enhancing employee skills and competencies, driving performance and productivity.",
                   "Performance Improvement Plans: In cases where performance falls below expectations, we assist in developing performance improvement plans that support employees in reaching their full potential.",
-                  "Data-Driven Insights: Leveraging advanced analytics, we provide data-driven insights to help identify trends, monitor performance metrics, and make informed decisions to optimize performance management processes.",
+                  "Data-Driven Insights: Leveraging advanced analytics, we provide data-driven insights to help identify trends, monitor performance metrics, and make informed decisions to optimize performance management processes."
                 ].map((item) => {
                   return <li>{item}</li>;
                 })}
@@ -74,7 +46,7 @@ const ServicesPage = () => {
               </p>
             </div>
           )}
-          {uuid == 1 && (
+          {index == 1 && (
             <div className="space-y-3">
               <p>
                 We're pioneering the integration of AI and machine learning
@@ -143,7 +115,7 @@ const ServicesPage = () => {
               </p>
             </div>
           )}
-          {uuid == 2 && (
+          {index == 2 && (
             <div className="space-y-3">
               <p>
                 We understand the unique challenges and opportunities of
@@ -187,10 +159,6 @@ const ServicesPage = () => {
                   effective.
                 </li>
               </ul>
-            </div>
-          )}
-          {uuid == 3 && (
-            <div className="space-y-3">
               <h2>Our Services Include:</h2>
 
               <ul className="list list-outside list-decimal ms-3">
@@ -226,7 +194,8 @@ const ServicesPage = () => {
               </p>
             </div>
           )}
-          {uuid == 4 && (
+
+          {index == 3 && (
             <div className="space-y-3">
               <p>
                 We, the OPM Team, are proud to offer comprehensive HR Advisory &
@@ -286,10 +255,6 @@ const ServicesPage = () => {
                   budget.
                 </li>
               </ul>
-            </div>
-          )}
-          {uuid == 5 && (
-            <div className="space-y-3">
               <p>
                 Our team of HR experts has a deep understanding of the latest HR
                 trends and best practices globally. We are committed to
@@ -324,7 +289,8 @@ const ServicesPage = () => {
               </ul>
             </div>
           )}
-          {uuid == 6 && (
+
+          {index == 4 && (
             <div className="space-y-3">
               <p>
                 We recognize that successful implementation of HR initiatives
@@ -382,7 +348,7 @@ const ServicesPage = () => {
             </div>
           )}
 
-          {uuid == 7 && (
+          {index == 5 && (
             <div className="space-y-3">
               <p>
                 We understand that staying competitive in today's fast-paced
@@ -435,7 +401,7 @@ const ServicesPage = () => {
               </p>
             </div>
           )}
-          {uuid == 8 && (
+          {index == 6 && (
             <div className="space-y-3">
               <p>
                 In the digital age, data is king, and at OPM International HR
@@ -491,7 +457,7 @@ const ServicesPage = () => {
               </p>
             </div>
           )}
-          {uuid == 9 && (
+          {index == 7 && (
             <div className="space-y-3">
               <p>
                 We understand the challenges that businesses face in managing
