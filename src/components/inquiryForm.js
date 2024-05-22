@@ -2,6 +2,7 @@ import { useState } from "react";
 import Spinner from "./spinner";
 import { addInquiry } from "../controllers/inquiriesController";
 import { Toaster, toast } from "react-hot-toast";
+import { services } from "../utils/arrays";
 
 const InquiryForm = () => {
   const [loading, setLoading] = useState(false);
@@ -19,7 +20,7 @@ const InquiryForm = () => {
             phone: e.target.phone.value,
             service: e.target.service.value,
             message: e.target.message.value,
-            isRead: false
+            isRead: false,
           };
           addInquiry(data).then((data) => {
             setLoading(false);
@@ -69,16 +70,7 @@ const InquiryForm = () => {
             className="w-full rounded-lg border border-borderColor focus:ring-primary focus:border-primary"
           >
             <option>Select service</option>
-            {[
-              "Restructuring & Turnaround",
-              "Business Planning",
-              "Exit & Succession Plan",
-              "Strategic Plan",
-              "Global risk & Investigations",
-              "Audit & Assurance",
-              "Trades & Stocks",
-              "Information Technology"
-            ].map((item) => {
+            {services.map((item) => {
               return <option value={item}>{item}</option>;
             })}
           </select>

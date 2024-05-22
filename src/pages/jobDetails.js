@@ -112,13 +112,13 @@ const JobDetails = () => {
           ></div>
 
           {user == null ? (
-            <div className="mt-8 text-green-600">
+            <div className="mt-8 text-muted text-sm">
               To apply for this job you need to{" "}
               <span
                 onClick={() => {
                   navigate("/login");
                 }}
-                className="font-bold cursor-pointer text-red-400 italic"
+                className="font-medium cursor-pointer  text-primary"
               >
                 Login
               </span>
@@ -128,7 +128,7 @@ const JobDetails = () => {
               <div>
                 {" "}
                 {job.applicants.includes(user.id) ? (
-                  <button className="py-3 px-5 bg-green-100 text-green-700 font-bold mt-5 ">
+                  <button className="py-3 px-5 bg-green-100 text-green-700 font-medium mt-5 ">
                     Applied
                   </button>
                 ) : (
@@ -136,7 +136,7 @@ const JobDetails = () => {
                     onClick={() => {
                       navigate(`/applyForAJob/${job.id}`);
                     }}
-                    className="py-3 px-5 bg-primary font-bold mt-5 text-white"
+                    className="py-3 px-5 bg-primary font-medium mt-5 text-white"
                   >
                     Apply for a Job
                   </button>

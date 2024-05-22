@@ -28,8 +28,13 @@ import ServicesPage from "./pages/servicesPage";
 import CompanyPage from "./pages/companyPage";
 import ProductPage from "./pages/productsPage";
 import InvestmentPage from "./pages/investmentPage";
-
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+import AOS from "aos";
 function App() {
+  useEffect(() => {
+    AOS.init({});
+  }, []);
   return (
     <div className=" font-aeonik text-textColor">
       <BrowserRouter>
@@ -42,7 +47,7 @@ function App() {
             <Route path="/jobs" element={<JobsPage />} />
             <Route path="/services/:uuid" element={<ServicesPage />} />
             <Route path="/company" element={<CompanyPage />} />
-            <Route path="/products" element={<ProductPage />} />
+            <Route path="/products/:uuid" element={<ProductPage />} />
             <Route path="/investment" element={<InvestmentPage />} />
 
             <Route path="/blog" element={<BlogPage />} />

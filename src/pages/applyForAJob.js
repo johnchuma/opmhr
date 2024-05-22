@@ -30,7 +30,7 @@ const ApplyForAJob = () => {
   ) : (
     <div>
       <div className="bg-slate-900 list text-white flex py-12 md:py-24 flex-col justify-center items-center">
-        <h1 className="text-4xl font-bold">Send Application</h1>
+        <h1 className="text-4xl font-medium">Send Application</h1>
         <div className="w-12 h-2 bg-primary mt-3"></div>
       </div>
       <div className="bg-slate-800 text-white flex py-8  justify-center items-center">
@@ -38,7 +38,7 @@ const ApplyForAJob = () => {
           onClick={() => {
             navigate(`/jobDetails/${job.id}`);
           }}
-          className="text-sm font-bold cursor-pointer"
+          className="text-sm font-medium cursor-pointer"
         >
           Job details
         </h1>
@@ -56,7 +56,9 @@ const ApplyForAJob = () => {
             />
           </svg>
         </div>
-        <h1 className="text-sm font-bold cursor-pointer ">Send Application</h1>
+        <h1 className="text-sm font-medium cursor-pointer ">
+          Send Application
+        </h1>
       </div>
       <form
         onSubmit={(e) => {
@@ -80,7 +82,7 @@ const ApplyForAJob = () => {
             companyId: job.companyId,
             jobId: job.id,
             jobTitle: job.title,
-            coverLetter: letter
+            coverLetter: letter,
           };
           console.log(data);
           getLink(e.target.cv.files[0]).then((link) => {
@@ -100,7 +102,7 @@ const ApplyForAJob = () => {
         }}
         className="  py-12 md:py-24 w-6/12 mx-auto"
       >
-        <h1 className="font-bold text-2xl ">Application Form</h1>
+        <h1 className="font-medium text-2xl ">Application Form</h1>
         <p className="mb-4">Other details will be taken from your account*</p>
 
         <p className="mb-2">Write a cover letter</p>
@@ -119,7 +121,7 @@ const ApplyForAJob = () => {
         />
         <button
           type="submit"
-          className="py-3 px-5 bg-primary font-bold mt-5 text-white w-48 flex justify-center"
+          className="py-3 px-5 bg-primary font-medium mt-5 text-white w-48 flex justify-center"
         >
           {sending ? <Spinner /> : "Send Application"}
         </button>

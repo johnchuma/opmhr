@@ -10,7 +10,7 @@ const ContactPage = () => {
 
       <div className="w-11/12 mx-auto ">
         <div className="grid grid-cols-1  gap-y-8 gap-x-6 items-start">
-          <div className=" border border-borderColor rounded-lg p-5 mt-4">
+          <div className=" rounded-lg p-5 mt-4">
             <InquiryForm />
           </div>
         </div>

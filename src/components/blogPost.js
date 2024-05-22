@@ -59,7 +59,7 @@ const BlogPost = ({ item, refresh, setRefresh }) => {
                     paragraph1: e.target.paragraph1.value,
                     paragraph2: e.target.paragraph2.value,
                     paragraph3: e.target.paragraph3.value,
-                    conclusion: e.target.conclusion.value
+                    conclusion: e.target.conclusion.value,
                   };
                   updateBlog(item.id, data).then((data) => {
                     setLoading(false);
@@ -73,7 +73,7 @@ const BlogPost = ({ item, refresh, setRefresh }) => {
               <textarea
                 required
                 name="title"
-                className="w-full  font-bold border-0 focus:ring-0 text-4xl"
+                className="w-full  font-medium border-0 focus:ring-0 text-4xl"
                 defaultValue={item.title}
                 placeholder="Blog title"
               />
@@ -189,7 +189,7 @@ const BlogPost = ({ item, refresh, setRefresh }) => {
                 />
               </svg>
 
-              <h1 className="font-bold text-red-600 text-sm">Delete Post</h1>
+              <h1 className="font-medium text-red-600 text-sm">Delete Post</h1>
             </div>
           </div>
         </div>

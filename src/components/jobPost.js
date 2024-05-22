@@ -46,7 +46,7 @@ const JobPost = ({ item, refresh, setRefresh }) => {
         <div className="fixed inset-0 bg-black bg-opacity-25 z-50 flex justify-center items-center">
           <div className="w-7/12 bg-white  shadow-xl h-3/4 overflow-y-scroll px-8 py-10">
             <div className="flex justify-between">
-              <h1 className="text-2xl font-bold"></h1>
+              <h1 className="text-2xl font-medium"></h1>
               <svg
                 onClick={() => {
                   setShowModal(false);
@@ -84,7 +84,7 @@ const JobPost = ({ item, refresh, setRefresh }) => {
                     responsibilities,
                     deadline: Timestamp.fromDate(
                       new Date(e.target.deadline.value)
-                    )
+                    ),
                   };
                   updateJob(item.id, data).then((data) => {
                     setLoading(false);
@@ -245,7 +245,7 @@ const JobPost = ({ item, refresh, setRefresh }) => {
               </div>
               {item.companyId && (
                 <div className="mt-8">
-                  <h1 className="font-bold text-lg">Publisher's contacts</h1>
+                  <h1 className="font-medium text-lg">Publisher's contacts</h1>
                   <div className="flex space-x-2 text-slate-600">
                     {" "}
                     <p>{item.email}</p>,<p>{item.phone}</p>
@@ -268,7 +268,7 @@ const JobPost = ({ item, refresh, setRefresh }) => {
                     onClick={() => {
                       setPublishing(true);
                       updateJob(item.id, {
-                        published: true
+                        published: true,
                       }).then((data) => {
                         toast.success("Changes saved");
                         setPublishing(false);

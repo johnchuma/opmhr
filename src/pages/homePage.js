@@ -1,9 +1,14 @@
+import { useNavigate } from "react-router-dom";
+import { services } from "../utils/arrays";
+import { useEffect } from "react";
+
 const HomePage = () => {
+  const navigate = useNavigate();
   return (
     <div className="pt-24">
-      <div className="   py-12 h-screen w-11/12 mx-auto rounded-xl ">
+      <div className="   py-12 h-screen w-11/12 mx-auto rounded-xl  ">
         <div className="flex flex-col space-y-6 justify-center items-center w-7/12 mx-auto text-center font-aeonik ">
-          <h1 className="text-5xl font-medium ">
+          <h1 className="text-5xl font-medium  px-12">
             Bridging HR and Technlogy for Global Success
           </h1>
           <p className="text-muted">
@@ -15,19 +20,7 @@ const HomePage = () => {
             <button className="bg-primary text-white py-3 px-4 rounded-xl">
               Subscribe Now
             </button>
-            <button className="bg-color text-primary py-3 px-4 rounded-xl border border-borderColor flex items-center bg-white space-x-2  ">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="w-5 h-5"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z"
-                  clipRule="evenodd"
-                />
-              </svg>
+            <button className="bg-color text-textColor py-3 px-4 rounded-xl border border-borderColor flex items-center bg-white space-x-2  ">
               <div>Demo</div>
             </button>
           </div>
@@ -83,7 +76,7 @@ const HomePage = () => {
           "logo (3).jpeg",
           "logo (4).jpeg",
           "logo (5).jpeg",
-          "logo (6).jpeg"
+          "logo (6).jpeg",
         ].map((item) => {
           return (
             <div className="flex justify-center">
@@ -92,9 +85,12 @@ const HomePage = () => {
           );
         })}
       </div>
-      <div className="grid grid-cols-12 w-11/12 mx-auto justify-between space-x-10 pb-20 ">
+      <div
+        data-aos="fade-up"
+        className="grid grid-cols-12 w-11/12 mx-auto justify-between space-x-10 pb-20 "
+      >
         <div className=" col-span-5">
-          <h1 className="text-3xl font-bold">
+          <h1 className="text-3xl font-medium">
             Short summary about OPM International HR Consultants:{" "}
           </h1>
         </div>
@@ -109,68 +105,78 @@ const HomePage = () => {
           </p>
         </div>
       </div>
-      <div className="w-11/12 mx-auto grid grid-cols-12 space-x-16 items-center">
+      <div
+        className="w-11/12 mx-auto grid grid-cols-12 space-x-16 items-center"
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom"
+      >
         <div className=" col-span-6">
-          <h1 className="text-3xl font-bold">Explore our services</h1>
+          <h1 className="text-3xl font-medium">Explore our services</h1>
           <p className="mt-3 text-muted">
             Weare the bridge to a modern, data-driven, and globally-minded HR
             function.Let us help you unlock the full potential of your HR
             technology and workforce across local and international borders.
           </p>
-          <div className=" space-y-3 mt-8">
-            {[
-              "Global HR Technology Consulting",
-              "International and Local HR Data Analytics & Reporting",
-              "Global HR Process Automation",
-              "Global HR Transformation Strategy",
-              "Global Change Management & Training"
-            ].map((item) => {
+          <h1 className="text-muted font-medium mt-4">Services</h1>
+          <ul className=" list-disc ml-4">
+            {services.map((item) => {
               return (
-                <div
-                  className="text-muted  flex justify-between 
-                border-b-2 border-gray-200  
-                 hover:border-primary transition-all duration-300 
-                 cursor-pointer py-2 hover:bg-lightBackground group hover:px-2 "
+                <li
+                  onClick={() => {
+                    navigate(`services/${item}`);
+                  }}
+                  className="border-b hover:underline text-muted hover:text-primary cursor-pointer border-b-transparent"
                 >
-                  <p>{item}</p>
-                  <div>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      b
-                      className="w-6 h-6 text-muted text-opacity-40"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
-                      />
-                    </svg>
-                  </div>
-                </div>
+                  {item}
+                </li>
               );
             })}
-          </div>
+          </ul>
+          {/* 
+          <ul className="list list-disc list-outside space-y-1 mt-2">
+            {services.map((item) => {
+              return (
+                <li
+                  onClick={() => {
+                    navigate(`services/${item}`);
+                  }}
+                  className="text-muted group flex justify-between border-b hover:underline hover:text-primary cursor-pointer border-b-transparent"
+                >
+                  {item}
+                </li>
+              );
+            })}
+          </ul> */}
+
+          <button
+            onClick={() => {
+              navigate(`/services/${services[0]}`);
+            }}
+            className="py-3 px-4 rounded-xl mt-6 bg-primary  text-white  border border-borderColor"
+          >
+            Read More
+          </button>
         </div>
         <div className=" col-span-6">
           <img className=" rounded-3xl " src="girl.png" />
         </div>
       </div>
-      <div className="w-11/12 mx-auto grid grid-cols-12 space-x-16 items-center py-24">
+      <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom"
+        className="w-11/12 mx-auto grid grid-cols-12 space-x-16 items-center py-24"
+      >
         <div className=" col-span-6">
           <img className=" rounded-3xl" src="girl2.png" />
         </div>
         <div className=" col-span-6">
-          <h1 className="text-3xl font-bold mb-3">OPM-HR Mission & Vision</h1>
+          <h1 className="text-3xl font-medium mb-3">OPM-HR Mission & Vision</h1>
           <p className=" text-muted">
             We take the time to understand your unique business needs and
             develop customized solutions that perfectly align with your
             strategic objectives.
           </p>
-          <h1 className="text-primary font-bold mt-2">Mission</h1>
+          <h1 className="text-muted font-medium mt-2">Mission</h1>
 
           <ul className="list list-disc list-outside ms-5">
             <li>
@@ -186,19 +192,30 @@ const HomePage = () => {
               thriving and successful workforce.
             </li>
           </ul>
-          <h1 className="text-primary font-bold mt-2">Vision</h1>
+          <h1 className="text-muted font-medium mt-2">Vision</h1>
 
           <p className=" text-muted">
             We aim to push boundaries using advanced tech for transformative HR
             solutions.
           </p>
-
+          <button
+            onClick={() => {
+              navigate("/company");
+            }}
+            className="py-3 px-4 rounded-xl mt-8 bg-primary text-white  border border-borderColor"
+          >
+            Read More
+          </button>
           <div className=" space-y-3 mt-8"></div>
         </div>
       </div>
-      <div className="w-full mx-auto bg-lightBackground py-24 mb-8">
+      <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom"
+        className="w-full mx-auto bg-lightBackground py-24 mb-8"
+      >
         <div className="w-6/12 mx-auto text-center space-y-4">
-          <h1 className="font-bold text-3xl">Latest job posts</h1>
+          <h1 className="font-medium text-3xl">Latest job posts</h1>
           <p className="text-muted">
             Deserunt sit non. Magna ullamco consectetur proident ex est duis
             magna tempor duis commodo velit qui amet. Quis cillum mollit sunt.
@@ -211,43 +228,43 @@ const HomePage = () => {
               company: "OMNI-SOLUTIONS",
               location: "Dar es Salaam",
               salary: "2,000,000 TSH",
-              employement: "Full Time"
+              employement: "Full Time",
             },
             {
               title: "Digital Marketing Specialist",
               company: "OMNI-SOLUTIONS",
               location: "Dar es Salaam",
               salary: "2,000,000 TSH",
-              employement: "Full Time"
+              employement: "Full Time",
             },
             {
               title: "Digital Marketing Specialist",
               company: "OMNI-SOLUTIONS",
               location: "Dar es Salaam",
               salary: "2,000,000 TSH",
-              employement: "Full Time"
+              employement: "Full Time",
             },
             {
               title: "Digital Marketing Specialist",
               company: "OMNI-SOLUTIONS",
               location: "Dar es Salaam",
               salary: "2,000,000 TSH",
-              employement: "Full Time"
+              employement: "Full Time",
             },
             {
               title: "Digital Marketing Specialist",
               company: "OMNI-SOLUTIONS",
               location: "Dar es Salaam",
               salary: "2,000,000 TSH",
-              employement: "Full Time"
+              employement: "Full Time",
             },
             {
               title: "Digital Marketing Specialist",
               company: "OMNI-SOLUTIONS",
               location: "Dar es Salaam",
               salary: "2,000,000 TSH",
-              employement: "Full Time"
-            }
+              employement: "Full Time",
+            },
           ].map((item) => {
             return (
               <div className="bg-white p-4 rounded-lg">
@@ -256,7 +273,7 @@ const HomePage = () => {
                     <img src="https://cdn.vox-cdn.com/thumbor/VKD3KfczL8xi89_n32rmbjTpdlg=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/13674554/Mastercard_logo.jpg" />
                   </div>
                   <div className="w-10/12">
-                    <h1 className="font-bold ">{item.title}</h1>
+                    <h1 className="font-medium ">{item.title}</h1>
                     <p className="text-primary">{item.company}</p>
 
                     <p className="flex text-muted space-x-3">
@@ -322,9 +339,13 @@ const HomePage = () => {
           </button>
         </div>
       </div>
-      <div className="w-7/12 mx-auto py-12 text-center">
-        <h1 className="font-bold text-3xl">Our director statement</h1>
-        <p className="text-muted">James Freeman Tana</p>
+      <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom"
+        className="w-7/12 mx-auto py-12 text-center"
+      >
+        <h1 className="font-medium text-3xl">Our director statement</h1>
+        <p className="text-muted">Murishi Nelson Balthazar</p>
         <p className=" italic text-base mt-5 text-muted space-y-2">
           I am proud to present our company as a leader in human resources
           consulting and software solutions. With a global footprint and a
@@ -362,9 +383,13 @@ const HomePage = () => {
           </div>
         </p>
       </div>
-      <div className="w-11/12 mx-auto bg-lightBackground rounded-2xl py-24">
+      <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom"
+        className="w-11/12 mx-auto bg-lightBackground rounded-2xl py-24"
+      >
         <div className="w-6/12 mx-auto text-center space-y-4">
-          <h1 className="font-bold text-3xl">Get our Daily Updates</h1>
+          <h1 className="font-medium text-3xl">Get our Daily Updates</h1>
           <p className="text-muted">
             Deserunt sit non. Magna ullamco consectetur proident ex est duis
             magna tempor duis commodo velit qui amet. Quis cillum mollit sunt.

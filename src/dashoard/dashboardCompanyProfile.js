@@ -22,7 +22,7 @@ const CompanyProfile = () => {
   ) : (
     <div>
       <div className="flex justify-between">
-        <h1 className="font-bold text-2xl">Company Limited</h1>
+        <h1 className="text-lg">Company Limited</h1>
       </div>
       <div className="grid grid-cols-1 px-8 py-8 bg-white shadow mt-5 w-full">
         <form
@@ -32,7 +32,7 @@ const CompanyProfile = () => {
             const data = {
               name: e.target.name.value,
               phone: e.target.phone.value,
-              address: e.target.address.value
+              address: e.target.address.value,
             };
             getLink(file).then((image) => {
               data.profileURL = image ?? user.profileURL;
@@ -105,7 +105,7 @@ const CompanyProfile = () => {
           </div>
           <button
             type="submit"
-            className="py-3 mt-5 px-4 w-48 flex justify-center bg-primary text-white font-bold"
+            className="py-3 mt-5 px-4 w-48 flex justify-center bg-primary rounded-lg text-white font-medium"
           >
             {loading ? <Spinner /> : "Save Changes"}
           </button>

@@ -53,7 +53,7 @@ export const sectors = [
   "Textiles",
   "Utilities",
   "Waste Management",
-  "Zoology"
+  "Zoology",
 ];
 
 export const services = [
@@ -64,9 +64,15 @@ export const services = [
   "International and Local HR Data Analytics & Reporting",
   "Change management & trainings services",
   "HR Data analytics & reporting",
-  "Global HR Transformation Strategy"
+  "Global HR Transformation Strategy",
 ];
-
+export const products = [
+  "Performance Management Software",
+  "HRIS (Human Resources Information System)",
+  "Product 3",
+  "Product 4",
+  "Product 5",
+];
 export const partners = [
   "/partner-logo/101.png",
   "/partner-logo/102.PNG",
@@ -95,7 +101,7 @@ export const partners = [
   "/partner-logo/14.png",
   "/partner-logo/15.jpg",
   "/partner-logo/16.jpg",
-  "/partner-logo/17.png"
+  "/partner-logo/17.png",
 ];
 
 export const skills = [
@@ -333,5 +339,5 @@ export const skills = [
   "Healthcare Compliance Companies (e.g., The Joint Commission, Healthcare Compliance Pros, Clearwater Compliance)",
   "Medical Coding Companies (e.g., Aviacode, Maxim Healthcare Services, AMN Healthcare)",
   "Health Information Management (HIM) Companies (e.g., MRO Corporation, Ciox Health, Sharecare Health Data Services)",
-  "Medical Transcription Companies (e.g., MModal, Nuance Communications, Acusis)"
+  "Medical Transcription Companies (e.g., MModal, Nuance Communications, Acusis)",
 ];

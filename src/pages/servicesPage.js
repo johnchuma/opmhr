@@ -16,7 +16,7 @@ const ServicesPage = () => {
 
       <div className="grid grid-cols-12 w-11/12 mx-auto gap-8 mt-6 bg-white p-3  ">
         <div className="col-span-12 space-y-4  ">
-          <h1 className="font-bold text-2xl">{uuid}</h1>
+          <h1 className="font-medium text-2xl">{uuid}</h1>
           {index == 0 && (
             <div className=" space-y-4">
               <p>
@@ -25,14 +25,14 @@ const ServicesPage = () => {
                 approach tailored to meet your unique needs, our services
                 encompass a wide range of offerings including:
               </p>
-              <ul className="list list-outside list-decimal ms-3">
+              <ul className="list list-outside list-decimal ms-4">
                 {[
                   "Performance Appraisal Systems: We develop customized performance appraisal systems that align with your organization's goals and values, providing a clear framework for assessing and rewarding employee performance.",
                   "Goal Setting and Alignment: Our goal-setting services help streamline objectives across all levels of your organization, ensuring that individual goals are in sync with the broader organizational goals.",
                   "Feedback and Coaching: Our expert team offers personalized feedback and coaching to employees, fostering a culture of continuous improvement and growth within your organization.",
                   "Training and Development: We provide tailored training programs aimed at enhancing employee skills and competencies, driving performance and productivity.",
                   "Performance Improvement Plans: In cases where performance falls below expectations, we assist in developing performance improvement plans that support employees in reaching their full potential.",
-                  "Data-Driven Insights: Leveraging advanced analytics, we provide data-driven insights to help identify trends, monitor performance metrics, and make informed decisions to optimize performance management processes."
+                  "Data-Driven Insights: Leveraging advanced analytics, we provide data-driven insights to help identify trends, monitor performance metrics, and make informed decisions to optimize performance management processes.",
                 ].map((item) => {
                   return <li>{item}</li>;
                 })}
@@ -66,7 +66,7 @@ const ServicesPage = () => {
 
               <h2>How Our Service Can Benefit Your Business:</h2>
 
-              <ul className="list list-outside list-decimal ms-3">
+              <ul className="list list-outside list-decimal ms-4">
                 <li>
                   Data-driven insights: Harness the power of AI and machine
                   learning to analyze vast amounts of HR data, uncovering hidden
@@ -129,7 +129,7 @@ const ServicesPage = () => {
 
               <h2>Our Strength:</h2>
 
-              <ul className="list list-outside list-decimal ms-3">
+              <ul className="list list-outside list-decimal ms-4">
                 <li>
                   Expertise in Diverse Markets: With extensive knowledge of
                   various international labor markets, we are adept at
@@ -161,7 +161,7 @@ const ServicesPage = () => {
               </ul>
               <h2>Our Services Include:</h2>
 
-              <ul className="list list-outside list-decimal ms-3">
+              <ul className="list list-outside list-decimal ms-4">
                 <li>
                   Both Local and International Recruitment: Sourcing, vetting,
                   and hiring the best talent from across the globe.
@@ -207,7 +207,7 @@ const ServicesPage = () => {
 
               <h2>Our HR Advisory & Consultancy Services Include:</h2>
 
-              <ul className="list list-outside list-decimal ms-3">
+              <ul className="list list-outside list-decimal ms-4">
                 <li>
                   Strategic HR Planning: We work with you to develop a
                   comprehensive HR strategy that aligns with your business
@@ -266,7 +266,7 @@ const ServicesPage = () => {
                 Advisory & Consultancy:
               </h2>
 
-              <ul className="list list-outside list-decimal ms-3">
+              <ul className="list list-outside list-decimal ms-4">
                 <li>
                   Expertise: We have a proven track record of success in helping
                   organizations achieve their HR goals.
@@ -303,7 +303,7 @@ const ServicesPage = () => {
 
               <h2>Here's How Our Service Can Benefit Your Organization:</h2>
 
-              <ul className="list list-outside list-decimal ms-3">
+              <ul className="list list-outside list-decimal ms-4">
                 <li>
                   Change readiness assessment: Evaluate your organization's
                   readiness for change, identifying potential barriers and
@@ -360,7 +360,7 @@ const ServicesPage = () => {
 
               <h2>Our Global HR Transformation Strategy Service Offers:</h2>
 
-              <ul className="list list-outside list-decimal ms-3">
+              <ul className="list list-outside list-decimal ms-4">
                 <li>
                   Strategic alignment: Align your HR strategy with your
                   organization's overall business objectives, ensuring that your
@@ -414,7 +414,7 @@ const ServicesPage = () => {
 
               <h2>Our Suite of Products Empowers You To:</h2>
 
-              <ul className="list list-outside list-decimal ms-3">
+              <ul className="list list-outside list-decimal ms-4">
                 <li>
                   Gain actionable insights: Transform raw HR data into
                   actionable insights that drive informed decision-making at
@@ -485,7 +485,7 @@ const ServicesPage = () => {
                 Process Automation service, you can:
               </p>
 
-              <ul className="list list-outside list-decimal ms-3">
+              <ul className="list list-outside list-decimal ms-4">
                 <li>
                   <strong>Boost efficiency:</strong> Automate time-consuming
                   tasks and workflows, reducing manual errors and increasing
@@ -526,6 +526,14 @@ const ServicesPage = () => {
               </p>
             </div>
           )}
+          <button
+            onClick={() => {
+              navigate("/contactus");
+            }}
+            className="bg-primary text-white py-3 px-4 rounded-xl"
+          >
+            Request Service
+          </button>
         </div>
       </div>
     </div>

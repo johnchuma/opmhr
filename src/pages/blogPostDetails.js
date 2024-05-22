@@ -33,7 +33,7 @@ const BlogPostDetails = () => {
       <div className="pt-12"></div>
 
       <div className="w-11/12 md:w-8/12 gap-x-10 mx-auto py-12 md:py-24 text-base ">
-        <h1 className="text-3xl font-bold">{post.title}</h1>
+        <h1 className="text-3xl font-medium">{post.title}</h1>
         <p className="text-sm text-muted pt-2">
           Published {timeAgo(post.createdAt.toDate())}
         </p>
@@ -56,7 +56,7 @@ const BlogPostDetails = () => {
               comment: e.target.comment.value,
               name: user == null ? e.target.name.value : user.name,
               image: user == null ? null : user.profileURL,
-              blogId: post.id
+              blogId: post.id,
             };
             addComment(data).then((data) => {
               e.target.comment.value = "";

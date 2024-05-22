@@ -11,7 +11,7 @@ const MiniSidebar = () => {
             { title: "Contact Us", path: "/contactUs" },
             { title: "Why top target ?", path: "/whyus" },
             { title: "Clients & partners", path: "/partners" },
-            { title: "Top target in a glance", path: "/aboutus" }
+            { title: "Top target in a glance", path: "/aboutus" },
           ].map((item) => {
             return (
               <div
@@ -19,7 +19,7 @@ const MiniSidebar = () => {
                   item.path == pathname
                     ? "border-l-4 border-primary"
                     : "border-l-4 border-orange-400"
-                } font-bold`}
+                } font-medium`}
                 onClick={() => {
                   navigate(item.path);
                 }}
@@ -32,7 +32,7 @@ const MiniSidebar = () => {
       </div>
 
       <div>
-        <h1 className="text-xl font-bold">For Business Enquiry</h1>
+        <h1 className="text-xl font-medium">For Business Enquiry</h1>
         <p className="">
           You can also send us an email and we’ll get in touch shortly, or Troll
           Free Number +255677274141

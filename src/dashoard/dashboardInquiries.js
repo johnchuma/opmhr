@@ -5,7 +5,7 @@ import ExperienceItem from "../components/experience";
 import RefreeItem from "../components/refreeItem";
 import {
   getInquiries,
-  updateInquiry
+  updateInquiry,
 } from "../controllers/inquiriesController";
 import { timeAgo } from "../utils/time_ago";
 import NoData from "../components/noData";
@@ -97,7 +97,7 @@ const DashboardInquiries = () => {
               <div className="fixed inset-0 bg-black bg-opacity-25 z-50 flex justify-center items-center">
                 <div className="w-4/12 bg-white   shadow-xl px-8 py-10">
                   <div className="flex justify-between">
-                    <h1 className="text-2xl font-bold">Message</h1>
+                    <h1 className="text-2xl font-medium">Message</h1>
                     <svg
                       onClick={() => {
                         if (selectedItem.isRead == false) {

@@ -9,7 +9,7 @@ import JobPost from "../components/jobPost";
 import {
   getCompanyPendingJobs,
   getCompanyPublishedJobs,
-  getJobs
+  getJobs,
 } from "../controllers/jobController";
 import { UserContext } from "../auth/privateRoute";
 import NoData from "../components/noData";
@@ -40,7 +40,7 @@ const DashboardPublishedJobs = () => {
   ) : (
     <div>
       <div className="flex justify-between">
-        <h1 className="text-2xl font-bold">Published Jobs</h1>
+        <h1 className="text-lg">Published Jobs</h1>
       </div>
       {posts.length < 1 ? (
         <NoData />
