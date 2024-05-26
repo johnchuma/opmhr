@@ -320,13 +320,11 @@ const HomePage = () => {
                 image: "blog1.png"
               },
               {
-                title:
-                  "Revolutionizing HR with Automation: The Future is Heres",
+                title: "Enhancing Employee Experience Through HR Automation",
                 image: "blog2.png"
               },
               {
-                title:
-                  "Revolutionizing HR with Automation: The Future is Heres",
+                title: "Driving Business Growth with HR Process Automation",
                 image: "blog3.png"
               }
             ].map((item) => (
