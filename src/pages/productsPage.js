@@ -246,6 +246,112 @@ const ServicesPage = () => {
                 </p>
               </div>
             )}
+            {index == 2 && (
+              <div>
+                <p>
+                  Payroll software plays a crucial role in managing one of the
+                  most critical aspects of any business—employee compensation.
+                  Here's how the key features of payroll software can positively
+                  influence clients:
+                </p>
+
+                <ul className="list list-outside list-decimal ms-4">
+                  <li>
+                    <strong>Automated Payroll Processing:</strong> Payroll
+                    software automates the entire payroll process, from
+                    calculating wages and deductions to generating paychecks or
+                    facilitating direct deposits. By automating repetitive
+                    tasks, clients can save time, minimize errors, and ensure
+                    accurate and timely payroll processing.
+                  </li>
+
+                  <li>
+                    <strong>Tax Compliance and Reporting:</strong> Payroll
+                    software helps clients stay compliant with tax regulations
+                    by automatically calculating payroll taxes, including
+                    federal, state, and local taxes, and deducting them from
+                    employees' paychecks. The software also generates tax forms,
+                    such as W-2s and 1099s, and facilitates electronic filing,
+                    reducing the risk of errors and penalties.
+                  </li>
+
+                  <li>
+                    <strong>Employee Self-Service:</strong> Many payroll
+                    software solutions offer employee self-service portals where
+                    employees can access their pay stubs, view their tax
+                    information, update their personal details, and manage their
+                    direct deposit preferences. This empowers employees to take
+                    control of their payroll-related tasks, reducing
+                    administrative burden on HR and payroll staff.
+                  </li>
+
+                  <li>
+                    <strong>Time and Attendance Integration:</strong> Payroll
+                    software often integrates with time and attendance systems
+                    to automatically import employee hours worked and calculate
+                    accurate pay based on time records. This integration ensures
+                    that payroll calculations are based on actual hours worked,
+                    reducing payroll errors and discrepancies.
+                  </li>
+
+                  <li>
+                    <strong>Benefit Deductions and Administration:</strong>{" "}
+                    Payroll software allows clients to manage employee benefits
+                    deductions, such as health insurance premiums, retirement
+                    contributions, and flexible spending accounts. The software
+                    calculates benefit deductions accurately and ensures that
+                    employees receive the correct compensation after deductions.
+                  </li>
+
+                  <li>
+                    <strong>Customizable Payroll Reports:</strong> Payroll
+                    software provides clients with customizable payroll reports
+                    that offer insights into payroll expenses, tax liabilities,
+                    employee earnings, and deductions. Clients can generate
+                    reports tailored to their specific needs, track key payroll
+                    metrics, and analyze trends to inform decision-making.
+                  </li>
+
+                  <li>
+                    <strong>Multi-State and Multi-Currency Support:</strong> For
+                    clients operating in multiple states or countries, payroll
+                    software offers support for multi-state and multi-currency
+                    payroll processing. This capability ensures compliance with
+                    varying tax laws and regulations across different
+                    jurisdictions, simplifying payroll administration for
+                    clients with diverse workforce locations.
+                  </li>
+
+                  <li>
+                    <strong>Security and Data Protection:</strong> Payroll
+                    software prioritizes data security and protection by
+                    implementing robust security measures, such as encryption,
+                    access controls, and regular data backups. Clients can trust
+                    that sensitive payroll information, including employee
+                    salaries and tax data, is safeguarded against unauthorized
+                    access or breaches.
+                  </li>
+
+                  <li>
+                    <strong>Scalability and Flexibility:</strong> Payroll
+                    software is scalable and flexible, capable of accommodating
+                    the evolving needs of growing businesses. Whether clients
+                    are adding new employees, expanding into new markets, or
+                    implementing changes to payroll policies, the software can
+                    adapt to accommodate these changes without disruption.
+                  </li>
+                </ul>
+
+                <p>
+                  By leveraging these features, payroll software empowers
+                  clients to streamline payroll processes, ensure compliance,
+                  improve accuracy, and enhance employee satisfaction. It serves
+                  as a strategic tool for managing payroll efficiently, reducing
+                  administrative burden, and supporting the overall success and
+                  growth of clients' businesses.
+                </p>
+              </div>
+            )}
           </div>
           <button className="bg-primary text-white py-3 px-4 mt-4 rounded-xl">
             Order Software

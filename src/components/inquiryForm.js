@@ -20,7 +20,7 @@ const InquiryForm = () => {
             phone: e.target.phone.value,
             service: e.target.service.value,
             message: e.target.message.value,
-            isRead: false,
+            isRead: false
           };
           addInquiry(data).then((data) => {
             setLoading(false);
@@ -71,7 +71,7 @@ const InquiryForm = () => {
           >
             <option>Select service</option>
             {services.map((item) => {
-              return <option value={item}>{item}</option>;
+              return <option value={item.title}>{item.title}</option>;
             })}
           </select>
         </div>

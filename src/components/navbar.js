@@ -6,25 +6,26 @@ const Navbar = () => {
   const navigate = useNavigate();
   const [show, setShow] = useState(true);
   return (
-    <div className="relative w-full">
-      <div className="fixed w-full bg-white border-b border-borderColor  text-muted z-50">
+    <div className="relative w-full text-base">
+      <div className="fixed w-full bg-blackBackground  text-white z-50">
+        <div className=" bg-[#E0FEFF] flex items-center justify-center space-x-2 ">
+          <h1 className="text-textColor py-2">
+            Get a 3 month discount when you subscribe now,{" "}
+          </h1>
+          <h1 className="font-bold text-primary underline">Learn More</h1>
+        </div>
         <div className="flex w-11/12  items-center mx-auto py-4 justify-between">
-          <img
-            className="h-10 cursor-pointer"
-            onClick={() => {
-              navigate("/");
-            }}
-            src="/logo.jpeg"
-          />
+          <h1 className="text-2xl font-medium">OPM International</h1>
           <div className="flex space-x-3">
             {[
+              { title: "Home", path: "/" },
               { title: "Services", path: "/services/0" },
               { title: "Company", path: "/company" },
               { title: "Products", path: "/products" },
               { title: "Investment", path: "/investment" },
               { title: "Jobs", path: "/jobs" },
               { title: "Posts", path: "/blog" },
-              { title: "Contacts", path: "/contactus" },
+              { title: "Contacts", path: "/contactus" }
             ].map((item) => {
               return (
                 <button
@@ -70,7 +71,7 @@ const Navbar = () => {
                             return (
                               <div
                                 onClick={() => {
-                                  navigate(`/services/${item}`);
+                                  navigate(`/services/${item.title}`);
                                   setShow(false);
                                   setTimeout(() => {
                                     setShow(true);
@@ -79,7 +80,7 @@ const Navbar = () => {
                                 className={` transition-all hover:underline  rounded-md duration-300 cursor-pointer py-2 hover:text-primary border-gray-200 
                              }`}
                               >
-                                <p>{item}</p>
+                                <p>{item.title}</p>
                               </div>
                             );
                           })}
@@ -130,11 +131,11 @@ const Navbar = () => {
               onClick={() => {
                 navigate("/login");
               }}
-              className="py-3 px-4 rounded-xl  border border-borderColor"
+              className="py-3 px-4 rounded-xl  "
             >
-              Login
+              Register
             </button>
-            <button className="bg-primary text-white py-3 px-4 rounded-xl">
+            <button className="border-2 border-[#384141] py-2 px-3 rounded-lg">
               Book a free Demo
             </button>
           </div>

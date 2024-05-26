@@ -7,7 +7,7 @@ const ServicesPage = () => {
   const navigate = useNavigate();
   const [index, setIndex] = useState(0);
   useEffect(() => {
-    var no = services.indexOf(uuid);
+    var no = 0;
     setIndex(no);
   }, [uuid]);
   return (
@@ -32,7 +32,7 @@ const ServicesPage = () => {
                   "Feedback and Coaching: Our expert team offers personalized feedback and coaching to employees, fostering a culture of continuous improvement and growth within your organization.",
                   "Training and Development: We provide tailored training programs aimed at enhancing employee skills and competencies, driving performance and productivity.",
                   "Performance Improvement Plans: In cases where performance falls below expectations, we assist in developing performance improvement plans that support employees in reaching their full potential.",
-                  "Data-Driven Insights: Leveraging advanced analytics, we provide data-driven insights to help identify trends, monitor performance metrics, and make informed decisions to optimize performance management processes.",
+                  "Data-Driven Insights: Leveraging advanced analytics, we provide data-driven insights to help identify trends, monitor performance metrics, and make informed decisions to optimize performance management processes."
                 ].map((item) => {
                   return <li>{item}</li>;
                 })}

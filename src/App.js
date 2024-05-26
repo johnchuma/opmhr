@@ -24,7 +24,7 @@ import BlogPostDetails from "./pages/blogPostDetails";
 import JobDetails from "./pages/jobDetails";
 import ApplyForAJob from "./pages/applyForAJob";
 import ContactPage from "./pages/contactpage";
-import ServicesPage from "./pages/servicesPage";
+// import ServicesPage from "./pages/servicesPage";
 import CompanyPage from "./pages/companyPage";
 import ProductPage from "./pages/productsPage";
 import InvestmentPage from "./pages/investmentPage";
@@ -45,7 +45,7 @@ function App() {
             <Route index path="/" element={<HomePage />} />
             <Route path="/contactus" element={<ContactPage />} />
             <Route path="/jobs" element={<JobsPage />} />
-            <Route path="/services/:uuid" element={<ServicesPage />} />
+            {/* <Route path="/services/:uuid" element={<ServicesPage />} />s */}
             <Route path="/company" element={<CompanyPage />} />
             <Route path="/products/:uuid" element={<ProductPage />} />
             <Route path="/investment" element={<InvestmentPage />} />
