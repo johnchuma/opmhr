@@ -1,24 +1,33 @@
 import { products } from "../utils/arrays";
-
+import { motion } from "framer-motion";
 const Footer = () => {
+  const scrollAnimationVariants = {
+    hidden: { opacity: 0, y: 200 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+  };
   return (
     <>
-      <div className="   bg-lightBackground text-base ">
-        <div className="w-11/12 mx-auto">
+      <motion.div
+        variants={scrollAnimationVariants}
+        whileInView="visible"
+        initial="hidden"
+        className="   bg-lightBackground text-lg py-24 "
+      >
+        <div className="w-10/12 2xl:w-8/12 mx-auto">
           <div className="grid grid-cols-5 gap-x-4  ">
             <div>
-              <h1 className="font-medium text-2xl">OPM HR</h1>
+              <img className="h-12" src="/logo.png" />
             </div>
             <div>
-              <h1 className=" font-medium text-lg">Products</h1>
+              <h1 className=" font-medium text-xl">Products</h1>
               <div className="text-muted mt-3">
                 {products.map((item) => {
-                  return <p>{item}</p>;
+                  return <p>{item.title}</p>;
                 })}
               </div>
             </div>
             <div>
-              <h1 className=" font-medium  text-lg">Company</h1>
+              <h1 className=" font-medium  text-xl">Company</h1>
               <div className="text-muted mt-3">
                 {[
                   { title: "Home", path: "" },
@@ -26,15 +35,15 @@ const Footer = () => {
                   { title: "Company", path: "" },
                   { title: "Jobs", path: "" },
                   { title: "Posts", path: "" },
-                  { title: "Contacts", path: "" }
+                  { title: "Contacts", path: "" },
                 ].map((item) => {
                   return <p>{item.title}</p>;
                 })}
               </div>
             </div>
             <div>
-              <h1 className=" font-medium  text-lg">Support</h1>
-              <div className="text-muted font-normal mt-3 space-y-1 ">
+              <h1 className=" font-medium  text-xl">Support</h1>
+              <div className="text-muted  mt-3 space-y-1 ">
                 <p>+255 748 057 891 TZ</p>
                 <p>+66 93 606 8191 T</p>
                 <p>hello@opmhr.com</p>
@@ -42,8 +51,8 @@ const Footer = () => {
               </div>
             </div>
             <div>
-              <h1 className=" font-medium  text-lg">Address</h1>
-              <p className="text-muted font-normal mt-3  ">
+              <h1 className=" font-medium  text-xl">Address</h1>
+              <p className="text-muted  mt-3  ">
                 <p>Alhassan Mwinyi Rd, Dar es Salaam, Tanzania</p>
                 <p>
                   Palasia, Industial House, MP Indore, Indiana, 46218, INDIA
@@ -91,7 +100,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

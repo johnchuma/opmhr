@@ -31,12 +31,25 @@ import InvestmentPage from "./pages/investmentPage";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import AOS from "aos";
+import PerformanceManagementServices from "./pages/services/performanceManagementServices";
+import PerformanceManagementSoftware from "./pages/softwares/performanceManagementSoftware";
+import Appraisal from "./pages/softwares/appraisal";
+import HRIS from "./pages/softwares/hris";
+import Leave from "./pages/softwares/leave";
+import Attendance from "./pages/softwares/attendance";
+import ESSPortal from "./pages/softwares/essPortal";
+// import FullAndFinal from "./pages/softwares/fullAndfinal";
+import PayrollSoftware from "./pages/softwares/payrollSoftware";
+import Timesheet from "./pages/softwares/timesheet";
+import FullAndFinal from "./pages/softwares/fullAndfinal";
+import Expenses from "./pages/softwares/expenses";
+import Recruitment from "./pages/softwares/recruitment";
 function App() {
   useEffect(() => {
     AOS.init({});
   }, []);
   return (
-    <div className=" font-aeonik text-textColor">
+    <div>
       <BrowserRouter>
         <Routes>
           <Route path="/login" index element={<LoginPage />} />
@@ -45,7 +58,27 @@ function App() {
             <Route index path="/" element={<HomePage />} />
             <Route path="/contactus" element={<ContactPage />} />
             <Route path="/jobs" element={<JobsPage />} />
-            {/* <Route path="/services/:uuid" element={<ServicesPage />} />s */}
+            <Route
+              path="/services/performance-management-services"
+              element={<PerformanceManagementServices />}
+            />
+            <Route
+              path="/products/performance-management-software"
+              element={<PerformanceManagementSoftware />}
+            />
+            <Route path="/products/appraisal" element={<Appraisal />} />
+            <Route path="/products/hris" element={<HRIS />} />
+            <Route path="/products/leave" element={<Leave />} />
+            <Route path="/products/attendance" element={<Attendance />} />
+            <Route path="/products/ess-portal" element={<ESSPortal />} />
+            <Route path="/products/full-&-final" element={<FullAndFinal />} />
+            <Route
+              path="/products/payroll-software"
+              element={<PayrollSoftware />}
+            />
+            <Route path="/products/timesheet" element={<Timesheet />} />
+            <Route path="/products/recruitment" element={<Recruitment />} />
+            <Route path="/products/expenses" element={<Expenses />} />
             <Route path="/company" element={<CompanyPage />} />
             <Route path="/products/:uuid" element={<ProductPage />} />
             <Route path="/investment" element={<InvestmentPage />} />

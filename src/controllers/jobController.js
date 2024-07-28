@@ -38,8 +38,7 @@ export const getActiveJobs = async () => {
         let qr = query(
             ref,
             orderBy("createdAt", "desc"),
-            where("published", "==", true),
-            where("deadline", ">=", Timestamp.now())
+            where("published", "==", true)
         );
 
         const response = await getDocs(qr);

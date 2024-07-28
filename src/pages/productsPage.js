@@ -7,7 +7,7 @@ const ServicesPage = () => {
   const navigate = useNavigate();
   const [index, setIndex] = useState(0);
   useEffect(() => {
-    var no = products.indexOf(uuid);
+    var no = products.map((item)=>item.title).indexOf(uuid);
     setIndex(no);
   }, [uuid]);
   return (

@@ -4,6 +4,7 @@ import PageLoader from "../components/pageLoader";
 import { useContext, useEffect, useState } from "react";
 import { formatDate } from "../utils/format_date";
 import { UserContext } from "../layouts/mainLayout";
+import { FaArrowLeft } from "react-icons/fa";
 
 const JobDetails = () => {
   const { uuid } = useParams();
@@ -38,18 +39,28 @@ const JobDetails = () => {
   return loading ? (
     <PageLoader />
   ) : (
-    <div className="pt-8">
-      <div className="w-8/12 mx-auto py-12 md:py-24 grid grid-cols-12 text-lg">
+    <div className=" pt-28 pb-12">
+    
+      <div className="w-8/12 2xl:w-6/12 mx-auto  grid grid-cols-12 text-lg">
+        <div
+          onClick={() => {
+            navigate("/jobs");
+          }}
+          className="flex space-x-2 items-center text-muted mb-4 cursor-pointer"
+        >
+          <FaArrowLeft />
+          <h1 className="underline">Back</h1>
+        </div>
         <div className=" col-span-12">
           <div className="flex items-center space-x-3">
             <img className="h-12 w-12 object-cover " src={job.logo} />
             <div className=" space-y-2 ">
-              <h1 className=" text-xl   ">{job.title}</h1>
+              <h1 className=" text-2xl   ">{job.title}</h1>
               <p className="text-sm text-muted">Company: {job.company}</p>
             </div>
           </div>
           <div className="flex flex-wrap mt-4">
-            <button className="py-1 px-3 mb-2 me-2 items-center text-sm rounded-full bg-gray-100  flex">
+            <button className="py-1 px-3 mb-2 me-2 items-center text-sm rounded-full border bg-lightBackground border-primary py-2  flex">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -64,7 +75,7 @@ const JobDetails = () => {
               </svg>
               <div>{job.address}</div>
             </button>
-            <button className="py-1 px-3 mb-2 me-2 items-center text-sm rounded-full bg-gray-100 flex">
+            <button className="py-1 px-3 mb-2 me-2 items-center text-sm rounded-full border bg-lightBackground border-primary py-2 flex">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -76,7 +87,7 @@ const JobDetails = () => {
 
               <div>{job.vacancies} Vacancies</div>
             </button>
-            <button className="py-1 px-3 mb-2 me-2 items-center text-sm rounded-full bg-gray-100  flex">
+            <button className="py-1 px-3 mb-2 me-2 items-center text-sm rounded-full border bg-lightBackground border-primary py-2  flex">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -97,14 +108,14 @@ const JobDetails = () => {
             className="mt-5 text-base text-muted"
             dangerouslySetInnerHTML={{ __html: job.description }}
           ></p>
-          <h1 className=" pb-2 text-lg mt-8">Skills</h1>
+          <h1 className=" pb-2 text-2xl mt-8">Skills</h1>
           <div
             className="text-base text-muted"
             id="skillsList"
             dangerouslySetInnerHTML={{ __html: job.skills }}
           ></div>
 
-          <h1 className=" pt-5 pb-2 text-lg">Responsibilites</h1>
+          <h1 className=" pt-5 pb-2 text-2xl">Responsibilites</h1>
           <div
             className="text-base text-muted"
             id="responsibilitiesList"
@@ -112,17 +123,14 @@ const JobDetails = () => {
           ></div>
 
           {user == null ? (
-            <div className="mt-8 text-muted text-sm">
-              To apply for this job you need to{" "}
-              <span
-                onClick={() => {
-                  navigate("/login");
-                }}
-                className="font-medium cursor-pointer  text-primary"
-              >
-                Login
-              </span>
-            </div>
+            <button
+              onClick={() => {
+                navigate("/login");
+              }}
+              className=" hover:scale-105 transition-all  duration-200 cursor-pointer bg-primary font-medium text-white py-4 px-6 mt-8 rounded-full"
+            >
+              Apply Job
+            </button>
           ) : (
             user.role == "User" && (
               <div>
@@ -138,7 +146,7 @@ const JobDetails = () => {
                     }}
                     className="py-3 px-5 bg-primary font-medium mt-5 text-white"
                   >
-                    Apply for a Job
+                    Apply job
                   </button>
                 )}
               </div>

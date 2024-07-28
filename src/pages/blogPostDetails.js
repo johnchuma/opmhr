@@ -7,6 +7,7 @@ import { useContext } from "react";
 import { addComment, getComments } from "../controllers/commentsController";
 import { toast } from "react-hot-toast";
 import { UserContext } from "../layouts/mainLayout";
+import { FaArrowLeft } from "react-icons/fa";
 
 const BlogPostDetails = () => {
   const { uuid } = useParams();
@@ -30,15 +31,21 @@ const BlogPostDetails = () => {
     <PageLoader />
   ) : (
     <div>
-      <div className="pt-12"></div>
+  
 
-      <div className="w-11/12 md:w-8/12 gap-x-10 mx-auto py-12 md:py-24 text-base ">
+      <div className=" w-8/12 2xl:w-6/12 gap-x-10 mx-auto pt-28 pb-12 text-base ">
+        <div onClick={()=>{
+          navigate('/blog')
+        }} className="flex space-x-2 cursor-pointer items-center text-muted mb-4">
+          <FaArrowLeft />
+          <h1 className="underline">Back</h1>
+        </div>
         <h1 className="text-3xl font-medium">{post.title}</h1>
         <p className="text-sm text-muted pt-2">
           Published {timeAgo(post.createdAt.toDate())}
         </p>
         <img className="w-full my-5 rounded-lg" src={post.image} />
-        <div className="space-y-5">
+        <div className="space-y-5 text-textColor text-lg text-opacity-70">
           <p>{post.introduction}</p>
           <p>{post.paragraph1}</p>
           <p>{post.paragraph2}</p>
@@ -46,7 +53,7 @@ const BlogPostDetails = () => {
           <p>{post.conclusion}</p>
         </div>
       </div>
-      <div className="w-8/12 mx-auto">
+      <div className="w-8/12 2xl:w-6/12 mx-auto">
         <h1 className=" text-xl mb-3">Share Your Comment Below</h1>
         <form
           className="grid grid-cols-12 space-y-4 w-full items-end "
@@ -66,7 +73,7 @@ const BlogPostDetails = () => {
         >
           {user == null && (
             <div className="flex flex-col col-span-12 space-y-1">
-              <label>Username</label>
+              <label className="text-muted">Username</label>
               <input
                 className=" border-borderColor rounded-md focus:ring-primary focus:border-primary bg-transparent"
                 placeholder="Write username"
@@ -75,7 +82,7 @@ const BlogPostDetails = () => {
             </div>
           )}
           <div className="flex flex-col col-span-12 space-y-2">
-            <label>Write your comment</label>
+            <label className="text-muted">Write your comment</label>
             <textarea
               lines={1}
               name="comment"
@@ -92,7 +99,7 @@ const BlogPostDetails = () => {
             </button>
           </div>
         </form>
-        <h1 className=" py-2  text-lg mt-8">{comments.length} Comments</h1>
+        <h1 className=" py-2  text-lg mt-8">Comments</h1>
         <div className="space-y-4 mb-24 ">
           {comments.map((item) => {
             return (
@@ -120,12 +127,12 @@ const BlogPostDetails = () => {
                 </div>
                 <div>
                   <div className="flex items-center space-x-3">
-                    <h1 className=" text-sm ">{item.name}</h1>
+                    <h1 className=" text-sm text-muted ">{item.name}</h1>
                     <p className=" text-muted text-sm">
                       {timeAgo(item.createdAt.toDate())}
                     </p>
                   </div>
-                  <h1 className="text-base">{item.comment}</h1>
+                  <h1 className="text-base ">{item.comment}</h1>
                 </div>
               </div>
             );

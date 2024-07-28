@@ -1,3 +1,16 @@
+import { BsPeople } from "react-icons/bs";
+import { FaCompress, FaToolbox } from "react-icons/fa";
+import { FaArrowUpRightDots } from "react-icons/fa6";
+import { GiExpense } from "react-icons/gi";
+import { IoDuplicateOutline, IoFileTrayFullOutline } from "react-icons/io5";
+import { MdOutlineIndeterminateCheckBox } from "react-icons/md";
+import { PiArticleNyTimesBold } from "react-icons/pi";
+import {
+  RiBarChartGroupedLine,
+  RiCalendarCheckLine,
+  RiSecurePaymentLine,
+} from "react-icons/ri";
+
 export const sectors = [
   "IT & Technology",
   "Human Resource (HR)",
@@ -53,7 +66,7 @@ export const sectors = [
   "Textiles",
   "Utilities",
   "Waste Management",
-  "Zoology"
+  "Zoology",
 ];
 
 export const services = [
@@ -61,83 +74,114 @@ export const services = [
     title: "Performance Management Services",
     description:
       "Our Performance Management services are designed to elevate your organization's efficiency and productivity.",
-    icon: "service1.png"
+    icon: "service1.png",
   },
   {
     title: "AI & Machine Learning in Global HR",
     description:
       "We're pioneering the integration of AI and machine learning technologies into global HR strategies to optimize talent management and improve decision-making processes.",
-    icon: "service2.png"
+    icon: "service2.png",
   },
   {
     title: "Global Staff Outsourcing Solutions",
     description:
       "We understand the unique challenges and opportunities of building a workforce across borders and provide tailored solutions to meet your needs.",
-    icon: "service3.png"
+    icon: "service3.png",
   },
   {
     title: "HR Advisory and Consultancy",
     description:
       "We, the OPM Team, are proud to offer comprehensive HR Advisory & Consultancy services to guide your organization through strategic HR initiatives.",
-    icon: "service4.png"
+    icon: "service4.png",
   },
   {
     title: "International and Local HR Data Analytics & Reporting",
     description:
       "In the digital age, data is king, and at OPM International HR Consultants, we're dedicated to leveraging data analytics and reporting to drive HR success.",
-    icon: "service5.png"
+    icon: "service5.png",
   },
   {
     title: "Change Management & Training Services",
     description:
       "We recognize that successful implementation of HR initiatives hinges on effective change management and training services designed to empower your team.",
-    icon: "service6.png"
+    icon: "service6.png",
   },
   {
     title: "Global HR Transformation Strategy",
     description:
       "We understand that staying competitive in today's fast-paced business landscape requires a robust Global HR Transformation Strategy.",
-    icon: "service7.png"
+    icon: "service7.png",
   },
   {
     title: "Addressing Complex HR Processes",
     description:
       "We understand the challenges that businesses face in managing complex HR processes and offer solutions to streamline operations and enhance performance.",
-    icon: "service8.png"
-  }
+    icon: "service8.png",
+  },
 ];
 export const softwares = [
   {
     title: "Performance Management Software",
     description:
       "Performance Management Software is designed to help organizations streamline and optimize their performance management processes.",
-    icon: "software1.png"
+    icon: "software1.png",
   },
   {
     title: "HRIS (Human Resources Information System)",
     description:
       "HRIS (Human Resources Information System) software is a comprehensive solution designed to manage HR functions efficiently.",
-    icon: "software2.png"
+    icon: "software2.png",
   },
   {
     title: "Payroll Software",
     description:
       "Payroll software simplifies and automates the payroll process, ensuring accuracy and compliance with legal standards.",
-    icon: "software3.png"
+    icon: "software3.png",
   },
   {
     title: "Performance Management Software",
     description:
       "Performance Management Software is designed to help organizations streamline and optimize their performance management processes.",
-    icon: "software1.png"
-  }
+    icon: "software1.png",
+  },
 ];
 export const products = [
-  "Performance Management Software",
-  "HRIS (Human Resources Information System)",
-  "Payroll software",
-  "Product 4",
-  "Product 5"
+  {
+    icon: <RiBarChartGroupedLine />,
+    title: "Performance Management Software",
+  },
+  {
+    icon: <BsPeople />,
+    title: "HRIS",
+  },
+  {
+    icon: <RiSecurePaymentLine />,
+    title: "Payroll software",
+  },
+  {
+    icon: <RiCalendarCheckLine />,
+    title: "Attendance",
+  },
+  {
+    icon: <MdOutlineIndeterminateCheckBox />,
+    title: "Leave",
+  },
+  {
+    icon: <FaCompress />,
+    title: "ESS Portal",
+  },
+  {
+    icon: <GiExpense />,
+    title: "Expenses",
+  },
+  {
+    icon: <IoDuplicateOutline />,
+    title: "Recruitment",
+  },
+  {
+    icon: <PiArticleNyTimesBold />,
+    title: "Timesheet",
+  },
 ];
 export const partners = [
   "/partner-logo/101.png",
@@ -167,7 +211,7 @@ export const partners = [
   "/partner-logo/14.png",
   "/partner-logo/15.jpg",
   "/partner-logo/16.jpg",
-  "/partner-logo/17.png"
+  "/partner-logo/17.png",
 ];
 
 export const skills = [
@@ -405,5 +449,5 @@ export const skills = [
   "Healthcare Compliance Companies (e.g., The Joint Commission, Healthcare Compliance Pros, Clearwater Compliance)",
   "Medical Coding Companies (e.g., Aviacode, Maxim Healthcare Services, AMN Healthcare)",
   "Health Information Management (HIM) Companies (e.g., MRO Corporation, Ciox Health, Sharecare Health Data Services)",
-  "Medical Transcription Companies (e.g., MModal, Nuance Communications, Acusis)"
+  "Medical Transcription Companies (e.g., MModal, Nuance Communications, Acusis)",
 ];

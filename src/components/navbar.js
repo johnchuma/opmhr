@@ -1,43 +1,90 @@
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { products, services } from "../utils/arrays";
-import { useState } from "react";
+import { createContext, useEffect, useState } from "react";
+import { useScroll, motion, AnimatePresence } from "framer-motion";
+import { FaToolbox, FaTools } from "react-icons/fa";
+import { set } from "firebase/database";
 
-const Navbar = () => {
+const Navbar = ({ isScrolling, setIsScrolling, pathname }) => {
   const navigate = useNavigate();
-  const [show, setShow] = useState(true);
+  const [isModalShowing, setisModalShowing] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(false);
+  const [show, setShow] = useState(false);
+
+  const [scrollValue, setScrollValue] = useState(0);
+  useEffect(() => {
+   
+  }, [pathname]);
+
   return (
-    <div className="relative w-full text-base">
-      <div className="fixed w-full bg-blackBackground  text-white z-50">
-        <div className=" bg-[#E0FEFF] flex items-center justify-center space-x-2 ">
-          <h1 className="text-textColor py-2">
-            Get a 3 month discount when you subscribe now,{" "}
-          </h1>
-          <h1 className="font-bold text-primary underline">Learn More</h1>
-        </div>
-        <div className="flex w-11/12  items-center mx-auto py-4 justify-between">
-          <h1 className="text-2xl font-medium">OPM International</h1>
+    <div className="relative w-full text-base text-dark">
+      <motion.div
+        className={`fixed w-full ${
+          isScrolling
+            ? " bg-white shadow-lg text-dark "
+            : "bg-black bg-opacity-40 text-white"
+        }  z-50  `}
+      >
+        <AnimatePresence>
+          {!isScrolling && (
+            <motion.div
+              initial={{ opacity: 0, y: -50 }}
+              animate={{
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0 },
+              }}
+              exit={{ opacity: 0, y: 50, transition: { duration: 0 } }}
+              className=" bg-white flex items-center justify-center space-x-2 "
+            >
+              <h1 className="text-textColor py-2">
+                Get a 3 month discount when you subscribe now,{" "}
+              </h1>
+              <h1 className="font-bold text-primary underline">Learn More</h1>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        <div className="flex w-10/12 2xl:w-8/12  items-center mx-auto py-4 justify-between">
+          <img className="h-12" src="/logo.png" />
           <div className="flex space-x-3">
             {[
               { title: "Home", path: "/" },
-              { title: "Services", path: "/services/0" },
-              { title: "Company", path: "/company" },
+              { title: "Services", path: "/services" },
+              { title: "About Us", path: "/company" },
               { title: "Products", path: "/products" },
-              { title: "Investment", path: "/investment" },
               { title: "Jobs", path: "/jobs" },
               { title: "Posts", path: "/blog" },
-              { title: "Contacts", path: "/contactus" }
+              { title: "Contacts", path: "/contactus" },
             ].map((item) => {
               return (
                 <button
                   className={`${
                     ["Services", "Products"].includes(item.title) && "group"
                   } py-4`}
-                  onClick={() =>
-                    !["Services", "Products"].includes(item.title) &&
-                    navigate(item.path)
-                  }
+                  onClick={() => {
+                    // alert(item.path);
+                    if (!["Services", "Products"].includes(item.title)) {
+                      // alert(item.path);
+                      navigate(item.path);
+                    }
+                  }}
                 >
-                  <div className="flex items-center space-x-1">
+                  <div
+                    onMouseEnter={() => {
+                      if (["Services", "Products"].includes(item.title)) {
+                        setShow(true);
+                        setSelectedItem(item.title);
+                        
+                      } else {
+                        setShow(false);
+                        setSelectedItem(null);
+                        
+                      }
+                      console.log("hovered");
+                    }}
+                    className="flex items-center space-x-1"
+                  >
                     <div>{item.title}</div>
                     {["Services", "Products"].includes(item.title) && (
                       <svg
@@ -56,71 +103,125 @@ const Navbar = () => {
                       </svg>
                     )}
                   </div>
-                  {show == true && item.title == "Services" && (
-                    <div
-                      className={` hover:block ${
-                        item.title == "Services" && "group-hover:block"
-                      } hidden absolute text-start bg-white shadow-lg py-8 delay-700 transition-all border left-0 right-0  top-16`}
-                    >
-                      <div className="w-11/12 mx-auto ">
-                        <h1 className="font-medium mb-3 text-textColor text-2xl pb-2 border-b-2 border-borderColor">
-                          Our services
-                        </h1>
-                        <div className="  grid grid-cols-2 ">
-                          {services.map((item, index) => {
-                            return (
-                              <div
-                                onClick={() => {
-                                  navigate(`/services/${item.title}`);
-                                  setShow(false);
-                                  setTimeout(() => {
-                                    setShow(true);
-                                  }, [1000]);
-                                }}
-                                className={` transition-all hover:underline  rounded-md duration-300 cursor-pointer py-2 hover:text-primary border-gray-200 
+                  <AnimatePresence>
+                    {show == true && selectedItem == "Services" && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{
+                          opacity: 1,
+                          y: 0,
+                          transition: { duration: 0.3 },
+                        }}
+                        exit={{ opacity: 0, y: 50 }}
+                        className={`  absolute text-start bg-white shadow   border left-0 right-0  top-20`}
+                      >
+                        <div
+                          onMouseLeave={() => {
+                            setShow(false);
+                           
+                          }}
+                          className="w-10/12 2xl:w-8/12 mx-auto "
+                        >
+                          <div className="grid grid-cols-12 gap-5 items-center">
+                            <div className=" col-span-3">
+                              <img className="pt-8" src="/services.png" />
+                            </div>
+                            <div className=" col-span-9 py-8">
+                              <h1 className="text-2xl mb-3 font-medium">
+                                Our services
+                              </h1>
+                              <div className="  grid grid-cols-3 gap-5  ">
+                                {services.map((item, index) => {
+                                  return (
+                                    <div
+                                      onClick={() => {
+                                        // alert("Hello");
+                                        navigate(
+                                          `/services/${item.title
+                                            .toLowerCase()
+                                            .replace(/ /g, "-")}`
+                                        );
+                                        setShow(false);
+                                      }}
+                                      className={` transition-all flex space-x-3 bg-white hover:scale-105  shadow   items-center px-4 rounded-xl duration-300 cursor-pointer py-2  border-gray-200 
                              }`}
-                              >
-                                <p>{item.title}</p>
+                                    >
+                                      <div className="size-12 flex justify-center  items-center  rounded-2xl text-primary">
+                                        <img
+                                          className="size-6"
+                                          src={`/${item.icon}`}
+                                          alt=""
+                                        />
+                                      </div>
+                                      <p className="text-dark">{item.title}</p>
+                                    </div>
+                                  );
+                                })}
                               </div>
-                            );
-                          })}
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                    </div>
-                  )}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
 
-                  {show == true && item.title == "Products" && (
-                    <div
-                      className={` hover:block ${
-                        item.title == "Products" && "group-hover:block"
-                      } hidden absolute text-start bg-white shadow-lg py-8 delay-700 transition-all border left-0 right-0  top-16`}
-                    >
-                      <div className="w-11/12 mx-auto ">
-                        <h1 className="font-medium mb-3 text-textColor text-2xl pb-2 border-b-2 border-borderColor">
-                          Our Products
-                        </h1>
-                        <div className="  grid grid-cols-2 ">
-                          {products.map((item, index) => {
-                            return (
-                              <div
-                                onClick={() => {
-                                  navigate(`/products/${item}`);
-                                  setShow(false);
-                                  setTimeout(() => {
-                                    setShow(true);
-                                  }, [1000]);
-                                }}
-                                className={` transition-all hover:underline  rounded-md duration-300 cursor-pointer py-2 hover:text-primary border-gray-200 
+                  <AnimatePresence>
+                    {show == true && item.title == "Products" && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 200 }}
+                        animate={{
+                          opacity: 1,
+                          y: 0,
+                          transition: { duration: 0.3 },
+                        }}
+                        exit={{ opacity: 0, y: 200 }}
+                        className={`  absolute text-start bg-white shadow py-8  border left-0 right-0  top-[80px]`}
+                      >
+                        <div
+                          onMouseLeave={() => {
+                            setShow(false);
+                           
+                          }}
+                          className="w-10/12 2xl:w-8/12 mx-auto "
+                        >
+                          <div className="grid grid-cols-12 gap-8 items-center">
+                            <div className=" col-span-3">
+                              <img src="/software.png" />
+                            </div>
+                            <div className=" col-span-9">
+                              <h1 className="text-2xl mb-3 font-medium">
+                                Our Products
+                              </h1>
+                              <div className="  grid grid-cols-3 gap-5 ">
+                                {products.map((item, index) => {
+                                  return (
+                                    <div
+                                      onClick={() => {
+                                        navigate(
+                                          `/products/${item.title
+                                            .toLowerCase()
+                                            .replace(/ /g, "-")}`
+                                        );
+                                        setShow(false);
+                                        
+                                      }}
+                                      className={` transition-all flex space-x-3 bg-white hover:scale-105  shadow   items-center px-4 rounded-xl duration-300 cursor-pointer py-2  border-gray-200 
                              }`}
-                              >
-                                <p>{item}</p>
+                                    >
+                                      <div className="text-4xl flex justify-center  items-center ounded-2xl text-primary">
+                                        {item.icon}
+                                      </div>
+                                      <p className="text-dark">{item.title}</p>
+                                    </div>
+                                  );
+                                })}
                               </div>
-                            );
-                          })}
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                    </div>
-                  )}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </button>
               );
             })}
@@ -131,16 +232,23 @@ const Navbar = () => {
               onClick={() => {
                 navigate("/login");
               }}
-              className="py-3 px-4 rounded-xl  "
+              className="py-3 px-4 rounded-xl hover:scale-105 transition-all  duration-200 cursor-pointer  "
             >
               Register
             </button>
-            <button className="border-2 border-[#384141] py-2 px-3 rounded-lg">
+            <button
+              className={`border-2 ${
+                isScrolling
+                  ? "border-primary bg-primary text-white border-opacity-15 "
+                  : "border-white border-opacity-75"
+              }  py-2 px-3 rounded-full hover:scale-105 transition-all  duration-200 cursor-pointer`}
+            >
               Book a free Demo
             </button>
           </div>
         </div>
-      </div>
+        {/* <motion.div className="h-2 bg-primary " style={{scaleX:scrollYProgress}}></motion.div> */}
+      </motion.div>
     </div>
   );
 };
