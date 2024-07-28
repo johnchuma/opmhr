@@ -13,13 +13,12 @@ const MainLayout = () => {
   // const { pathname } = useLocation();
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [isScrolling, setIsScrolling] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(true);
 
   const [pathname, setPathname] = useState(useLocation().pathname);
 
-
   useEffect(() => {
-      onAuthStateChanged(auth, (user) => {
+    onAuthStateChanged(auth, (user) => {
       if (user) {
         getUser(user.email).then((data) => {
           setUser(data);
@@ -40,9 +39,15 @@ const MainLayout = () => {
   }, []);
   return (
     <div>
-      <Navbar isScrolling={isScrolling} pathname={pathname} setIsScrolling={setIsScrolling} />
+      <Navbar
+        isScrolling={isScrolling}
+        pathname={pathname}
+        setIsScrolling={setIsScrolling}
+      />
       <UserContext.Provider value={{ user }}>
-        <NavbarContext.Provider value={{ isScrolling, setIsScrolling,setPathname }}>
+        <NavbarContext.Provider
+          value={{ isScrolling, setIsScrolling, setPathname }}
+        >
           <Outlet />
         </NavbarContext.Provider>
       </UserContext.Provider>
