@@ -36,9 +36,7 @@ const InquiryForm = () => {
         }}
       >
         <div className="flex space-x-4 items-center">
-          <div>
-            <BsSend className="text-6xl text-primary" />
-          </div>
+         
           <div>
             <h1 className="text-4xl mb-0">Contact Us</h1>
             <p className="text-base text-muted">
