@@ -6,10 +6,7 @@ const ServicesPage = () => {
   const { uuid } = useParams();
   const navigate = useNavigate();
   const [index, setIndex] = useState(0);
-  useEffect(() => {
-    var no = 0;
-    setIndex(no);
-  }, [uuid]);
+ 
   return (
     <div>
       <div className="py-12" />
@@ -528,7 +525,7 @@ const ServicesPage = () => {
           )}
           <button
             onClick={() => {
-              navigate("/contactus");
+              // navigate("/contactus");
             }}
             className="bg-primary text-white py-3 px-4 rounded-xl"
           >
