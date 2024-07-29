@@ -25,7 +25,7 @@ const BlogPage = () => {
     <div>
       
 
-      <div className="pt-28 pb-8  w-8/12 mx-auto  gap-5">
+      <div className="pt-28 pb-8  w-8/12 2xl:w-6/12 mx-auto  gap-5">
         {posts.map((item) => {
           return (
             <div

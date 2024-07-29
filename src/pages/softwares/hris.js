@@ -25,7 +25,7 @@ const HRIS = () => {
         className="w-10/12 2xl:w-8/12 mx-auto grid grid-cols-12 items-center pt-28"
       >
         <div className=" col-span-6">
-          <img src="/product.png" />
+          <img src="/hris.svg" />
         </div>
         <div className=" col-span-6">
           <h1 className="font-medium text-textColor text-6xl">HRIS Software</h1>

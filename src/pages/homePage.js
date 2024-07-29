@@ -14,8 +14,8 @@ import { FaPeopleGroup } from "react-icons/fa6";
 const HomePage = () => {
   //animation variants
   const scrollAnimationVariants = {
-    hidden: {opacity:0,y:200},
-    visible: {opacity:1,y:0,transition:{duration:1}},
+    hidden: { opacity: 0, y: 200 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
   };
   const navigate = useNavigate();
   return (
@@ -28,7 +28,11 @@ const HomePage = () => {
         <div className="absolute h-full w-full ">
           <div className="   py-12 h-screen w-10/12 2xl:w-8/12 mx-auto rounded-xl items-center flex ">
             <div className=" gap-16  grid grid-cols-12 items-start ">
-              <motion.div initial={{x:-2000,opacity:0}}  animate={{x:0,opacity:1,transition:{duration:1}}}  className=" space-y-8 col-span-8 ">
+              <motion.div
+                initial={{ x: -2000, opacity: 0 }}
+                animate={{ x: 0, opacity: 1, transition: { duration: 1 } }}
+                className=" space-y-8 col-span-8 "
+              >
                 <h1 className="text-6xl font-medium leading-tight text-white  ">
                   Bridging HR and Technlogy for Global Success
                 </h1>
@@ -63,7 +67,11 @@ const HomePage = () => {
         </div>
       </div>
 
-      <motion.div initial={{y:300,opacity:0}} animate={{y:-50,opacity:1,transition:{duration:1,delay:1}}}   className="w-10/12 2xl:w-8/12 mx-auto bg-white shadow-2xl -translate-y-10 p-8 rounded-3xl">
+      <motion.div
+        initial={{ y: 300, opacity: 0 }}
+        animate={{ y: -50, opacity: 1, transition: { duration: 1, delay: 1 } }}
+        className="w-10/12 2xl:w-8/12 mx-auto bg-white shadow-2xl -translate-y-10 p-8 rounded-3xl"
+      >
         <div className="flex items-center justify-between">
           <div className="flex space-x-2 w-8/12 items-center bg-slate-50  py-2 px-8 rounded-full">
             <FaSearch />
@@ -71,23 +79,27 @@ const HomePage = () => {
               className="w-full border-0 bg-transparent focus:border-o focus:ring-0"
               placeholder="Search keyword/ job title"
             />
-          
           </div>
           <div className="flex space-x-2  items-center bg-slate-50  py-2 px-8 rounded-full">
-          <select className="w-full border-0 bg-transparent focus:border-o focus:ring-0">
-              <option >Select category</option>
-            <option value="Employee">Employee</option>
-                <option value="Trainee">Trainee</option>
-                <option value="Volunteer">Volunteer</option>
+            <select className="w-full border-0 bg-transparent focus:border-o focus:ring-0">
+              <option>Select category</option>
+              <option value="Employee">Employee</option>
+              <option value="Trainee">Trainee</option>
+              <option value="Volunteer">Volunteer</option>
             </select>
-            </div>
+          </div>
           <button className="bg-primary hover:scale-105 transition-all  duration-200 cursor-pointer font-medium text-white py-4 px-6 rounded-full">
             Search Jobs
           </button>
         </div>
       </motion.div>
 
-      <motion.div whileInView="visible" initial="hidden" variants={scrollAnimationVariants}  className="w-10/12 2xl:w-8/12 mx-auto grid grid-cols-12 items-center">
+      <motion.div
+        whileInView="visible"
+        initial="hidden"
+        variants={scrollAnimationVariants}
+        className="w-10/12 2xl:w-8/12 mx-auto grid grid-cols-12 items-center"
+      >
         <div className=" col-span-6">
           <h1 className="font-medium text-textColor text-6xl">
             About OPM International HR Consultants
@@ -108,7 +120,12 @@ const HomePage = () => {
           <img src="/about.png" />
         </div>
       </motion.div>
-      <motion.div variants={scrollAnimationVariants}  whileInView="visible" initial="hidden" className="bg-lightBackground py-8">
+      <motion.div
+        variants={scrollAnimationVariants}
+        whileInView="visible"
+        initial="hidden"
+        className="bg-lightBackground py-8"
+      >
         <div className="flex justify-center">
           <h1 className="text-6xl font-medium py-12">Our core values</h1>
         </div>
@@ -189,7 +206,12 @@ const HomePage = () => {
           </p>
         </div>
       </motion.div>
-      <motion.div variants={scrollAnimationVariants}  whileInView="visible" initial="hidden" className="w-10/12 2xl:w-8/12 mx-auto grid grid-cols-12 items-center py-24">
+      <motion.div
+        variants={scrollAnimationVariants}
+        whileInView="visible"
+        initial="hidden"
+        className="w-10/12 2xl:w-8/12 mx-auto grid grid-cols-12 items-center py-24"
+      >
         <div className=" col-span-6">
           <h1 className="font-medium text-textColor text-6xl">
             Performance Management Software
@@ -209,12 +231,17 @@ const HomePage = () => {
         </div>
 
         <div className=" col-span-6">
-          <img src="/performance.png" />
+        <img src="/product.png" />
         </div>
       </motion.div>
-      <motion.div variants={scrollAnimationVariants}  whileInView="visible" initial="hidden" className="w-10/12 2xl:w-8/12 mx-auto grid grid-cols-12 items-center py-24 gap-8">
+      <motion.div
+        variants={scrollAnimationVariants}
+        whileInView="visible"
+        initial="hidden"
+        className="w-10/12 2xl:w-8/12 mx-auto grid grid-cols-12 items-center py-24 gap-8"
+      >
         <div className=" col-span-6">
-          <img src="/hrms.png" />
+          <img src="/hris.svg" />
         </div>
         <div className=" col-span-6">
           <h1 className="font-medium text-textColor text-6xl">
@@ -234,7 +261,12 @@ const HomePage = () => {
           </div>
         </div>
       </motion.div>
-      <motion.div variants={scrollAnimationVariants}  whileInView="visible" initial="hidden" className="w-10/12 2xl:w-8/12 mx-auto grid grid-cols-12 items-center py-24">
+      <motion.div
+        variants={scrollAnimationVariants}
+        whileInView="visible"
+        initial="hidden"
+        className="w-10/12 2xl:w-8/12 mx-auto grid grid-cols-12 items-center py-24"
+      >
         <div className=" col-span-6">
           <h1 className="font-medium text-textColor text-6xl">
             Payroll Software
@@ -254,24 +286,34 @@ const HomePage = () => {
         </div>
 
         <div className=" col-span-6">
-          <img src="/payroll.png" />
+        <img src="/payroll.svg" />
         </div>
       </motion.div>
-      <motion.div variants={scrollAnimationVariants}  whileInView="visible" initial="hidden" className=" pt-24">
+      <motion.div
+        variants={scrollAnimationVariants}
+        whileInView="visible"
+        initial="hidden"
+        className=" pt-24"
+      >
         <div className="w-6/12 mx-auto text-center">
           <h1 className="text-6xl font-medium">Our Services</h1>
         </div>
         <div className="w-10/12 2xl:w-8/12 mx-auto grid grid-cols-4 gap-4 mt-8">
           {services.map((item) => (
             <div className="bg-white shadow-2xl rounded-2xl p-5 flex flex-col text-center items-center">
-              <img className="h-12" src={item.icon} />
+              <div className="text-primary text-4xl">{item.icon}</div>
               <h1 className="font-medium text-2xl mt-2">{item.title}</h1>
               <p className="text-muted mt-2">{item.description}</p>
             </div>
           ))}
         </div>
 
-        <motion.div variants={scrollAnimationVariants}  whileInView="visible" initial="hidden"  className=" w-10/12 2xl:w-8/12 mx-auto py-24">
+        <motion.div
+          variants={scrollAnimationVariants}
+          whileInView="visible"
+          initial="hidden"
+          className=" w-10/12 2xl:w-8/12 mx-auto py-24"
+        >
           <h1 className="text-6xl font-medium text-center ">
             Latest blog posts
           </h1>
@@ -310,7 +352,12 @@ const HomePage = () => {
             </button>
           </div>
         </motion.div>
-        <motion.div variants={scrollAnimationVariants}  whileInView="visible" initial="hidden"  className="bg-primary py-24">
+        <motion.div
+          variants={scrollAnimationVariants}
+          whileInView="visible"
+          initial="hidden"
+          className="bg-primary py-24"
+        >
           <div className="w-4/12 mx-auto flex flex-col space-y-4 items-center">
             <img className="h-24" src="subscribe.png" />
             <h1 className="text-3xl text-white font-medium text-center">

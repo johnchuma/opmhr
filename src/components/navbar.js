@@ -199,12 +199,8 @@ const Navbar = ({ isScrolling, setIsScrolling, pathname }) => {
                                       className={` transition-all flex space-x-3 bg-white hover:scale-105  shadow   items-center px-4 rounded-xl duration-300 cursor-pointer py-2  border-gray-200 
                              }`}
                                     >
-                                      <div className="size-12 flex justify-center  items-center  rounded-2xl text-primary">
-                                        <img
-                                          className="size-6"
-                                          src={`/${item.icon}`}
-                                          alt=""
-                                        />
+                                      <div className=" flex justify-center  items-center text-4xl  rounded-4xl text-primary ">
+                                        {item.icon}
                                       </div>
                                       <p className="text-dark">{item.title}</p>
                                     </div>

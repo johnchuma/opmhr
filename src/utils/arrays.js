@@ -1,15 +1,19 @@
-import { BsPeople } from "react-icons/bs";
-import { FaCompress, FaToolbox } from "react-icons/fa";
-import { FaArrowUpRightDots } from "react-icons/fa6";
+import { AiOutlinePartition } from "react-icons/ai";
+import { BiWorld } from "react-icons/bi";
+import { BsBarChartSteps, BsPeople } from "react-icons/bs";
+import { FaAddressBook, FaCompress, FaToolbox, FaUser } from "react-icons/fa";
+import { FaArrowUpRightDots, FaGauge } from "react-icons/fa6";
 import { GiExpense } from "react-icons/gi";
 import { IoDuplicateOutline, IoFileTrayFullOutline } from "react-icons/io5";
-import { MdOutlineIndeterminateCheckBox } from "react-icons/md";
+import { LuBadgeHelp, LuGaugeCircle } from "react-icons/lu";
+import { MdOutlineIndeterminateCheckBox, MdOutlineModelTraining, MdSettingsInputComponent } from "react-icons/md";
 import { PiArticleNyTimesBold } from "react-icons/pi";
 import {
   RiBarChartGroupedLine,
   RiCalendarCheckLine,
   RiSecurePaymentLine,
 } from "react-icons/ri";
+import { TbTransform } from "react-icons/tb";
 
 export const sectors = [
   "IT & Technology",
@@ -74,49 +78,49 @@ export const services = [
     title: "Performance Management Services",
     description:
       "Our Performance Management services are designed to elevate your organization's efficiency and productivity.",
-    icon: "service1.png",
+    icon: <LuGaugeCircle/>,
   },
   {
     title: "AI & Machine Learning in Global HR",
     description:
       "We're pioneering the integration of AI and machine learning technologies into global HR strategies to optimize talent management and improve decision-making processes.",
-    icon: "service2.png",
+    icon: <AiOutlinePartition/>,
   },
   {
     title: "Global Staff Outsourcing Solutions",
     description:
       "We understand the unique challenges and opportunities of building a workforce across borders and provide tailored solutions to meet your needs.",
-    icon: "service3.png",
+    icon: <BiWorld/>,
   },
   {
     title: "HR Advisory and Consultancy",
     description:
       "We, the OPM Team, are proud to offer comprehensive HR Advisory & Consultancy services to guide your organization through strategic HR initiatives.",
-    icon: "service4.png",
+    icon: <LuBadgeHelp />,
   },
   {
     title: "International and Local HR Data Analytics & Reporting",
     description:
       "In the digital age, data is king, and at OPM International HR Consultants, we're dedicated to leveraging data analytics and reporting to drive HR success.",
-    icon: "service5.png",
+    icon: <BsBarChartSteps />,
   },
   {
     title: "Change Management & Training Services",
     description:
       "We recognize that successful implementation of HR initiatives hinges on effective change management and training services designed to empower your team.",
-    icon: "service6.png",
+    icon: <MdOutlineModelTraining />,
   },
   {
     title: "Global HR Transformation Strategy",
     description:
       "We understand that staying competitive in today's fast-paced business landscape requires a robust Global HR Transformation Strategy.",
-    icon: "service7.png",
+    icon: <TbTransform />,
   },
   {
     title: "Addressing Complex HR Processes",
     description:
       "We understand the challenges that businesses face in managing complex HR processes and offer solutions to streamline operations and enhance performance.",
-    icon: "service8.png",
+    icon: <MdSettingsInputComponent />,
   },
 ];
 export const softwares = [
