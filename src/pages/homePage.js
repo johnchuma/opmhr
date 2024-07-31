@@ -292,7 +292,7 @@ const HomePage = () => {
       </motion.div>
       <div className="flex justify-center items-center">
         <button className=" flex items-center space-x-3 hover:bg-primary  hover:text-white  hover:scale-105 transition-all  duration-200 cursor-pointer border border-dark  border-opacity-45 font-medium text-dark py-4 px-6 mt-8 rounded-full">
-          <div>View more services</div>
+          <div>View more softwares</div>
           <FaArrowRight />
         </button>
       </div>
