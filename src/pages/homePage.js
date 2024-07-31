@@ -3,6 +3,7 @@ import { services, softwares } from "../utils/arrays";
 import { useEffect } from "react";
 import { MotionConfig, motion } from "framer-motion";
 import {
+  FaArrowRight,
   FaBeer,
   FaLightbulb,
   FaPeopleCarry,
@@ -98,10 +99,10 @@ const HomePage = () => {
         whileInView="visible"
         initial="hidden"
         variants={scrollAnimationVariants}
-        className="w-10/12 2xl:w-8/12 mx-auto grid grid-cols-12 items-center"
+        className="w-10/12 2xl:w-8/12 mx-auto grid grid-cols-12 items-center gap-16"
       >
         <div className=" col-span-6">
-          <h1 className="font-medium text-textColor text-6xl">
+          <h1 className="font-medium text-textColor text-5xl">
             About OPM International HR Consultants
           </h1>
           <p className="text-lg text-muted  mt-4">
@@ -127,7 +128,7 @@ const HomePage = () => {
         className="bg-lightBackground py-8"
       >
         <div className="flex justify-center">
-          <h1 className="text-6xl font-medium py-12">Our core values</h1>
+          <h1 className="text-5xl font-medium py-12">Our core values</h1>
         </div>
         <div className="w-10/12 2xl:w-8/12 grid grid-cols-5 gap-8 mx-auto ">
           {[
@@ -176,7 +177,7 @@ const HomePage = () => {
           })}
         </div>
         <div className="w-8/12 2xl:w-6/12 mx-auto text-center py-12 ">
-          <h1 className="f font-medium text-6xl my-8">
+          <h1 className="f font-medium text-5xl my-8">
             We Simplify HR Activities Around the World
           </h1>
           <p className="text-lg text-muted mt-2">
@@ -213,7 +214,7 @@ const HomePage = () => {
         className="w-10/12 2xl:w-8/12 mx-auto grid grid-cols-12 items-center py-24"
       >
         <div className=" col-span-6">
-          <h1 className="font-medium text-textColor text-6xl">
+          <h1 className="font-medium text-textColor text-5xl">
             Performance Management Software
           </h1>
           <p className="text-lg text-muted  mt-4">
@@ -231,20 +232,20 @@ const HomePage = () => {
         </div>
 
         <div className=" col-span-6">
-        <img src="/product.png" />
+          <img src="/product.png" />
         </div>
       </motion.div>
       <motion.div
         variants={scrollAnimationVariants}
         whileInView="visible"
         initial="hidden"
-        className="w-10/12 2xl:w-8/12 mx-auto grid grid-cols-12 items-center py-24 gap-8"
+        className="w-10/12 2xl:w-8/12 mx-auto grid grid-cols-12 items-center py-4 gap-8"
       >
         <div className=" col-span-6">
           <img src="/hris.svg" />
         </div>
         <div className=" col-span-6">
-          <h1 className="font-medium text-textColor text-6xl">
+          <h1 className="font-medium text-textColor text-5xl">
             HRIS (Human Resources Information System)
           </h1>
           <p className="text-lg text-muted  mt-4">
@@ -268,7 +269,7 @@ const HomePage = () => {
         className="w-10/12 2xl:w-8/12 mx-auto grid grid-cols-12 items-center py-24"
       >
         <div className=" col-span-6">
-          <h1 className="font-medium text-textColor text-6xl">
+          <h1 className="font-medium text-textColor text-5xl">
             Payroll Software
           </h1>
           <p className="text-lg text-muted  mt-4">
@@ -286,9 +287,15 @@ const HomePage = () => {
         </div>
 
         <div className=" col-span-6">
-        <img src="/payroll.svg" />
+          <img src="/payroll.svg" />
         </div>
       </motion.div>
+      <div className="flex justify-center items-center">
+        <button className=" flex items-center space-x-3 hover:bg-primary  hover:text-white  hover:scale-105 transition-all  duration-200 cursor-pointer border border-dark  border-opacity-45 font-medium text-dark py-4 px-6 mt-8 rounded-full">
+          <div>View more services</div>
+          <FaArrowRight />
+        </button>
+      </div>
       <motion.div
         variants={scrollAnimationVariants}
         whileInView="visible"
@@ -296,12 +303,12 @@ const HomePage = () => {
         className=" pt-24"
       >
         <div className="w-6/12 mx-auto text-center">
-          <h1 className="text-6xl font-medium">Our Services</h1>
+          <h1 className="text-5xl font-medium">Our Services</h1>
         </div>
-        <div className="w-10/12 2xl:w-8/12 mx-auto grid grid-cols-4 gap-4 mt-8">
+        <div className="w-10/12 2xl:w-8/12 mx-auto grid grid-cols-4 gap-6 mt-8">
           {services.map((item) => (
-            <div className="bg-white shadow-2xl rounded-2xl p-5 flex flex-col text-center items-center">
-              <div className="text-primary text-4xl">{item.icon}</div>
+            <div className="bg-white shadow-2xl rounded-2xl  p-5 flex flex-col text-center items-center">
+              <div className="text-primary text-3xl">{item.icon}</div>
               <h1 className="font-medium text-2xl mt-2">{item.title}</h1>
               <p className="text-muted mt-2">{item.description}</p>
             </div>
@@ -314,7 +321,7 @@ const HomePage = () => {
           initial="hidden"
           className=" w-10/12 2xl:w-8/12 mx-auto py-24"
         >
-          <h1 className="text-6xl font-medium text-center ">
+          <h1 className="text-5xl font-medium text-center ">
             Latest blog posts
           </h1>
           <p className="text-muted text-center text-xl py-3">

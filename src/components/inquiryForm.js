@@ -36,9 +36,8 @@ const InquiryForm = () => {
         }}
       >
         <div className="flex space-x-4 items-center">
-         
           <div>
-            <h1 className="text-4xl mb-0">Contact Us</h1>
+            <h1 className="text-2xl mb-0">Contact Us</h1>
             <p className="text-base text-muted">
               Fill the form below to reach us
             </p>

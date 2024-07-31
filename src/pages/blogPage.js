@@ -23,9 +23,11 @@ const BlogPage = () => {
     <PageLoader />
   ) : (
     <div>
-      
+       <div className="w-full h-48 bg-primary  flex  justify-center items-center pt-20 ">
+      <h1 className="text-white text-4xl ">Blog Posts</h1>
+    </div>
 
-      <div className="pt-28 pb-8  w-8/12 2xl:w-6/12 mx-auto  gap-5">
+      <div className="pt-8 pb-8  w-8/12 2xl:w-6/12 mx-auto  gap-5">
         {posts.map((item) => {
           return (
             <div

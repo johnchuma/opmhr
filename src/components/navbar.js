@@ -143,7 +143,7 @@ const Navbar = ({ isScrolling, setIsScrolling, pathname }) => {
                                       className={` transition-all flex space-x-3 bg-white hover:scale-105  shadow   items-center px-4 rounded-xl duration-300 cursor-pointer py-2  border-gray-200 
                              }`}
                                     >
-                                      <div className="text-4xl flex justify-center  items-center ounded-2xl text-primary">
+                                      <div className="text-2xl flex justify-center  items-center ounded-2xl text-primary">
                                         {item.icon}
                                       </div>
                                       <p className="text-dark">{item.title}</p>
@@ -199,7 +199,7 @@ const Navbar = ({ isScrolling, setIsScrolling, pathname }) => {
                                       className={` transition-all flex space-x-3 bg-white hover:scale-105  shadow   items-center px-4 rounded-xl duration-300 cursor-pointer py-2  border-gray-200 
                              }`}
                                     >
-                                      <div className=" flex justify-center  items-center text-4xl  rounded-4xl text-primary ">
+                                      <div className=" flex justify-center  items-center text-2xl  rounded-4xl text-primary ">
                                         {item.icon}
                                       </div>
                                       <p className="text-dark">{item.title}</p>

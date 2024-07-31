@@ -32,19 +32,21 @@ const BlogPostDetails = () => {
   ) : (
     <div>
   
-
-      <div className=" w-8/12 2xl:w-6/12 gap-x-10 mx-auto pt-28 pb-12 text-base ">
-        <div onClick={()=>{
-          navigate('/blog')
-        }} className="flex space-x-2 cursor-pointer items-center text-muted mb-4">
-          <FaArrowLeft />
-          <h1 className="underline">Back</h1>
-        </div>
-        <h1 className="text-3xl font-medium">{post.title}</h1>
-        <p className="text-sm text-muted pt-2">
+  <div className="w-full h-72 bg-primary  flex  justify-center items-center pt-20 ">
+      <div className="w-6/12 ">
+      <h1 className="text-white text-4xl ">{post.title}</h1>
+      <p className="text-sm text-white text-opacity- pt-2">
           Published {timeAgo(post.createdAt.toDate())}
         </p>
-        <img className="w-full my-5 rounded-lg" src={post.image} />
+      </div>
+
+    </div>
+      <div className=" w-8/12 2xl:w-6/12 gap-x-10 mx-auto pt-12 pb-12 text-base ">
+        
+       
+       <div className="w-6/12">
+       <img className="w-full my-5 rounded-lg" src={post.image} />
+       </div>
         <div className="space-y-5 text-textColor text-lg text-opacity-70">
           <p>{post.introduction}</p>
           <p>{post.paragraph1}</p>

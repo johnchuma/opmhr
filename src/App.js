@@ -44,6 +44,13 @@ import Timesheet from "./pages/softwares/timesheet";
 import FullAndFinal from "./pages/softwares/fullAndfinal";
 import Expenses from "./pages/softwares/expenses";
 import Recruitment from "./pages/softwares/recruitment";
+import MachinelearningInGlobalHR from "./pages/services/machineLearningInGlobalHR";
+import GlobalStaffOutsourcingSolution from "./pages/services/globalStaffOutsourcingSolution";
+import HRAdvisoryAndConsultancy from "./pages/services/hrAdvisoryAndConsultancy";
+import InternationalAndLocalDataAnalysis from "./pages/services/internationalAndLocaldataAnalysis";
+import ChangeManagementAndTrainingServices from "./pages/services/changeManagementAndTrainingServices";
+import GlobalHRTransformationStrategy from "./pages/services/globalHRTransformationStrategy";
+import AddressingComplexHRProcess from "./pages/services/addressingComplexHRProcess";
 function App() {
   useEffect(() => {
     AOS.init({});
@@ -62,6 +69,13 @@ function App() {
               path="/services/performance-management-services"
               element={<PerformanceManagementServices />}
             />
+            <Route path="/services/ai-&-machine-learning-in-global-hr" element={<MachinelearningInGlobalHR/>}/>
+            <Route path="/services/global-staff-outsourcing-solutions" element={<GlobalStaffOutsourcingSolution/>}/>
+            <Route path="/services/hr-advisory-and-consultancy" element={<HRAdvisoryAndConsultancy/>}/>
+            <Route path="/services/international-and-local-hr-data-analytics-&-reporting" element={<InternationalAndLocalDataAnalysis/>}/>
+            <Route path="/services/change-management-&-training-services" element={<ChangeManagementAndTrainingServices/>}/>
+            <Route path="/services/global-hr-transformation-strategy" element={<GlobalHRTransformationStrategy/>}/>
+            <Route path="/services/addressing-complex-hr-processes" element={<AddressingComplexHRProcess/>}/>
             <Route
               path="/products/performance-management-software"
               element={<PerformanceManagementSoftware />}

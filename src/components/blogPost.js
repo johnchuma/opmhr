@@ -9,6 +9,7 @@ const BlogPost = ({ item, refresh, setRefresh }) => {
   const [loading, setLoading] = useState(false);
   return (
     <div>
+      
       <div
         onClick={() => {
           setShowModal(true);
@@ -73,7 +74,7 @@ const BlogPost = ({ item, refresh, setRefresh }) => {
               <textarea
                 required
                 name="title"
-                className="w-full  font-medium border-0 focus:ring-0 text-4xl"
+                className="w-full  font-medium border-0 focus:ring-0 text-2xl"
                 defaultValue={item.title}
                 placeholder="Blog title"
               />

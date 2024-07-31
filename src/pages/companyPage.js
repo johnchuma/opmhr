@@ -34,10 +34,10 @@ const CompanyPage = () => {
           whileInView="visible"
           initial="hidden"
           variants={scrollAnimationVariants}
-          className="w-10/12 2xl:w-8/12 mx-auto grid grid-cols-12 items-center"
+          className="w-10/12 2xl:w-8/12 mx-auto grid grid-cols-12 items-center gap-16"
         >
           <div className=" col-span-6">
-            <h1 className="font-medium text-textColor text-6xl">
+            <h1 className="font-medium text-textColor text-5xl">
               About OPM International HR Consultants
             </h1>
             <p className="text-lg text-muted  mt-4">
@@ -60,7 +60,7 @@ const CompanyPage = () => {
           className="bg-lightBackground py-8"
         >
           <div className="flex justify-center">
-            <h1 className="text-6xl font-medium py-12 text-textColor">
+            <h1 className="text-5xl font-medium py-12 text-textColor">
               Our core values
             </h1>
           </div>
@@ -111,7 +111,7 @@ const CompanyPage = () => {
             })}
           </div>
           <div className="w-8/12 2xl:w-6/12 mx-auto text-center py-12 ">
-            <h1 className="f font-medium text-6xl my-8 text-textColor">
+            <h1 className="f font-medium text-5xl my-8 text-textColor">
               Why Us
             </h1>
             <p className="text-lg text-muted mt-2">
@@ -136,7 +136,7 @@ const CompanyPage = () => {
             <img src="/target.svg" />
           </div>
           <div className=" col-span-6">
-            <h1 className="font-medium text-textColor text-6xl">Our Mission</h1>
+            <h1 className="font-medium text-textColor text-5xl">Our Mission</h1>
             {[
               "To ignite growth in SMEs by providing innovative and comprehensive HR solutions.",
               "To champion a positive and productive work environment, fostering employee engagement and satisfaction.",
@@ -162,7 +162,7 @@ const CompanyPage = () => {
           className="w-10/12 2xl:w-8/12 mx-auto grid grid-cols-12 items-center py-0 gap-8"
         >
           <div className=" col-span-6">
-            <h1 className="font-medium text-textColor text-6xl">Our vision</h1>
+            <h1 className="font-medium text-textColor text-5xl">Our vision</h1>
 
             {[
               "We aim to push boundaries using advanced tech for transformative HR solutions.",

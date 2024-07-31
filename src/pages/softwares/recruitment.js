@@ -29,7 +29,7 @@ const Recruitment = () => {
           <img src="/product.png" />
         </div>
         <div className=" col-span-6">
-          <h1 className="font-medium text-textColor text-6xl">
+          <h1 className="font-medium text-textColor text-5xl">
             Recruitment Management System
           </h1>
           <p className="text-lg text-muted  mt-4">
@@ -50,7 +50,7 @@ const Recruitment = () => {
         className="bg-lightBackground py-16"
       >
         <div className="flex justify-center">
-          <h1 className="text-6xl font-medium pb-12">Software features</h1>
+          <h1 className="text-5xl font-medium pb-12">Software features</h1>
         </div>
         <div className="w-10/12 2xl:w-8/12 grid grid-cols-2 gap-8 mx-auto ">
           {[
@@ -88,23 +88,23 @@ const Recruitment = () => {
                 "In many companies, RMS automates the assessments and tests according to the required post vacancy. Additionally, added data analytic features offer detailed information on recruitment metrics and assist employers in decision-making. Different recruitment management tools even automate the selection mail or offer letters to candidates and provide feedback.",
             },
             {
-                icon: <LuDatabase />,
-  
-                title: "Initiating Negotiation",
-                description:
-                  "This system also offers applicant tracking features through which recruiters can track the candidate’s performance and salary expectations throughout the hiring process. So, after selecting the candidates, employers have valuable insight into how to draft negotiation strategies effectively.",
-              },
-              {
-                icon: <LuDatabase />,
-  
-                title: "Hiring and Onboarding",
-                description:
-                  "The transition from candidates to employees occurs during the onboarding process. Recruitment management software also automates this process by sending welcome emails, distributing employee handbooks and annexures, and completing paperwork in lieu of HR professionals. It often tracks the progress of the onboarding tasks.",
-              }
+              icon: <LuDatabase />,
+
+              title: "Initiating Negotiation",
+              description:
+                "This system also offers applicant tracking features through which recruiters can track the candidate’s performance and salary expectations throughout the hiring process. So, after selecting the candidates, employers have valuable insight into how to draft negotiation strategies effectively.",
+            },
+            {
+              icon: <LuDatabase />,
+
+              title: "Hiring and Onboarding",
+              description:
+                "The transition from candidates to employees occurs during the onboarding process. Recruitment management software also automates this process by sending welcome emails, distributing employee handbooks and annexures, and completing paperwork in lieu of HR professionals. It often tracks the progress of the onboarding tasks.",
+            },
           ].map((item) => {
             return (
               <div className="hover:scale-105 transition-all p-5 rounded-lg flex space-x-4 bg-white shadow-lg duration-200 cursor-pointer">
-                <div className=" text-4xl text-primary mt-2">{item.icon}</div>
+                <div className=" text-2xl text-primary mt-2">{item.icon}</div>
                 <div>
                   <h1 className=" font-normal text-textColor text-xl ">
                     {item.title}
@@ -125,7 +125,7 @@ const Recruitment = () => {
         className=" py-16 w-10/12 2xl:w-8/12 mx-auto p-8 rounded-2xl shadow-2xl bg-primary grid grid-cols-12 my-16"
       >
         <div className=" col-span-12 flex flex-col items-center">
-          <h1 className=" text-4xl text-white font-medium">
+          <h1 className=" text-2xl text-white font-medium">
             Are you curious about this software ?
           </h1>
           <button className=" hover:scale-105 transition-all  duration-200 cursor-pointer bg-white font-medium  py-4 px-6 mt-8 rounded-full">

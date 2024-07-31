@@ -30,7 +30,7 @@ const ApplyForAJob = () => {
   ) : (
     <div>
       <div className="bg-slate-900 list text-white flex py-12 md:py-24 flex-col justify-center items-center">
-        <h1 className="text-4xl font-medium">Send Application</h1>
+        <h1 className="text-2xl font-medium">Send Application</h1>
         <div className="w-12 h-2 bg-primary mt-3"></div>
       </div>
       <div className="bg-slate-800 text-white flex py-8  justify-center items-center">
