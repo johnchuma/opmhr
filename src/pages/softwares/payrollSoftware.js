@@ -46,7 +46,7 @@ const PayrollSoftware = () => {
           <img src="/payroll.svg" />
         </div>
         <div className=" col-span-6">
-          <h1 className="font-medium text-textColor text-5xl">
+          <h1 className="font-medium text-textColor text-4xl">
             Payroll Software
           </h1>
           <p className="text-lg text-muted  mt-4">
@@ -64,7 +64,7 @@ const PayrollSoftware = () => {
         className="bg-lightBackground py-16"
       >
         <div className="flex justify-center">
-          <h1 className="text-5xl font-medium pb-12">Software features</h1>
+          <h1 className="text-4xl font-medium pb-12">Software features</h1>
         </div>
         <div className="w-10/12 2xl:w-8/12 grid grid-cols-2 gap-8 mx-auto ">
           {[

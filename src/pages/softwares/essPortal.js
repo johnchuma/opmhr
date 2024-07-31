@@ -29,7 +29,7 @@ const ESSPortal = () => {
           <img src="/product.png" />
         </div>
         <div className=" col-span-6">
-          <h1 className="font-medium text-textColor text-5xl">ESS portal</h1>
+          <h1 className="font-medium text-textColor text-4xl">ESS portal</h1>
           <p className="text-lg text-muted  mt-4">
             ESS Portal is a web-based user interface for employees used to
             access and edit information. It enables the employees to edit and
@@ -47,7 +47,7 @@ const ESSPortal = () => {
         className="bg-lightBackground py-16"
       >
         <div className="flex justify-center">
-          <h1 className="text-5xl font-medium pb-12">Software features</h1>
+          <h1 className="text-4xl font-medium pb-12">Software features</h1>
         </div>
         <div className="w-10/12 2xl:w-8/12 grid grid-cols-3 gap-8 mx-auto ">
           {[
