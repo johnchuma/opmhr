@@ -90,7 +90,9 @@ const HomePage = () => {
               <option value="Volunteer">Volunteer</option>
             </select>
           </div>
-          <button className="bg-primary hover:scale-105 transition-all  duration-200 cursor-pointer font-medium text-white py-4 px-6 rounded-full">
+          <button onClick={()=>{
+            navigate('/jobs')
+          }} className="bg-primary hover:scale-105 transition-all  duration-200 cursor-pointer font-medium text-white py-4 px-6 rounded-full">
             Search Jobs
           </button>
         </div>
@@ -113,7 +115,9 @@ const HomePage = () => {
             optimizing HR functions for unparalleled efficiency and global
             success. We Offer a wide Range of HR solution to the business
           </p>
-          <button className="bg-primary hover:scale-105 transition-all  duration-200 cursor-pointer font-medium text-white py-4 px-6 mt-8 rounded-full">
+          <button onClick={()=>{
+            navigate('/company')
+          }} className="bg-primary hover:scale-105 transition-all  duration-200 cursor-pointer font-medium text-white py-4 px-6 mt-8 rounded-full">
             Learn More
           </button>
         </div>
