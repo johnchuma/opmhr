@@ -243,7 +243,7 @@ const AddJob = ({ refresh, setRefresh }) => {
                   className="w-full border-borderColor rounded-md focus:ring-primary focus:border-primary"
                 />
               </div>
-              <div className=" flex space-x-3 items-center">
+              {user.role !="Admin" && <div className=" flex space-x-3 items-center">
                 <input
                   type="checkbox"
                   required
@@ -255,7 +255,7 @@ const AddJob = ({ refresh, setRefresh }) => {
                   pay for the obvious costs when looking for the best employee
                   for my company
                 </h1>
-              </div>
+              </div>}
 
               <button
                 type="submit"
