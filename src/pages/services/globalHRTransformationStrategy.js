@@ -15,11 +15,16 @@ import {
 } from "react-icons/fa";
 import {
   AiOutlineAlignRight,
+  AiOutlineAreaChart,
   AiOutlineBarChart,
   AiOutlineBook,
+  AiOutlineBorderlessTable,
   AiOutlineBulb,
   AiOutlineCalendar,
+  AiOutlineDotChart,
+  AiOutlineLineChart,
   AiOutlineSwapRight,
+  AiOutlineUser,
 } from "react-icons/ai";
 const GlobalHRTransformationStrategy = () => {
   const scrollAnimationVariants = {
@@ -71,31 +76,31 @@ const GlobalHRTransformationStrategy = () => {
           {[
             {
               title: "Gain Actionable Insights",
-              icon: <FaUser />,
+              icon: <AiOutlineBulb />,
               description:
                 "Transform raw HR data into actionable insights that drive informed decision-making at every level of your organization.",
             },
             {
               title: "Ensure Compliance",
-              icon: <FaUser />,
+              icon: <AiOutlineBorderlessTable />,
               description:
                 "Stay ahead of regulatory requirements and mitigate risks by leveraging comprehensive reporting tools that provide visibility into compliance metrics.",
             },
             {
               title: "Enhance Operational Efficiency",
-              icon: <FaUser />,
+              icon: <AiOutlineDotChart />,
               description:
                 "Identify inefficiencies and bottlenecks in your HR processes, allowing you to streamline operations and improve productivity.",
             },
             {
               title: "Drive Business Growth",
-              icon: <FaUser />,
+              icon: <AiOutlineLineChart />,
               description:
                 "By making data-driven decisions, you can align your HR strategies with your overall business objectives, driving growth and profitability.",
             },
             {
               title: "Improve Talent Management",
-              icon: <FaUser />,
+              icon: <AiOutlineUser/>,
               description:
                 "Identify top performers, track key performance indicators, and develop data-driven strategies for talent acquisition, retention, and development.",
             },

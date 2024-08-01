@@ -51,6 +51,7 @@ import InternationalAndLocalDataAnalysis from "./pages/services/internationalAnd
 import ChangeManagementAndTrainingServices from "./pages/services/changeManagementAndTrainingServices";
 import GlobalHRTransformationStrategy from "./pages/services/globalHRTransformationStrategy";
 import AddressingComplexHRProcess from "./pages/services/addressingComplexHRProcess";
+import ScrollToTop from "./layouts/scrollToTop";
 function App() {
   useEffect(() => {
     AOS.init({});
@@ -58,6 +59,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
+      <ScrollToTop/>
         <Routes>
           <Route path="/login" index element={<LoginPage />} />
           <Route path="/register" index element={<RegisterPage />} />

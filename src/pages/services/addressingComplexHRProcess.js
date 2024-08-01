@@ -8,7 +8,8 @@ import { VscFeedback } from "react-icons/vsc";
 import { MdOutlineModelTraining } from "react-icons/md";
 import { LuDatabase } from "react-icons/lu";
 import { FaLightbulb, FaStepBackward, FaStepForward, FaUser } from "react-icons/fa";
-import { AiOutlineAlignRight, AiOutlineBarChart, AiOutlineBook, AiOutlineBulb, AiOutlineCalendar, AiOutlineSwapRight } from "react-icons/ai";
+import { AiOutlineAlignRight, AiOutlineBarChart, AiOutlineBook, AiOutlineBulb, AiOutlineCalendar, AiOutlineCustomerService, AiOutlineMoneyCollect, AiOutlinePieChart, AiOutlineSwapRight, AiOutlineUser } from "react-icons/ai";
+import { RiAccountBoxLine, RiArchiveStackLine } from "react-icons/ri";
 const AddressingComplexHRProcess = () => {
     const scrollAnimationVariants = {
         hidden: { opacity: 0, y: 200 },
@@ -70,27 +71,27 @@ const AddressingComplexHRProcess = () => {
           {[
   {
     title: "Boost Efficiency",
-    icon: <FaUser />,
+    icon: <AiOutlinePieChart />,
     description: "Automate time-consuming tasks and workflows, reducing manual errors and increasing operational efficiency across your organization."
   },
   {
     title: "Enhance Employee Experience",
-    icon: <FaUser />,
+    icon: <AiOutlineUser />,
     description: "Streamline the employee onboarding process, improve communication channels, and provide self-service options, resulting in a seamless and engaging employee experience."
   },
   {
     title: "Drive Cost Savings",
-    icon: <FaUser />,
+    icon: <AiOutlineMoneyCollect />,
     description: "By eliminating manual processes and reducing the need for paper-based documentation, you can significantly reduce administrative costs and improve your bottom line."
   },
   {
     title: "Scale Your Operations",
-    icon: <FaUser />,
+    icon: <RiArchiveStackLine />,
     description: "As your business grows, our scalable automation solutions grow with you, ensuring that your HR processes remain efficient and effective, no matter the size of your organization."
   },
   {
     title: "Ensure Compliance",
-    icon: <FaUser />,
+    icon: <RiAccountBoxLine />,
     description: "Stay ahead of changing regulations and compliance requirements by automating compliance checks and documentation processes, reducing the risk of errors and penalties."
   }
 ].map((item) => {

@@ -14,12 +14,21 @@ import {
   FaUser,
 } from "react-icons/fa";
 import {
+    AiFillExperiment,
+  AiFillInteraction,
   AiOutlineAlignRight,
   AiOutlineBarChart,
   AiOutlineBook,
   AiOutlineBulb,
   AiOutlineCalendar,
+  AiOutlineCompass,
+  AiOutlineGateway,
+  AiOutlineGlobal,
+  AiOutlineInteraction,
+  AiOutlineSetting,
+  AiOutlineSolution,
   AiOutlineSwapRight,
+  AiOutlineUser,
 } from "react-icons/ai";
 const GlobalStaffOutsourcingSolution = () => {
   const scrollAnimationVariants = {
@@ -72,31 +81,31 @@ const GlobalStaffOutsourcingSolution = () => {
           {[
             {
               title: "Both Local and International Recruitment",
-              icon: <FaUser />,
+              icon: <AiOutlineGlobal />,
               description:
                 "Sourcing, vetting, and hiring the best talent from across the globe.",
             },
             {
               title: "Employee Onboarding",
-              icon: <FaUser />,
+              icon: <AiOutlineUser />,
               description:
                 "Structuring onboarding programs that align with your corporate culture and compliance requirements.",
             },
             {
               title: "HR Management",
-              icon: <FaUser />,
+              icon: <AiFillExperiment />,
               description:
                 "Offering full-range HR services including payroll, benefits administration, and performance management.",
             },
             {
               title: "Mobility Solutions",
-              icon: <FaUser />,
+              icon: <AiOutlineSolution />,
               description:
                 "Assisting with employee relocations, including visa application and housing.",
             },
             {
               title: "Strategic Staffing Consultation",
-              icon: <FaUser />,
+              icon: <AiOutlineSetting />,
               description:
                 "Working closely with you to forecast and meet your future staffing needs.",
             },
@@ -149,27 +158,27 @@ const GlobalStaffOutsourcingSolution = () => {
           {[
   {
     title: "Expertise in Diverse Markets",
-    icon: <FaUser />,
+    icon: <AiOutlineGateway />,
     description: "With extensive knowledge of various international labor markets, we are adept at navigating the complexities of recruiting and managing global talent pools."
   },
   {
     title: "Tailored Recruitment Strategies",
-    icon: <FaUser />,
+    icon: <AiOutlineBook />,
     description: "We customize our recruitment strategies based on your specific business goals, industry specifics, and the unique aspects of each geographic location."
   },
   {
     title: "Seamless Integration",
-    icon: <FaUser />,
+    icon: <AiOutlineInteraction />,
     description: "Our end-to-end staffing services ensure a smooth integration of new global employees into your existing teams, fostering synergy and enhancing productivity."
   },
   {
     title: "Compliance and Risk Management",
-    icon: <FaUser />,
+    icon: <AiOutlineCompass />,
     description: "We handle all aspects of compliance and labor laws in each country, minimizing risks and protecting your business against potential legal and financial liabilities."
   },
   {
     title: "Dedicated Support",
-    icon: <FaUser />,
+    icon: <AiOutlineSetting />,
     description: "Our team provides continuous support and consultancy, from the initial recruitment process to ongoing HR management, ensuring your global team remains robust and effective."
   }
 ].map((item) => {

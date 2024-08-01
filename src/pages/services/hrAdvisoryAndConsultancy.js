@@ -9,17 +9,27 @@ import { MdOutlineModelTraining } from "react-icons/md";
 import { LuDatabase } from "react-icons/lu";
 import {
   FaLightbulb,
+  FaPeopleCarry,
   FaStepBackward,
   FaStepForward,
   FaUser,
 } from "react-icons/fa";
 import {
+    AiFillCheckSquare,
   AiOutlineAlignRight,
+  AiOutlineArrowsAlt,
   AiOutlineBarChart,
   AiOutlineBook,
+  AiOutlineBuild,
   AiOutlineBulb,
   AiOutlineCalendar,
+  AiOutlineDeleteColumn,
+  AiOutlineExpandAlt,
+  AiOutlineGold,
+  AiOutlineShareAlt,
   AiOutlineSwapRight,
+  AiOutlineWoman,
+  AiTwotoneCheckSquare,
 } from "react-icons/ai";
 const HRAdvisoryAndConsultancy = () => {
   const scrollAnimationVariants = {
@@ -68,55 +78,55 @@ const HRAdvisoryAndConsultancy = () => {
           {[
             {
               title: "Strategic HR Planning",
-              icon: <FaUser />,
+              icon: <AiOutlineArrowsAlt />,
               description:
                 "We work with you to develop a comprehensive HR strategy that aligns with your business objectives. This includes identifying your talent needs, developing talent management programs, and creating a culture of engagement and performance.",
             },
             {
               title: "Training & Development",
-              icon: <FaUser />,
+              icon: <FaPeopleCarry />,
               description:
                 "We offer a wide range of training and development programs to help your employees reach their full potential.",
             },
             {
               title: "Talent Acquisition & Management",
-              icon: <FaUser />,
+              icon: <AiOutlineBuild />,
               description:
                 "We help you attract, hire, and retain top talent. Our services include job descriptions, candidate sourcing, interview coaching, and onboarding programs.",
             },
             {
               title: "HR Technology",
-              icon: <FaUser />,
+              icon: <AiTwotoneCheckSquare />,
               description:
                 "We can help you select and implement the right HR technology solutions to streamline your HR processes and improve efficiency.",
             },
             {
               title: "Compensation & Benefits",
-              icon: <FaUser />,
+              icon: <AiOutlineGold />,
               description:
                 "We ensure your compensation and benefits programs are competitive and compliant with all applicable laws and regulations.",
             },
             {
               title: "Employee Relations",
-              icon: <FaUser />,
+              icon: <AiOutlineShareAlt />,
               description:
                 "We provide guidance on employee relations issues, including performance management, disciplinary action, and conflict resolution.",
             },
             {
               title: "HR Compliance",
-              icon: <FaUser />,
+              icon: <AiOutlineDeleteColumn />,
               description:
                 "We help you ensure your HR practices are compliant with all applicable laws and regulations.",
             },
             {
               title: "HR Audits",
-              icon: <FaUser />,
+              icon: <AiFillCheckSquare />,
               description:
                 "We conduct comprehensive HR audits to identify areas of risk and compliance.",
             },
             {
               title: "Project Management",
-              icon: <FaUser />,
+              icon: <AiOutlineWoman />,
               description:
                 "We can manage your HR projects from start to finish, ensuring they are completed on time and within budget.",
             },

@@ -19,6 +19,9 @@ import {
   AiOutlineBook,
   AiOutlineBulb,
   AiOutlineCalendar,
+  AiOutlinePaperClip,
+  AiOutlinePartition,
+  AiOutlinePieChart,
   AiOutlineSwapRight,
 } from "react-icons/ai";
 const ChangeManagementAndTrainingServices = () => {
@@ -68,43 +71,32 @@ const ChangeManagementAndTrainingServices = () => {
         </div>
         <div className="w-10/12 2xl:w-8/12 grid grid-cols-3 gap-8 mx-auto ">
           {[
-            {
-              title: "Performance Appraisal Systems",
-              icon: <AiOutlineBarChart />,
-              description:
-                "We develop customized performance appraisal systems that align with your organization's goals and values, providing a clear framework for assessing and rewarding employee performance.",
-            },
-            {
-              title: "Goal Setting and Alignment",
-              icon: <AiOutlineSwapRight />,
-              description:
-                "Our goal-setting services help streamline objectives across all levels of your organization, ensuring that individual goals are in sync with the broader organizational goals.",
-            },
-            {
-              title: "Feedback and Coaching",
-              icon: <AiOutlineBook />,
-              description:
-                "Our expert team offers personalized feedback and coaching to employees, fostering a culture of continuous improvement and growth within your organization.",
-            },
-            {
-              title: "Training and Development",
-              icon: <AiOutlineAlignRight />,
-              description:
-                "We provide tailored training programs aimed at enhancing employee skills and competencies, driving performance and productivity.",
-            },
-            {
-              title: "Performance Improvement Plans",
-              icon: <AiOutlineCalendar />,
-              description:
-                "In cases where performance falls below expectations, we assist in developing performance improvement plans that support employees in reaching their full potential.",
-            },
-            {
-              title: "Data-Driven Insights",
-              icon: <AiOutlineBulb />,
-              description:
-                "Leveraging advanced analytics, we provide data-driven insights to help identify trends, monitor performance metrics, and make informed decisions to optimize performance management processes.",
-            },
-          ].map((item) => {
+  {
+    title: "Strategic Alignment",
+    icon: <AiOutlineAlignRight />,
+    description: "Align your HR strategy with your organization's overall business objectives, ensuring that your HR initiatives support and contribute to your long-term success."
+  },
+  {
+    title: "Process Optimization",
+    icon: <AiOutlinePartition />,
+    description: "Streamline and optimize your HR processes to improve efficiency, reduce costs, and enhance the overall employee experience."
+  },
+  {
+    title: "Technology Integration",
+    icon: <AiOutlineBook />,
+    description: "Leverage cutting-edge HR technology solutions to automate manual tasks, enable data-driven decision-making, and provide greater visibility into your workforce metrics."
+  },
+  {
+    title: "Change Management",
+    icon: <AiOutlinePaperClip />,
+    description: "Implement effective change management strategies to minimize resistance and maximize adoption, ensuring a smooth transition to your new HR operating model."
+  },
+  {
+    title: "Continuous Improvement",
+    icon: <AiOutlinePieChart />,
+    description: "Foster a culture of continuous improvement within your organization, empowering your HR team to adapt to evolving business needs and drive ongoing enhancements to your HR strategy and processes."
+  }
+].map((item) => {
             return (
               <div className="hover:scale-105 transition-all p-5 rounded-lg flex space-x-4 bg-white shadow-lg duration-200 cursor-pointer">
                 <div className=" text-2xl text-primary mt-2">{item.icon}</div>

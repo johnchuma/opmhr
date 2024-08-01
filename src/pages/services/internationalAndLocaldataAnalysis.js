@@ -14,12 +14,17 @@ import {
   FaUser,
 } from "react-icons/fa";
 import {
+    AiFillMoneyCollect,
   AiOutlineAlignRight,
   AiOutlineBarChart,
   AiOutlineBook,
   AiOutlineBulb,
   AiOutlineCalendar,
+  AiOutlineComment,
+  AiOutlineCustomerService,
+  AiOutlineGateway,
   AiOutlineSwapRight,
+  AiTwotoneCarryOut,
 } from "react-icons/ai";
 const InternationalAndLocalDataAnalysis = () => {
   const scrollAnimationVariants = {
@@ -71,31 +76,31 @@ const InternationalAndLocalDataAnalysis = () => {
           {[
             {
               title: "Change Readiness Assessment",
-              icon: <FaUser />,
+              icon: <AiOutlineBarChart />,
               description:
                 "Evaluate your organization's readiness for change, identifying potential barriers and opportunities for success, and develop tailored strategies to drive adoption and buy-in.",
             },
             {
               title: "Communication Strategies",
-              icon: <FaUser />,
+              icon: <AiOutlineComment />,
               description:
                 "Develop clear and consistent communication strategies to keep employees informed and engaged throughout the change process, minimizing uncertainty and resistance.",
             },
             {
               title: "Stakeholder Engagement",
-              icon: <FaUser />,
+              icon: <AiFillMoneyCollect />,
               description:
                 "Engage key stakeholders at all levels of your organization, fostering alignment, building support, and ensuring that everyone is on board with the change initiative.",
             },
             {
               title: "Customized Training Programs",
-              icon: <FaUser />,
+              icon: <AiOutlineCustomerService/>,
               description:
                 "Develop customized training programs that address the specific needs of your workforce, providing them with the skills, knowledge, and resources they need to thrive in the new environment.",
             },
             {
               title: "Ongoing Support",
-              icon: <FaUser />,
+              icon: <AiOutlineGateway />,
               description:
                 "Provide ongoing support and guidance to your team, ensuring that they have the resources and assistance they need to successfully navigate the challenges of change and drive sustainable results.",
             },

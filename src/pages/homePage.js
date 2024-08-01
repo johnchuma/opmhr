@@ -14,6 +14,7 @@ import {
 import { FaPeopleGroup } from "react-icons/fa6";
 const HomePage = () => {
   //animation variants
+
   const scrollAnimationVariants = {
     hidden: { opacity: 0, y: 200 },
     visible: { opacity: 1, y: 0, transition: { duration: 1 } },
@@ -225,7 +226,9 @@ const HomePage = () => {
             <button className="bg-primary font-medium text-white py-4 px-6 mt-8 rounded-full hover:scale-105 transition-all  duration-200 cursor-pointer">
               Order software
             </button>
-            <button className=" hover:scale-105 transition-all  duration-200 cursor-pointer border border-dark  border-opacity-45 font-medium text-dark py-4 px-6 mt-8 rounded-full">
+            <button onClick={()=>{
+              navigate('/products/performance-management-software')
+            }}  className=" hover:scale-105 transition-all  duration-200 cursor-pointer border border-dark  border-opacity-45 font-medium text-dark py-4 px-6 mt-8 rounded-full">
               Learn More
             </button>
           </div>
@@ -256,7 +259,9 @@ const HomePage = () => {
             <button className=" hover:scale-105 transition-all  duration-200 cursor-pointer bg-primary font-medium text-white py-4 px-6 mt-8 rounded-full">
               Order software
             </button>
-            <button className="  hover:scale-105 transition-all  duration-200 cursor-pointer border border-dark  border-opacity-45 font-medium text-dark py-4 px-6 mt-8 rounded-full">
+            <button onClick={()=>{
+              navigate('/products/hris')
+            }} className="  hover:scale-105 transition-all  duration-200 cursor-pointer border border-dark  border-opacity-45 font-medium text-dark py-4 px-6 mt-8 rounded-full">
               Learn More
             </button>
           </div>
@@ -280,7 +285,10 @@ const HomePage = () => {
             <button className=" hover:scale-105 transition-all  duration-200 cursor-pointer bg-primary font-medium text-white py-4 px-6 mt-8 rounded-full">
               Order software
             </button>
-            <button className="  hover:scale-105 transition-all  duration-200 cursor-pointer border border-dark  border-opacity-45 font-medium text-dark py-4 px-6 mt-8 rounded-full">
+            <button onClick={()=>{
+              navigate('/products/payroll-software')
+
+            }} className="  hover:scale-105 transition-all  duration-200 cursor-pointer border border-dark  border-opacity-45 font-medium text-dark py-4 px-6 mt-8 rounded-full">
               Learn More
             </button>
           </div>
@@ -296,10 +304,8 @@ const HomePage = () => {
           <FaArrowRight />
         </button>
       </div>
-      <motion.div
-        variants={scrollAnimationVariants}
-        whileInView="visible"
-        initial="hidden"
+      <div
+     
         className=" pt-24"
       >
         <div className="w-6/12 mx-auto text-center">
@@ -307,7 +313,16 @@ const HomePage = () => {
         </div>
         <div className="w-10/12 2xl:w-8/12 mx-auto grid grid-cols-4 gap-6 mt-8">
           {services.map((item) => (
-            <div className="bg-white shadow-2xl rounded-2xl  p-5 flex flex-col text-center items-center">
+            <div 
+              onClick={(e) => {
+                e.stopPropagation();
+                const route = `/services/${item.title
+                  .toLowerCase()
+                  .replace(/ /g, "-")}`;
+                navigate(route);
+              }}
+              className="bg-white shadow-2xl rounded-2xl hover:scale-105 transition-all duration-200   cursor-pointer p-5 flex flex-col text-center items-center"
+            >
               <div className="text-primary text-3xl">{item.icon}</div>
               <h1 className="font-medium text-xl mt-2">{item.title}</h1>
               <p className="text-muted mt-2">{item.description}</p>
@@ -376,7 +391,7 @@ const HomePage = () => {
             </button>
           </div>
         </motion.div>
-      </motion.div>
+      </div>
     </div>
   );
 };
