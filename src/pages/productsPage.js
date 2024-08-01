@@ -7,7 +7,7 @@ const ServicesPage = () => {
   const navigate = useNavigate();
   const [index, setIndex] = useState(0);
   useEffect(() => {
-    var no = products.map((item)=>item.title).indexOf(uuid);
+    var no = products.map((item) => item.title).indexOf(uuid);
     setIndex(no);
   }, [uuid]);
   return (
@@ -354,7 +354,7 @@ const ServicesPage = () => {
             )}
           </div>
           <button className="bg-primary text-white py-3 px-4 mt-4 rounded-xl">
-            Order Software
+            Book a free demo
           </button>
         </div>
       </div>

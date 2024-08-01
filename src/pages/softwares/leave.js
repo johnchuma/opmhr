@@ -41,7 +41,7 @@ const Leave = () => {
             leave policies of their organization
           </p>
           <button className=" hover:scale-105 transition-all  duration-200 cursor-pointer bg-primary font-medium text-white py-4 px-6 mt-8 rounded-full">
-            Order software
+            Book a free demo
           </button>
         </div>
       </motion.div>

@@ -224,11 +224,14 @@ const HomePage = () => {
           </p>
           <div className="flex space-x-4">
             <button className="bg-primary font-medium text-white py-4 px-6 mt-8 rounded-full hover:scale-105 transition-all  duration-200 cursor-pointer">
-              Order software
+              Book a free demo
             </button>
-            <button onClick={()=>{
-              navigate('/products/performance-management-software')
-            }}  className=" hover:scale-105 transition-all  duration-200 cursor-pointer border border-dark  border-opacity-45 font-medium text-dark py-4 px-6 mt-8 rounded-full">
+            <button
+              onClick={() => {
+                navigate("/products/performance-management-software");
+              }}
+              className=" hover:scale-105 transition-all  duration-200 cursor-pointer border border-dark  border-opacity-45 font-medium text-dark py-4 px-6 mt-8 rounded-full"
+            >
               Learn More
             </button>
           </div>
@@ -257,11 +260,14 @@ const HomePage = () => {
           </p>
           <div className="flex space-x-4">
             <button className=" hover:scale-105 transition-all  duration-200 cursor-pointer bg-primary font-medium text-white py-4 px-6 mt-8 rounded-full">
-              Order software
+              Book a free demo
             </button>
-            <button onClick={()=>{
-              navigate('/products/hris')
-            }} className="  hover:scale-105 transition-all  duration-200 cursor-pointer border border-dark  border-opacity-45 font-medium text-dark py-4 px-6 mt-8 rounded-full">
+            <button
+              onClick={() => {
+                navigate("/products/hris");
+              }}
+              className="  hover:scale-105 transition-all  duration-200 cursor-pointer border border-dark  border-opacity-45 font-medium text-dark py-4 px-6 mt-8 rounded-full"
+            >
               Learn More
             </button>
           </div>
@@ -283,12 +289,14 @@ const HomePage = () => {
           </p>
           <div className="flex space-x-4">
             <button className=" hover:scale-105 transition-all  duration-200 cursor-pointer bg-primary font-medium text-white py-4 px-6 mt-8 rounded-full">
-              Order software
+              Book a free demo
             </button>
-            <button onClick={()=>{
-              navigate('/products/payroll-software')
-
-            }} className="  hover:scale-105 transition-all  duration-200 cursor-pointer border border-dark  border-opacity-45 font-medium text-dark py-4 px-6 mt-8 rounded-full">
+            <button
+              onClick={() => {
+                navigate("/products/payroll-software");
+              }}
+              className="  hover:scale-105 transition-all  duration-200 cursor-pointer border border-dark  border-opacity-45 font-medium text-dark py-4 px-6 mt-8 rounded-full"
+            >
               Learn More
             </button>
           </div>
@@ -304,16 +312,13 @@ const HomePage = () => {
           <FaArrowRight />
         </button>
       </div>
-      <div
-     
-        className=" pt-24"
-      >
+      <div className=" pt-24">
         <div className="w-6/12 mx-auto text-center">
           <h1 className="text-4xl font-medium">Our Services</h1>
         </div>
         <div className="w-10/12 2xl:w-8/12 mx-auto grid grid-cols-4 gap-6 mt-8">
           {services.map((item) => (
-            <div 
+            <div
               onClick={(e) => {
                 e.stopPropagation();
                 const route = `/services/${item.title
