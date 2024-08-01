@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { services, softwares } from "../utils/arrays";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { MotionConfig, motion } from "framer-motion";
 import {
   FaArrowRight,
@@ -12,6 +12,8 @@ import {
   FaSwift,
 } from "react-icons/fa";
 import { FaPeopleGroup } from "react-icons/fa6";
+import CustomModal from "../components/customModal";
+import CustomButton from "../components/customButton";
 const HomePage = () => {
   //animation variants
 
@@ -20,8 +22,21 @@ const HomePage = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 1 } },
   };
   const navigate = useNavigate();
+  const [showSubscription,setShowSubscription]  = useState(false)
   return (
-    <div className=" overflow-hiden bg-white text-textColor ">
+    <div className=" overflow-hiden bg-white text-textColor relative ">
+      <CustomModal setShow={setShowSubscription} show={showSubscription} heading="Subscribe" content={<div>
+        <form className="">
+            <p className="mb-2 text-sm text-muted">Email (required)</p>
+            <input
+              required
+              placeholder="Enter email address"
+              className="w-full rounded-lg border border-borderColor focus:ring-primary focus:border-primary mb-4"
+            />
+            <CustomButton title={"Subscribe Now"} />
+          </form>
+
+      </div>}/>
       <div className="  pt-0 relative h-screen w-screen">
         <img
           className="h-full w-full object-cover absolute"
@@ -44,7 +59,9 @@ const HomePage = () => {
                   success. We Offer a wide Range of HR solution to the business.
                 </p>
                 <div className="flex space-x-4 items-center">
-                  <button className="bg-primary hover:scale-105 transition-all  duration-200 cursor-pointer font-medium text-white py-4 px-6 rounded-full">
+                  <button onClick={()=>{
+                    setShowSubscription(true)
+                  }} className="bg-primary hover:scale-105 transition-all  duration-200 cursor-pointer font-medium text-white py-4 px-6 rounded-full">
                     Subscribe Now
                   </button>
                   <div className="w-12 h-12 rounded-full   border border-white border-opacity-75 hover:animate-none transition-all duration-500 flex justify-center items-center ">
@@ -397,7 +414,9 @@ const HomePage = () => {
               Subscribe to our newsletter to avoid missing our blogs and
               updates.
             </h1>
-            <button className="bg-white hover:scale-105 transition-all  duration-200 cursor-pointer text-textColor font-medium mt-4 py-3 px-4 rounded-full">
+            <button onClick={()=>{
+              setShowSubscription(true)
+            }} className="bg-white hover:scale-105 transition-all  duration-200 cursor-pointer text-textColor font-medium mt-4 py-3 px-4 rounded-full">
               Subscribe Now
             </button>
           </div>
