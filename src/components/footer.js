@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { products } from "../utils/arrays";
 import { motion } from "framer-motion";
 const Footer = () => {
@@ -5,6 +6,7 @@ const Footer = () => {
     hidden: { opacity: 0, y: 200 },
     visible: { opacity: 1, y: 0, transition: { duration: 1 } },
   };
+  const navigate = useNavigate()
   return (
     <>
       <motion.div
@@ -20,45 +22,44 @@ const Footer = () => {
             </div>
             <div>
               <h1 className=" font-medium text-xl">Products</h1>
-              <div className="text-muted mt-3">
+              <div  className="text-muted mt-3 space-y-1">
                 {products.map((item) => {
-                  return <p>{item.title}</p>;
+                  return <p  className="cursor-pointer hover:text-primary" onClick={()=>{
+                    navigate(
+                      `/products/${item.title
+                        .toLowerCase()
+                        .replace(/ /g, "-")}`
+                    );
+                  }}> {item.title}</p>;
                 })}
               </div>
             </div>
             <div>
               <h1 className=" font-medium  text-xl">Company</h1>
-              <div className="text-muted mt-3">
+              <div className="text-muted mt-3 space-y-1">
                 {[
-                  { title: "Home", path: "" },
-                  { title: "Our products", path: "" },
-                  { title: "Company", path: "" },
-                  { title: "Jobs", path: "" },
-                  { title: "Posts", path: "" },
-                  { title: "Contacts", path: "" },
+                  { title: "Home", path: "/" },
+                  { title: "About Us", path: "/company" },
+                  { title: "Jobs", path: "/jobs" },
+                  { title: "Posts", path: "/blog" },
+                  { title: "Contact", path: "/contactus" },
                 ].map((item) => {
-                  return <p>{item.title}</p>;
+                  return <p onClick={()=>{
+                    navigate(item.path)
+                  }} className=" cursor-pointer hover:text-primary ">{item.title}</p>;
                 })}
               </div>
             </div>
             <div>
               <h1 className=" font-medium  text-xl">Support</h1>
               <div className="text-muted  mt-3 space-y-1 ">
-                <p>+255 748 057 891 TZ</p>
-                <p>+66 93 606 8191 T</p>
-                <p>hello@opmhr.com</p>
-                <p>+2342 23442 2323</p>
+                <p>support@opmhr.com</p>
+                <p></p>
               </div>
             </div>
             <div>
-              <h1 className=" font-medium  text-xl">Address</h1>
-              <p className="text-muted  mt-3  ">
-                <p>Alhassan Mwinyi Rd, Dar es Salaam, Tanzania</p>
-                <p>
-                  Palasia, Industial House, MP Indore, Indiana, 46218, INDIA
-                </p>
-                <p>Nakhon 72, Phanok, Bangkok, Thailand</p>
-              </p>
+              <h1 className=" font-medium  text-xl mb-4">Address</h1>
+              <iframe width="220" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20Dar%20es%20Salaam+()&amp;t=p&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> 
             </div>
           </div>
           <div className="flex justify-between text-muted text-base mt-24">

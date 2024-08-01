@@ -14,6 +14,7 @@ import {
 import { FaPeopleGroup } from "react-icons/fa6";
 import { NavbarContext } from "../layouts/mainLayout";
 import { useLocation } from "react-router-dom";
+import { GiNinjaStar } from "react-icons/gi";
 const CompanyPage = () => {
   const scrollAnimationVariants = {
     hidden: { opacity: 0, y: 200 },
@@ -146,7 +147,7 @@ const CompanyPage = () => {
                 <div className="flex space-x-2 items-center">
                   <div>
                     <div className="bg-primary bg-opacity-20 rounded-full h-12 w-12 items-center flex flex-col justify-center">
-                      <FaCircle className="text-primary" />
+                      <GiNinjaStar className="text-primary" />
                     </div>
                   </div>
                   <p className="text-lg text-muted mt-4">{item}</p>
@@ -171,7 +172,8 @@ const CompanyPage = () => {
                 <div className="flex space-x-2 items-center">
                   <div>
                     <div className="bg-primary bg-opacity-20 rounded-full h-12 w-12 items-center flex flex-col justify-center">
-                      <FaCircle className="text-primary" />
+                      <GiNinjaStar className="text-primary" />
+                      
                     </div>
                   </div>
                   <div>
