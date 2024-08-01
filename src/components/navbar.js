@@ -225,7 +225,7 @@ const Navbar = ({ isScrolling, setIsScrolling, pathname }) => {
               }}
               className="py-3 px-4 rounded-xl hover:scale-105 transition-all  duration-200 cursor-pointer  "
             >
-              Register
+              Sign In
             </button>
             <button
               className={`border-2 ${
