@@ -6,7 +6,7 @@ const Footer = () => {
     hidden: { opacity: 0, y: 200 },
     visible: { opacity: 1, y: 0, transition: { duration: 1 } },
   };
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <>
       <motion.div
@@ -22,15 +22,23 @@ const Footer = () => {
             </div>
             <div>
               <h1 className=" font-medium text-xl">Products</h1>
-              <div  className="text-muted mt-3 space-y-1">
+              <div className="text-muted mt-3 space-y-1">
                 {products.map((item) => {
-                  return <p  className="cursor-pointer hover:text-primary" onClick={()=>{
-                    navigate(
-                      `/products/${item.title
-                        .toLowerCase()
-                        .replace(/ /g, "-")}`
-                    );
-                  }}> {item.title}</p>;
+                  return (
+                    <p
+                      className="cursor-pointer hover:text-primary"
+                      onClick={() => {
+                        navigate(
+                          `/products/${item.title
+                            .toLowerCase()
+                            .replace(/ /g, "-")}`
+                        );
+                      }}
+                    >
+                      {" "}
+                      {item.title}
+                    </p>
+                  );
                 })}
               </div>
             </div>
@@ -44,22 +52,52 @@ const Footer = () => {
                   { title: "Posts", path: "/blog" },
                   { title: "Contact", path: "/contactus" },
                 ].map((item) => {
-                  return <p onClick={()=>{
-                    navigate(item.path)
-                  }} className=" cursor-pointer hover:text-primary ">{item.title}</p>;
+                  return (
+                    <p
+                      onClick={() => {
+                        navigate(item.path);
+                      }}
+                      className=" cursor-pointer hover:text-primary "
+                    >
+                      {item.title}
+                    </p>
+                  );
                 })}
               </div>
             </div>
             <div>
               <h1 className=" font-medium  text-xl">Support</h1>
               <div className="text-muted  mt-3 space-y-1 ">
+                <div className="text-muted mt-3 space-y-1">
+                  {[{ title: "Contact Us", path: "/contactus" }].map((item) => {
+                    return (
+                      <p
+                        onClick={() => {
+                          navigate(item.path);
+                        }}
+                        className=" cursor-pointer hover:text-primary "
+                      >
+                        {item.title}
+                      </p>
+                    );
+                  })}
+                </div>
                 <p>support@opmhr.com</p>
                 <p></p>
               </div>
             </div>
             <div>
               <h1 className=" font-medium  text-xl mb-4">Address</h1>
-              <iframe width="220" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20Dar%20es%20Salaam+()&amp;t=p&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> 
+              <iframe
+                width="250"
+                height="200"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+                id="gmap_canvas"
+                src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=Makumbusho%20St.%20Dar%20es%20Salaam+(OPM%20International%20HR%20Consultancy%20Ltd)&amp;t=h&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              ></iframe>{" "}
             </div>
           </div>
           <div className="flex justify-between text-muted text-base mt-24">
