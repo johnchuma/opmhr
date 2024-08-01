@@ -28,7 +28,7 @@ const JobsPage = () => {
   ) : (
     <div>
     <div className="w-full h-48 bg-primary  flex  justify-center items-center pt-20 ">
-      <h1 className="text-white text-4xl ">Jobs</h1>
+      <h1 className="text-white text-4xl ">Carreer</h1>
     </div>
       <div className="grid grid-cols-1 md:grid-cols-12   md:w-8/12 2xl:w-6/12 mx-auto pt-8 pb-12">
         <div className=" col-span-12 px-0 mt-8 md:mt-0 ">

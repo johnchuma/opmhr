@@ -49,12 +49,12 @@ const Navbar = ({ isScrolling, setIsScrolling, pathname }) => {
           <div className="flex space-x-3">
             {[
               { title: "Home", path: "/" },
-              { title: "Services", path: "/services" },
               { title: "About Us", path: "/company" },
+              { title: "Services", path: "/services" },
               { title: "Products", path: "/products" },
-              { title: "Jobs", path: "/jobs" },
-              { title: "Posts", path: "/blog" },
-              { title: "Contacts", path: "/contactus" },
+              { title: "Carreer", path: "/jobs" },
+              { title: "Blogs", path: "/blog" },
+              { title: "Contact", path: "/contactus" },
             ].map((item, index) => {
               return (
                 <button
@@ -63,7 +63,7 @@ const Navbar = ({ isScrolling, setIsScrolling, pathname }) => {
                     ["Services", "Products"].includes(item.title) && "group"
                   } py-4`}
                   onClick={() => {
-                    if (index !== 1 && index !== 3) {
+                    if (index !== 2 && index !== 3) {
                       // alert(index);
                       // alert(item.path);
                       navigate(item.path);
