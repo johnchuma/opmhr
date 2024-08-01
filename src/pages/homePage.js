@@ -378,7 +378,9 @@ const HomePage = () => {
             ))}
           </div>
           <div className="flex justify-center">
-            <button className="bg-primary hover:scale-105 transition-all  duration-200 cursor-pointer text-white font-medium mt-4 py-3 px-6 rounded-full">
+            <button onClick={()=>{
+              navigate('/blog')
+            }} className="bg-primary hover:scale-105 transition-all  duration-200 cursor-pointer text-white font-medium mt-4 py-3 px-6 rounded-full">
               Explore More
             </button>
           </div>

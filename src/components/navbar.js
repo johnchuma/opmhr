@@ -61,7 +61,7 @@ const Navbar = ({ isScrolling, setIsScrolling, pathname }) => {
                   key={index}
                   className={`${
                     ["Services", "Products"].includes(item.title) && "group"
-                  } py-4`}
+                  } py-4 hover:text-primary transition-all duration-200 `}
                   onClick={() => {
                     if (index !== 2 && index !== 3) {
                       // alert(index);
