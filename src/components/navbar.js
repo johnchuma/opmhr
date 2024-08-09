@@ -24,26 +24,6 @@ const Navbar = ({ isScrolling, setIsScrolling, pathname }) => {
             : "bg-black bg-opacity-40 text-white"
         }  z-50  `}
       >
-        <AnimatePresence>
-          {!isScrolling && (
-            <motion.div
-              initial={{ opacity: 0, y: -50 }}
-              animate={{
-                opacity: 1,
-                y: 0,
-                transition: { duration: 0 },
-              }}
-              exit={{ opacity: 0, y: 50, transition: { duration: 0 } }}
-              className=" bg-white flex items-center justify-center space-x-2 "
-            >
-              <h1 className="text-textColor py-2">
-                Get a 3 month discount when you subscribe now,{" "}
-              </h1>
-              <h1 className="font-bold text-primary underline">Learn More</h1>
-            </motion.div>
-          )}
-        </AnimatePresence>
-
         <div className="flex w-10/12 2xl:w-8/12  items-center mx-auto py-4 justify-between">
           <img className="h-12" src="/logo.png" />
           <div className="flex space-x-3">

@@ -7,7 +7,7 @@ const CustomModal = ({heading,setShow,show,content}) => {
           <motion.div   className=" fixed inset-0 bg-black z-50 bg-opacity-30 ">
             <div className="flex flex-col justify-center items-center h-full w-full">
               <motion.div initial={{scale:0,opacity:0}} animate={{scale:1,opacity:1}} exit={{scale:0,opacity:0}}  
-              className="p-10 w-6/12 2xl:w-4/12 bg-white rounded-md shadow-2xl ">
+              className="p-10 w-5/12 2xl:w-4/12 bg-white rounded-md shadow-2xl ">
                 <div className="flex justify-between items-center mb-5 border-b pb-2 border-border">
                   <h1 className=" text-2xl font-semibold">{heading??""}</h1>
                   
