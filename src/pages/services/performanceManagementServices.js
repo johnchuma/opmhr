@@ -7,15 +7,27 @@ import { FcFeedback } from "react-icons/fc";
 import { VscFeedback } from "react-icons/vsc";
 import { MdOutlineModelTraining } from "react-icons/md";
 import { LuDatabase } from "react-icons/lu";
-import { FaLightbulb, FaStepBackward, FaStepForward, FaUser } from "react-icons/fa";
-import { AiOutlineAlignRight, AiOutlineBarChart, AiOutlineBook, AiOutlineBulb, AiOutlineCalendar, AiOutlineSwapRight } from "react-icons/ai";
+import {
+  FaLightbulb,
+  FaStepBackward,
+  FaStepForward,
+  FaUser,
+} from "react-icons/fa";
+import {
+  AiOutlineAlignRight,
+  AiOutlineBarChart,
+  AiOutlineBook,
+  AiOutlineBulb,
+  AiOutlineCalendar,
+  AiOutlineSwapRight,
+} from "react-icons/ai";
 const PerformanceManagementServices = () => {
-    const scrollAnimationVariants = {
-        hidden: { opacity: 0, y: 200 },
-        visible: { opacity: 1, y: 0, transition: { duration: 1 } },
-      };
-      const { isScrolling, setIsScrolling, setPathname } =
-        useContext(NavbarContext);
+  const scrollAnimationVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+  };
+  const { isScrolling, setIsScrolling, setPathname } =
+    useContext(NavbarContext);
   return (
     <div className="pt-20">
       <div className="w-full h-48 bg-primary  flex  justify-center items-center pt-18 ">
@@ -33,7 +45,6 @@ const PerformanceManagementServices = () => {
             <img src="/performance.svg" />
           </div>
           <div className=" col-span-6">
-           
             <p className="text-lg text-muted  mt-4">
               Our Performance Management services are designed to elevate your
               organization's human capital to new heights. With a meticulous
@@ -55,37 +66,43 @@ const PerformanceManagementServices = () => {
         </div>
         <div className="w-10/12 2xl:w-8/12 grid grid-cols-3 gap-8 mx-auto ">
           {[
-  {
-    title: "Performance Appraisal Systems",
-    icon: <AiOutlineBarChart/>,
-    description: "We develop customized performance appraisal systems that align with your organization's goals and values, providing a clear framework for assessing and rewarding employee performance."
-  },
-  {
-    title: "Goal Setting and Alignment",
-    icon: <AiOutlineSwapRight/>,
-    description: "Our goal-setting services help streamline objectives across all levels of your organization, ensuring that individual goals are in sync with the broader organizational goals."
-  },
-  {
-    title: "Feedback and Coaching",
-    icon: <AiOutlineBook/>,
-    description: "Our expert team offers personalized feedback and coaching to employees, fostering a culture of continuous improvement and growth within your organization."
-  },
-  {
-    title: "Training and Development",
-    icon: <AiOutlineAlignRight/>,
-    description: "We provide tailored training programs aimed at enhancing employee skills and competencies, driving performance and productivity."
-  },
-  {
-    title: "Performance Improvement Plans",
-    icon: <AiOutlineCalendar/>,
-    description: "In cases where performance falls below expectations, we assist in developing performance improvement plans that support employees in reaching their full potential."
-  },
-  {
-    title: "Data-Driven Insights",
-    icon: <AiOutlineBulb/>,
-    description: "Leveraging advanced analytics, we provide data-driven insights to help identify trends, monitor performance metrics, and make informed decisions to optimize performance management processes."
-  }
-].map((item) => {
+            {
+              title: "Performance Appraisal Systems",
+              icon: <AiOutlineBarChart />,
+              description:
+                "We develop customized performance appraisal systems that align with your organization's goals and values, providing a clear framework for assessing and rewarding employee performance.",
+            },
+            {
+              title: "Goal Setting and Alignment",
+              icon: <AiOutlineSwapRight />,
+              description:
+                "Our goal-setting services help streamline objectives across all levels of your organization, ensuring that individual goals are in sync with the broader organizational goals.",
+            },
+            {
+              title: "Feedback and Coaching",
+              icon: <AiOutlineBook />,
+              description:
+                "Our expert team offers personalized feedback and coaching to employees, fostering a culture of continuous improvement and growth within your organization.",
+            },
+            {
+              title: "Training and Development",
+              icon: <AiOutlineAlignRight />,
+              description:
+                "We provide tailored training programs aimed at enhancing employee skills and competencies, driving performance and productivity.",
+            },
+            {
+              title: "Performance Improvement Plans",
+              icon: <AiOutlineCalendar />,
+              description:
+                "In cases where performance falls below expectations, we assist in developing performance improvement plans that support employees in reaching their full potential.",
+            },
+            {
+              title: "Data-Driven Insights",
+              icon: <AiOutlineBulb />,
+              description:
+                "Leveraging advanced analytics, we provide data-driven insights to help identify trends, monitor performance metrics, and make informed decisions to optimize performance management processes.",
+            },
+          ].map((item) => {
             return (
               <div className="hover:scale-105 transition-all p-5 rounded-lg flex space-x-4 bg-white shadow-lg duration-200 cursor-pointer">
                 <div className=" text-2xl text-primary mt-2">{item.icon}</div>

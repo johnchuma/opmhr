@@ -28,7 +28,7 @@ import {
 } from "react-icons/ai";
 const GlobalHRTransformationStrategy = () => {
   const scrollAnimationVariants = {
-    hidden: { opacity: 0, y: 200 },
+    hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 1 } },
   };
   const { isScrolling, setIsScrolling, setPathname } =
@@ -100,7 +100,7 @@ const GlobalHRTransformationStrategy = () => {
             },
             {
               title: "Improve Talent Management",
-              icon: <AiOutlineUser/>,
+              icon: <AiOutlineUser />,
               description:
                 "Identify top performers, track key performance indicators, and develop data-driven strategies for talent acquisition, retention, and development.",
             },

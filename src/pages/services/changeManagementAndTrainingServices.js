@@ -26,7 +26,7 @@ import {
 } from "react-icons/ai";
 const ChangeManagementAndTrainingServices = () => {
   const scrollAnimationVariants = {
-    hidden: { opacity: 0, y: 200 },
+    hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 1 } },
   };
   const { isScrolling, setIsScrolling, setPathname } =
@@ -71,32 +71,37 @@ const ChangeManagementAndTrainingServices = () => {
         </div>
         <div className="w-10/12 2xl:w-8/12 grid grid-cols-3 gap-8 mx-auto ">
           {[
-  {
-    title: "Strategic Alignment",
-    icon: <AiOutlineAlignRight />,
-    description: "Align your HR strategy with your organization's overall business objectives, ensuring that your HR initiatives support and contribute to your long-term success."
-  },
-  {
-    title: "Process Optimization",
-    icon: <AiOutlinePartition />,
-    description: "Streamline and optimize your HR processes to improve efficiency, reduce costs, and enhance the overall employee experience."
-  },
-  {
-    title: "Technology Integration",
-    icon: <AiOutlineBook />,
-    description: "Leverage cutting-edge HR technology solutions to automate manual tasks, enable data-driven decision-making, and provide greater visibility into your workforce metrics."
-  },
-  {
-    title: "Change Management",
-    icon: <AiOutlinePaperClip />,
-    description: "Implement effective change management strategies to minimize resistance and maximize adoption, ensuring a smooth transition to your new HR operating model."
-  },
-  {
-    title: "Continuous Improvement",
-    icon: <AiOutlinePieChart />,
-    description: "Foster a culture of continuous improvement within your organization, empowering your HR team to adapt to evolving business needs and drive ongoing enhancements to your HR strategy and processes."
-  }
-].map((item) => {
+            {
+              title: "Strategic Alignment",
+              icon: <AiOutlineAlignRight />,
+              description:
+                "Align your HR strategy with your organization's overall business objectives, ensuring that your HR initiatives support and contribute to your long-term success.",
+            },
+            {
+              title: "Process Optimization",
+              icon: <AiOutlinePartition />,
+              description:
+                "Streamline and optimize your HR processes to improve efficiency, reduce costs, and enhance the overall employee experience.",
+            },
+            {
+              title: "Technology Integration",
+              icon: <AiOutlineBook />,
+              description:
+                "Leverage cutting-edge HR technology solutions to automate manual tasks, enable data-driven decision-making, and provide greater visibility into your workforce metrics.",
+            },
+            {
+              title: "Change Management",
+              icon: <AiOutlinePaperClip />,
+              description:
+                "Implement effective change management strategies to minimize resistance and maximize adoption, ensuring a smooth transition to your new HR operating model.",
+            },
+            {
+              title: "Continuous Improvement",
+              icon: <AiOutlinePieChart />,
+              description:
+                "Foster a culture of continuous improvement within your organization, empowering your HR team to adapt to evolving business needs and drive ongoing enhancements to your HR strategy and processes.",
+            },
+          ].map((item) => {
             return (
               <div className="hover:scale-105 transition-all p-5 rounded-lg flex space-x-4 bg-white shadow-lg duration-200 cursor-pointer">
                 <div className=" text-2xl text-primary mt-2">{item.icon}</div>

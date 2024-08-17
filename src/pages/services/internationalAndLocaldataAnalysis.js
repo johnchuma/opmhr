@@ -14,7 +14,7 @@ import {
   FaUser,
 } from "react-icons/fa";
 import {
-    AiFillMoneyCollect,
+  AiFillMoneyCollect,
   AiOutlineAlignRight,
   AiOutlineBarChart,
   AiOutlineBook,
@@ -28,7 +28,7 @@ import {
 } from "react-icons/ai";
 const InternationalAndLocalDataAnalysis = () => {
   const scrollAnimationVariants = {
-    hidden: { opacity: 0, y: 200 },
+    hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 1 } },
   };
   const { isScrolling, setIsScrolling, setPathname } =
@@ -94,7 +94,7 @@ const InternationalAndLocalDataAnalysis = () => {
             },
             {
               title: "Customized Training Programs",
-              icon: <AiOutlineCustomerService/>,
+              icon: <AiOutlineCustomerService />,
               description:
                 "Develop customized training programs that address the specific needs of your workforce, providing them with the skills, knowledge, and resources they need to thrive in the new environment.",
             },

@@ -17,7 +17,7 @@ import { useLocation } from "react-router-dom";
 import { GiNinjaStar } from "react-icons/gi";
 const CompanyPage = () => {
   const scrollAnimationVariants = {
-    hidden: { opacity: 0, y: 200 },
+    hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 1 } },
   };
   const { isScrolling, setIsScrolling, setPathname } =
@@ -173,7 +173,6 @@ const CompanyPage = () => {
                   <div>
                     <div className="bg-primary bg-opacity-20 rounded-full h-12 w-12 items-center flex flex-col justify-center">
                       <GiNinjaStar className="text-primary" />
-                      
                     </div>
                   </div>
                   <div>

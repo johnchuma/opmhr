@@ -14,7 +14,7 @@ import {
   FaUser,
 } from "react-icons/fa";
 import {
-    AiFillExperiment,
+  AiFillExperiment,
   AiFillInteraction,
   AiOutlineAlignRight,
   AiOutlineBarChart,
@@ -32,7 +32,7 @@ import {
 } from "react-icons/ai";
 const GlobalStaffOutsourcingSolution = () => {
   const scrollAnimationVariants = {
-    hidden: { opacity: 0, y: 200 },
+    hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 1 } },
   };
   const { isScrolling, setIsScrolling, setPathname } =
@@ -156,32 +156,37 @@ const GlobalStaffOutsourcingSolution = () => {
         </div>
         <div className="w-10/12 2xl:w-8/12 grid grid-cols-3 gap-8 mx-auto ">
           {[
-  {
-    title: "Expertise in Diverse Markets",
-    icon: <AiOutlineGateway />,
-    description: "With extensive knowledge of various international labor markets, we are adept at navigating the complexities of recruiting and managing global talent pools."
-  },
-  {
-    title: "Tailored Recruitment Strategies",
-    icon: <AiOutlineBook />,
-    description: "We customize our recruitment strategies based on your specific business goals, industry specifics, and the unique aspects of each geographic location."
-  },
-  {
-    title: "Seamless Integration",
-    icon: <AiOutlineInteraction />,
-    description: "Our end-to-end staffing services ensure a smooth integration of new global employees into your existing teams, fostering synergy and enhancing productivity."
-  },
-  {
-    title: "Compliance and Risk Management",
-    icon: <AiOutlineCompass />,
-    description: "We handle all aspects of compliance and labor laws in each country, minimizing risks and protecting your business against potential legal and financial liabilities."
-  },
-  {
-    title: "Dedicated Support",
-    icon: <AiOutlineSetting />,
-    description: "Our team provides continuous support and consultancy, from the initial recruitment process to ongoing HR management, ensuring your global team remains robust and effective."
-  }
-].map((item) => {
+            {
+              title: "Expertise in Diverse Markets",
+              icon: <AiOutlineGateway />,
+              description:
+                "With extensive knowledge of various international labor markets, we are adept at navigating the complexities of recruiting and managing global talent pools.",
+            },
+            {
+              title: "Tailored Recruitment Strategies",
+              icon: <AiOutlineBook />,
+              description:
+                "We customize our recruitment strategies based on your specific business goals, industry specifics, and the unique aspects of each geographic location.",
+            },
+            {
+              title: "Seamless Integration",
+              icon: <AiOutlineInteraction />,
+              description:
+                "Our end-to-end staffing services ensure a smooth integration of new global employees into your existing teams, fostering synergy and enhancing productivity.",
+            },
+            {
+              title: "Compliance and Risk Management",
+              icon: <AiOutlineCompass />,
+              description:
+                "We handle all aspects of compliance and labor laws in each country, minimizing risks and protecting your business against potential legal and financial liabilities.",
+            },
+            {
+              title: "Dedicated Support",
+              icon: <AiOutlineSetting />,
+              description:
+                "Our team provides continuous support and consultancy, from the initial recruitment process to ongoing HR management, ensuring your global team remains robust and effective.",
+            },
+          ].map((item) => {
             return (
               <div className="hover:scale-105 transition-all p-5 rounded-lg flex space-x-4 bg-white shadow-lg duration-200 cursor-pointer">
                 <div className=" text-2xl text-primary mt-2">{item.icon}</div>

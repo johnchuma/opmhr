@@ -3,7 +3,7 @@ import { products } from "../utils/arrays";
 import { motion } from "framer-motion";
 const Footer = () => {
   const scrollAnimationVariants = {
-    hidden: { opacity: 0, y: 200 },
+    hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 1 } },
   };
   const navigate = useNavigate();
@@ -16,8 +16,8 @@ const Footer = () => {
         className="   bg-lightBackground text-lg py-24 "
       >
         <div className="w-10/12 2xl:w-8/12 mx-auto">
-          <div className="grid grid-cols-5 gap-x-4  ">
-            <div>
+          <div className="grid  grid-cols-2 md:grid-cols-5 gap-x-4  ">
+            <div className="hidden md:block">
               <img className="h-12" src="/logo.png" />
             </div>
             <div>
@@ -86,8 +86,8 @@ const Footer = () => {
                 <p></p>
               </div>
             </div>
-            <div>
-              <h1 className=" font-medium  text-xl mb-4">Address</h1>
+            <div className="hidden md:block">
+              <h1 className=" font-medium  text-xl mb-4 ">Address</h1>
               <iframe
                 width="250"
                 height="200"
@@ -100,7 +100,7 @@ const Footer = () => {
               ></iframe>{" "}
             </div>
           </div>
-          <div className="flex justify-between text-muted text-base mt-24">
+          <div className="flex md:flex-row flex-col justify-between text-muted text-base mt-24">
             <p>
               <span className="font-medium ">English.</span> @2024. All rights
               reserved

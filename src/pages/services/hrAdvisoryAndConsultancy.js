@@ -15,7 +15,7 @@ import {
   FaUser,
 } from "react-icons/fa";
 import {
-    AiFillCheckSquare,
+  AiFillCheckSquare,
   AiOutlineAlignRight,
   AiOutlineArrowsAlt,
   AiOutlineBarChart,
@@ -33,7 +33,7 @@ import {
 } from "react-icons/ai";
 const HRAdvisoryAndConsultancy = () => {
   const scrollAnimationVariants = {
-    hidden: { opacity: 0, y: 200 },
+    hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 1 } },
   };
   const { isScrolling, setIsScrolling, setPathname } =

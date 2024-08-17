@@ -9,7 +9,7 @@ import { MdOutlineModelTraining, MdParagliding } from "react-icons/md";
 import { LuDatabase } from "react-icons/lu";
 const Expenses = () => {
   const scrollAnimationVariants = {
-    hidden: { opacity: 0, y: 200 },
+    hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 1 } },
   };
   const { isScrolling, setIsScrolling, setPathname } =

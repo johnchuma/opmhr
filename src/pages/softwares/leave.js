@@ -11,7 +11,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { AiFillSetting, AiOutlineSetting } from "react-icons/ai";
 const Leave = () => {
   const scrollAnimationVariants = {
-    hidden: { opacity: 0, y: 200 },
+    hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 1 } },
   };
   const { isScrolling, setIsScrolling, setPathname } =

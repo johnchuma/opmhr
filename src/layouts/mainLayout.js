@@ -46,8 +46,7 @@ const MainLayout = () => {
       />
       <UserContext.Provider value={{ user }}>
         <NavbarContext.Provider
-          value={{ isScrolling, setIsScrolling, setPathname }}
-        >
+          value={{ isScrolling, setIsScrolling, setPathname }}>
           <Outlet />
         </NavbarContext.Provider>
       </UserContext.Provider>
